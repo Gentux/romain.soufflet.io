@@ -1,3 +1,9 @@
 name: Romain Soufflet
 markdown: redcarpet
 pygments: true
+
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+exclude:     ['Makefile']
+keep_files:  ['.git', '.svn']

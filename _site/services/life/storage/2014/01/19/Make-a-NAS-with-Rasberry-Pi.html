@@ -7,7 +7,7 @@
     <meta name="description" content="Personal website">
     <meta name="author" content="Romain Soufflet (Gentux)">
 
-    <title>Free software developper</title>
+    <title>Make a NAS with Rasberry Pi</title>
 
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/cosmo/bootstrap.min.css" rel="stylesheet">
@@ -45,49 +45,40 @@
       </div>
     </div>
 
-        <div class="jumbotron">
-      <div class="container">
-        <div class="media">
-          <a class="pull-left" href="/">
-            <img alt="me" class="media-object" src="/img/gentux-jumbotron.jpg">
-          </a>
-          <div class="media-body">
-            <h1>Romain Soufflet</h1>
-            <p>I'm not a geek, just a little techie</p>
-            <p><a class="btn btn-primary btn-lg" role="button" href="/curriculum-vitae.html">Learn more &raquo;</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="container">
+      <article>
+        <header>
+          <h1>Make a NAS with Rasberry Pi</h1>
+          <p class="post-date">Published: <time pubdate="pubdate">19 Jan 2014</time></p>
+        </header>
 
-    <div class="container marketing">
-      <div class="row">
-        <div class="col-lg-6">
-          <img src="/icons/128/notepad_ok.png" alt="Blog posts">
-          <h2>Blog Posts</h2>
-          <ul class="posts">
-            
-              <li>
-                <time pubdate="pubdate">19 Jan 2014</time> &raquo;
-                <a href="/services/life/storage/2014/01/19/Make-a-NAS-with-Rasberry-Pi.html">Make a NAS with Rasberry Pi</a>
-              </li>
-            
-              <li>
-                <time pubdate="pubdate">09 Jan 2014</time> &raquo;
-                <a href="/services/life/2014/01/09/Romain-Soufflet-s-blog-oppened.html">Gentux.IO opening</a>
-              </li>
-            
-          </ul>
+        <div class="post">
+          <p>The first step in making my own space on Internet with RPi is storage.</p>
+
+<p>Nothing is possible without data storage, I need :</p>
+
+<ul>
+<li>Backup (mail, configurations…)</li>
+<li>Public Data (Shared links, shared photos… ect…)</li>
+<li>Private Documents for users (and myself)</li>
+</ul>
+
+<p>And the SD Card is not enough to store all that (in addition of that fact, I won&#39;t store backups on the same drive as
+the backuped system)</p>
+
+<p>I thought RPi was the right way to make all of this. I plugged in a 2To external HardDrive with its own power supply and
+began to backup configurations files and every home directory.</p>
+
+<p>RPi works very well with backup and private documents, but problems appear when you need to share big files. My USB
+drive froze every minutes for a few second.</p>
+
+<p>As for today, I haven&#39;t found any viable solution to use RPi as the center of my world at home. Everything works fine
+appart sharing hard drives.</p>
+
+<p>The solution I use today consist of sharing disks via my routeur (which provide samba sharing for external drives).</p>
+
         </div>
-        <div class="col-lg-6">
-          <img src="/icons/128/code.png" alt="Work in progress">
-          <h2>Work in progress</h2>
-          <p>
-            This website aims to centralize my notes, my thought and my experiments with new technologies.<br>
-          </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div>
+      </article>
     </div>
 
 
