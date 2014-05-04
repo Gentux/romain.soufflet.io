@@ -6,7 +6,7 @@ title: Free software developper
       <div class="container">
         <div class="media">
           <a class="pull-left" href="/">
-            <img alt="me" class="media-object" src="/img/gentux-jumbotron.jpg">
+            <img alt="me" class="media-object img-rounded" src="/img/gentux-jumbotron.jpg">
           </a>
           <div class="media-body">
             <h1>{{ site.name }}</h1>
@@ -25,7 +25,7 @@ title: Free software developper
           <ul class="posts">
             {% for post in site.posts %}
               <li>
-                <time pubdate="pubdate">{{ post.date | date_to_string }}</time> &raquo;
+                <time pubdate="pubdate">{{ post.date | date_to_string }}</time> :
                 <a href="{{ post.url }}">{{ post.title }}</a>
               </li>
             {% endfor %}
