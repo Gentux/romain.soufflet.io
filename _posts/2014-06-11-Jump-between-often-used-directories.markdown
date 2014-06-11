@@ -5,13 +5,13 @@ date: 2014-06-11 17:36:21
 categories: bash
 ---
 
-When I'm showing code are asking for advice to a collegue, I'm always surprised by their reactions.
+When I'm showing code or asking for advice to a colleague, I'm always surprised by their reactions.
 
 I am not a huge fan of aliases, but the few ones I use are really priceless. And amongst them, my favourites is still
 *jump*.
 
 Jump is a little collection of functions in my bashrc file allowing me to mark projects folder and jump to them from
-anywhere. For exemple :
+anywhere. For example :
 
     $ cd ~/projects/client-dir/project-dir
     $ mark
@@ -34,5 +34,5 @@ repository to store it.
 
 [Jump](https://github.com/Gentux/jump)
 
-I can't recall where I originaly found those functions, I've been using them for a pretty long time now and I hope it'll
-be usefull to other people now :)
+I can't recall where I originally found those functions, I've been using them for a pretty long time now and I hope it'll
+be useful to other people now :)
