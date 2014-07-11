@@ -28,6 +28,8 @@ title: Free software engineer
             Hi !<br>
             I'm <em>Romain Soufflet</em>, a young <em>software engineer</em> based in Paris.<br>
             My interest for <em>free softwares</em> lead me to <em>Easter-eggs</em> where I'm actually working.
+            <br>
+            Now I'm trying to learn more and contribute to <em>Openstack</em> project.
           </p>
         </div>
       </div>
@@ -40,7 +42,9 @@ title: Free software engineer
           <ul class="posts">
             {% for post in site.posts %}
               <li>
-                <time pubdate="pubdate">{{ post.date | date_to_string }}</time> :
+                <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date_to_long_string }}
+                </time> :
                 <a href="{{ post.url }}">{{ post.title }}</a>
               </li>
             {% endfor %}
