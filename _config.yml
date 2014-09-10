@@ -1,6 +1,6 @@
 name: Romain Soufflet
 markdown: redcarpet
-pygments: true
+highlighter: true
 
 destination: ./_site
 plugins:     ./_plugins
