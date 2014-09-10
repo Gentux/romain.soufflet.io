@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Development in 2014"
+title: "Software development in 2014"
 date: 2014-09-09 15:31:55
 categories: development
 ---
@@ -29,10 +29,10 @@ Moreover, we have some dependencies I'll call "vicious dependencies", like our
 files, but other CDN won't have the same structure as ours… that's how our CDN became a dependency in those project.
 
 
-Nobody here at work seems to worry about those project. Lead developers left the company and I find myself alone
-against all that code.
+Nobody here at work seems to worry about those. Lead developers left the company and I find myself alone against all
+that code.
 
-The problem lies in "I'm the only one who can actually work on these project". No one can know where are dependencies,
+The problem lies in **I'm the only one who can actually work on these project**. No one can know where are dependencies,
 where are all **git** repositories, where are **prod** and **preprod** servers for all services. I am the only one who
 can install and run the **Comarquage** solution.
 
@@ -45,8 +45,8 @@ I'll adapt those software I have to maintain as examples.
 
 ### README ###
 
-First of all, lot of old project doesn't have on. **README** file is the most important file on a project, you have to
-write it and keep it up to date.
+First of all, lot of old project doesn't have a **README** file, this is the most important file on a project, you have
+to write it and keep it up to date.
 
 It **must** contains at least :
 
