@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Gentux.IO opening"
-date: 2014-01-09 18:42:32
 categories: services life
+date: 2014-01-09 18:42:32
+description: First post on this blog
+title: "Gentux.IO opening"
 ---
 
 I launch today officially the Gentux.IO project.

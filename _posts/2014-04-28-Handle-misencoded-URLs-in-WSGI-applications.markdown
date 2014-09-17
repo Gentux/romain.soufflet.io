@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Reject badly encoded request in Python WSGI applications"
-date: 2014-04-28 17:12:02
 categories: python wsgi
+date: 2014-04-28 17:12:02
+description: Resolve exceptions caused by misencoded URLs
+title: "Reject badly encoded request in Python WSGI applications"
 ---
 
 At [Easter-eggs](http://www.easter-eggs.com/) we use [Python](http://www.python.org/) and
