@@ -22,6 +22,9 @@ You can say it's not a big deal, but it's enough to get complains for a grumpy d
 The solution, I bought a BananaPi and I installed [**Bananian**](www.bananian.org), then **XBMC**.
 
 
-## The Result ##
+And… nothing :(
 
-Hey, this is a draft, I didn't actually installed those thing, so wait until I test it out :D
+Bananian works well, it is exactly the Debian build I needed. But **XBMC** is verry slow, I can't watch anything with
+it.
+
+Don't panic, there is available solutions, tonight, I'll try the solutions described [here](http://linux-sunxi.org/XBMC)
