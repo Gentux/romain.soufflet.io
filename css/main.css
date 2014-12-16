@@ -28,3 +28,6 @@ article,
     text-align: center;
 }
 
+.container {
+    max-width: 650px;
+}
