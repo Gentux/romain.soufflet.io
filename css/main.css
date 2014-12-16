@@ -28,6 +28,6 @@ article,
     text-align: center;
 }
 
-.container {
+.container .post {
     max-width: 650px;
 }
