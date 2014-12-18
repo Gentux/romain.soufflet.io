@@ -31,3 +31,7 @@ article,
 .container .post {
     max-width: 650px;
 }
+
+.github-logo {
+  max-width: 16px;
+}
