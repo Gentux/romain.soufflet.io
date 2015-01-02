@@ -1,5 +1,6 @@
 body {
     padding-top: 50px;
+    background: url("/img/body-bg.png") repeat scroll 0px 0px #FFF;
 }
 
 header .post-date {
@@ -11,8 +12,10 @@ header h1 {
 }
 
 article,
-.marketing{
-    font-size: 1.1em;
+.marketing {
+    font-size: 1.2em;
+    max-width: 650px;
+    margin: auto;
 }
 
 .jumbotron h1 {
@@ -26,10 +29,6 @@ article,
 
 .license {
     text-align: center;
-}
-
-.container .post {
-    max-width: 650px;
 }
 
 .github-logo {
