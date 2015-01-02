@@ -5,14 +5,14 @@ title: Projects
 ---
     <div class="container">
       <h2>Blog Posts</h2>
-      <ul class="posts">
-        {% for post in site.posts %}
-          <li>
-            <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date_to_long_string }}
-            </time> :
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
+      <ul class="projects">
+        <li class="well">
+          <img src="/img/imap.png" alt="imap-cli"/>
+          <a href="https://github.com/Gentux/imap-cli">IMAP-Cli</a>
+        </li>
+        <li class="well">
+          <img src="/img/imap.png" alt="imap-cli"/>
+          <a href="https://github.com/Gentux/vimap">Vimap</a>
+        </li>
       </ul>
     </div>

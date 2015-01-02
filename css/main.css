@@ -33,5 +33,9 @@ article,
 }
 
 .github-logo {
-  max-width: 16px;
+    max-width: 16px;
+}
+
+.projects {
+    list-style: none;
 }
