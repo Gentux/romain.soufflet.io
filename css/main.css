@@ -1,3 +1,30 @@
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        margin-left: 50%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 50%;
+    }
+}
+
 body {
     padding-top: 50px;
     background: url("/img/body-bg.png") repeat scroll 0px 0px #FFF;
@@ -9,6 +36,12 @@ header .post-date {
 header h1 {
     border-bottom: 1px solid grey;
     padding-bottom: 5px;
+}
+
+article {
+    animation-name: fadeIn; /*, slideIn; */
+    animation-duration: 3s;
+    animation-iteration-count: 1;
 }
 
 article,
