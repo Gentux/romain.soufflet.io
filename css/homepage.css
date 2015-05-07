@@ -1,0 +1,59 @@
+/* Banner home page
+---------------------------------- */
+#banner {
+  background: url("../img/overlay.png"), url("../img/banner.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  padding: 16em 0em 14em;
+  text-align: center;
+}
+
+#banner h2 {
+  color: #000000;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+#banner p {
+  font-size: 1.5em;
+  margin: 1.5em 0 0 0;
+}
+
+#banner img {
+  border-radius: 10px;
+}
+
+/* Social Links
+---------------------------------- */
+.social-links {
+  padding: 0;
+  list-style: none;
+  margin: 15px 0;
+}
+.social-links li {
+  margin: 10px 25px 10px 0;
+  display: inline-block;
+  font-size: 36px;
+}
+.social-links li a {
+  color: #BBBBBB;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.social-links li.twitter a:hover {
+  color: #55acee;
+}
+.social-links li.github a:hover {
+  color: #555555;
+}
+.social-links li.linkedin a:hover {
+  color: #007bb6;
+}

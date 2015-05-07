@@ -3,39 +3,42 @@ layout: default
 description: Personal website
 title: Free software engineer
 ---
-    <div class="jumbotron">
-      <div class="container">
-        <div class="media">
-          <a class="pull-left hidden-xs" href="/">
-            <img alt="me" class="media-object img-rounded" src="/img/gentux-jumbotron.png">
-          </a>
-          <div class="media-body" itemscope itemtype="http://schema.org/Person">
-            <a itemprop="url" href="http://romain.soufflet.io">
-              <div itemprop="name"><h1>Romain Soufflet</h1></div>
-            </a>
-            <p>
-              I'm a <em itemprop="jobtitle">software engineer</em> based in
-              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="addressLocality">Paris</span> (<span itemprop="addressCountry">France</span>)
-              </span>.<br>
-              My interest for <em>free softwares</em> lead me to <em>Openstack</em> project on which I'm actually
-              working.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+<section id="banner">
+  <div class="media-body" itemscope itemtype="http://schema.org/Person">
+    <img alt="me" class="img-rounded" src="/img/gentux-jumbotron.png">
+    <a itemprop="url" href="http://romain.soufflet.io">
+      <div itemprop="name"><h2>Romain Soufflet</h2></div>
+    </a>
+    <p>
+    I'm a <em itemprop="jobtitle">software engineer</em> based in
+    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Paris</span> (<span itemprop="addressCountry">France</span>).
+    </span><br>
+    My interest for <em>free softwares</em> lead me to <em>Openstack</em>.<br>
+    I'm also working on some side project like <em>Imap-Cli</em>
+    </p>
+    <p>
+      <a href="/blog" class="btn btn-lg btn-default">Blog posts</a>
+      <a href="/projects" class="btn btn-lg btn-default">Projects</a>
+      <a href="mailto:romain@soufflet.io" class="btn btn-lg btn-default">Contact</a>
+    </p>
+  </div>
 
-    <div class="container marketing">
-      <h2>Blog Posts</h2>
-      <ul class="posts">
-        {% for post in site.posts %}
-          <li>
-            <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date_to_long_string }}
-            </time> :
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+  <ul class="social-links">
+    <li class="github">
+      <a target="_blank" href="http://www.github.com/gentux">
+        <i class="fa fa-github"></i>
+      </a>
+    </li>
+    <li class="linkedin">
+      <a target="_blank" href="https:/fr.linkedin.com/in/romainsoufflet">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="twitter">
+      <a target="_blank" href="http://twitter.com/Romain_Soufflet">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+  </ul>
+</section>
