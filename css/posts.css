@@ -1,0 +1,70 @@
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        margin-left: 50%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 50%;
+    }
+}
+
+header .post-date {
+  text-align: right;
+}
+header h1 {
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+}
+
+article, #blog_posts, #projects {
+  animation-name: fadeIn; /*, slideIn; */
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+article {
+  font-size: 1.2em;
+  max-width: 650px;
+  margin: auto;
+}
+
+a .post {
+  min-height: 150px;
+  color: #000;
+  vertical-align: center;
+}
+
+a .post:hover {
+  background-color: #BBBBBB;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a .post img {
+  float: left;
+  margin: 20px 15px 0 0;
+}

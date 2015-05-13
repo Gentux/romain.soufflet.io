@@ -1,61 +1,14 @@
-@keyframes fadeIn {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        margin-left: 50%;
-    }
-    to {
-        margin-left: 0%;
-    }
-}
-
-@keyframes slideOut {
-    from {
-        margin-left: 0%;
-    }
-    to {
-        margin-left: 50%;
-    }
-}
-
 body {
-    padding-top: 50px;
-    background-color: #222222;
-}
-
-header .post-date {
-    text-align: right;
-}
-header h1 {
-    border-bottom: 1px solid grey;
-    padding-bottom: 5px;
-}
-
-article {
-    animation-name: fadeIn; /*, slideIn; */
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-}
-
-article,
-.marketing {
-    font-size: 1.2em;
-    max-width: 650px;
-    margin: auto;
+  padding-top: 50px;
+  background: url("/img/sd/body-bg.png") repeat scroll 0px 0px #FFF;
 }
 
 footer {
+  background-color: #222222;
+  padding-top: 35px;
   height: 150px;
   font-size: 1.2em;
   color: #FFFFFF;
-  margin: 1.5em 0 0 0;
 }
 footer a {
   color: #95A5A6;
