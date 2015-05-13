@@ -4,6 +4,7 @@ categories: life firefoxos
 date: 2014-05-02 10:25:54
 description: How to update Geeksphone Peak to nightly version of Firefox OS
 title: "Upgrade Geeksphone Peak to nightly build"
+img: img/64/firefoxos.png
 ---
 
 

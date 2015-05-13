@@ -4,6 +4,7 @@ categories: development
 date: 2014-09-09 15:31:55
 description: General description of development in 2014
 title: "Software development in 2014"
+img: img/64/github.png
 ---
 
 

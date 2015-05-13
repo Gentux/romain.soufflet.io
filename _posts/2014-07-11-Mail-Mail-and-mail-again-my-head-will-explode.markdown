@@ -4,6 +4,7 @@ categories: bash
 date: 2014-07-11 11:47:26
 description: How should we use our mails
 title: "The way we're reading mails is wrong ! Let's go fix it"
+img: img/64/imap.png
 ---
 
 

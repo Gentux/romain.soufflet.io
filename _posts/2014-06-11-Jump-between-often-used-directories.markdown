@@ -4,6 +4,7 @@ categories: bash
 date: 2014-06-11 17:36:21
 description: Tips and trick arround command line
 title: "Jump between often used directories"
+img: img/64/bash.png
 ---
 
 When I'm showing code or asking for advice to a colleague, I'm always surprised by their reactions when they see my
