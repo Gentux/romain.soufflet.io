@@ -2,9 +2,8 @@
 layout: post
 categories: services life
 date: 2014-01-09 18:42:32
-description: First post on this blog
 title: "Gentux.IO opening"
-img: img/64/gentux.png
+img: img/hd/doityourself.jpg
 ---
 
 I launch today officially the Gentux.IO project.

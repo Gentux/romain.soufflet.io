@@ -3,7 +3,7 @@ layout: post
 title: "Soufflet.IO services"
 date: 2014-12-15 15:46:42
 categories: tools personal cloud
-img: img/64/gentux.png
+img: img/hd/doityourself.jpg
 ---
 
 It's been 3 weeks since I acquired the **Firefox OS Flame** device. I finally

@@ -3,7 +3,7 @@ layout: post
 title: "Discovering GO"
 date: 2015-06-18 09:46:42
 categories: language work
-img: img/64/gopher.png
+img: img/hd/Golang_go.svg.png
 ---
 
 Since I began to work a [**CloudWatt**](http://www.cloudwatt.com/), I've been

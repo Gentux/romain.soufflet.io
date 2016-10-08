@@ -2,9 +2,8 @@
 layout: post
 title: "Four month using Rasberry Pi"
 date: 2014-04-15 16:30:32
-description: 3rd Post
 categories: services life storage
-img: img/64/raspberry.png
+img: img/hd/Raspberry_Pi_boxed.jpg
 ---
 
 

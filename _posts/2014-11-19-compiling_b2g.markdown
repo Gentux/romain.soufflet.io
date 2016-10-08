@@ -3,7 +3,7 @@ layout: post
 title: "Compiling «Boot 2 Gecko» on Debian"
 date: 2014-11-19 19:32:42
 categories: FirefoxOS debian docker
-img: img/64/firefoxos.png
+img: img/hd/firefoxOS.jpg
 ---
 
 I wrote about my [Peak](http://www.geeksphone.com/other-devices-2/) phone a while ago. It's time to write again on

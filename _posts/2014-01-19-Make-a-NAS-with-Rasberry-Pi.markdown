@@ -2,9 +2,8 @@
 layout: post
 categories: services life storage
 date: 2014-01-19 18:42:32
-description: "Description of my NAS with RaspberryPi"
 title: "Make a NAS with Rasberry Pi"
-img: img/64/raspberry.png
+img: img/hd/raspberrypi_network.jpg
 ---
 
 
