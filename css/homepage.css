@@ -1,7 +1,7 @@
 /* Banner home page
 ---------------------------------- */
 #banner {
-  background: url("../img/sd/overlay.png"), url("../img/1080p/banner.jpg");
+  background: url("../img/1080p/banner.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
