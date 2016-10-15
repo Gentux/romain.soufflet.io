@@ -18,6 +18,12 @@ custome_css: posts
               <i class="fa fa-calendar"></i>
               {{ post.date | date_to_long_string }}
             </time>
+
+            <small>
+              <a href="{{ post.url }}#disqus_thread">
+                <i class="fa fa-comment"></i> Comments
+              </a>
+            </small>
           </p>
 
           {% if post.img %}
@@ -33,9 +39,11 @@ custome_css: posts
               <span class="body">{{ post.excerpt | strip_html }}</span>
             {% endif %}
           </p>
-          <a href="{{ post.url }}">Read more</a>
+          <a class="btn btn-primary" href="{{ post.url }}">Read more</a>
         </div>
       </article>
     {% endfor %}
   </div>
 </section>
+
+<script id="dsq-count-scr" src="//rsoufflet.disqus.com/count.js" async></script>
