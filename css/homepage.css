@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  padding: 16em 0em 14em;
+  padding: 10em 0em 14em;
   text-align: center;
 }
 
@@ -27,6 +27,7 @@
 
 #banner img {
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 /* Social Links
@@ -41,7 +42,7 @@
   display: inline-block;
   font-size: 36px;
 }
-.social-links li a {
+.social-links li a:hover {
   color: #BBBBBB;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -49,15 +50,16 @@
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.social-links li.twitter a:hover {
+
+.social-links li.twitter a {
   color: #55acee;
 }
-.social-links li.github a:hover {
+.social-links li.github a {
   color: #555555;
 }
-.social-links li.linkedin a:hover {
+.social-links li.linkedin a {
   color: #007bb6;
 }
-.social-links li.atom a:hover {
+.social-links li.atom a {
   color: #FF6600;
 }
