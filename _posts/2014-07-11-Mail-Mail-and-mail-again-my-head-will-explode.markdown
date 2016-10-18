@@ -52,7 +52,7 @@ I look up for that on internet and find nothing. Is my request totally dump ? Am
 
 
 In front of that huge problem of mine, I think I'm the only one complaining, but still, I have a problem with mail
-management softwares. So, I decided to make my own, a piece of software solving my problems… and perhaps solve someone
+management software. So, I decided to make my own, a piece of software solving my problems… and perhaps solve someone
 else problems.
 
 

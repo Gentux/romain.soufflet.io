@@ -17,6 +17,9 @@ footer a:hover {
   color: #26A65B;
   text-decoration: none;
 }
+footer .container {
+  background-color: #222222;
+}
 
 p {
   font-size: 18px;

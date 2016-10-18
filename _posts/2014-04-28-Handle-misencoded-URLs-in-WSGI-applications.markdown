@@ -20,7 +20,7 @@ The problem is simple: when the request headers contains non UTF-8 characters, t
 it expects the headers to be encoded in UTF-8.
 
 End-user tools like web browsers generate valid UTF-8 requests with no effort, but non UTF-8 requests can be generated
-by some odd softwares or by hand from a [ipython](http://ipython.org/) shell.
+by some odd software or by hand from a [ipython](http://ipython.org/) shell.
 
 Let's dive into the problem in ipython :
 
