@@ -55,11 +55,14 @@
   color: #55acee;
 }
 .social-links li.github a {
-  color: #555555;
+  color: #FFFFFF;
 }
 .social-links li.linkedin a {
   color: #007bb6;
 }
 .social-links li.atom a {
   color: #FF6600;
+}
+.social-links li.github a:hover {
+  color: #555555;
 }
