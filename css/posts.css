@@ -17,20 +17,12 @@ a .post img {
   margin: 20px 20px;
 }
 
-.post-title-image {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-  background-position: center;
-  margin-bottom: 1.5em;
-}
-
 .post-banner {
   width: 100%;
-  height: 200px;
-  background-size: cover;
+  height: 250px;
   box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-  background-position: center;
-  margin-bottom: 1.5em;
+}
+
+footer {
+  margin-bottom: 48px;
 }
