@@ -1,9 +1,10 @@
 ---
+categories: services life storage
+custom_css: posts.css
+date: 2014-04-15 16:30:32
+img: img/hd/Raspberry_Pi_boxed.jpg
 layout: post
 title: "Four month using Rasberry Pi"
-date: 2014-04-15 16:30:32
-categories: services life storage
-img: img/hd/Raspberry_Pi_boxed.jpg
 ---
 
 

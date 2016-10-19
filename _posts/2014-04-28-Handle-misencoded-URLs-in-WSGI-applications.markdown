@@ -1,9 +1,10 @@
 ---
-layout: post
 categories: python wsgi
+custom_css: posts.css
 date: 2014-04-28 17:12:02
-title: "Reject badly encoded request in Python WSGI applications"
 img: img/hd/languages.jpg
+layout: post
+title: "Reject badly encoded request in Python WSGI applications"
 ---
 
 At [Easter-eggs](http://www.easter-eggs.com/) we use [Python](http://www.python.org/) and

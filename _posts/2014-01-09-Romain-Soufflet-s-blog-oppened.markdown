@@ -1,9 +1,10 @@
 ---
-layout: post
 categories: services life
+custom_css: posts.css
 date: 2014-01-09 18:42:32
-title: "Gentux.IO opening"
 img: img/hd/doityourself.jpg
+layout: post
+title: "Gentux.IO opening"
 ---
 
 I launch today officially the Gentux.IO project.

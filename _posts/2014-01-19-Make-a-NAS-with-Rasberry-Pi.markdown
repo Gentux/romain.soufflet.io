@@ -1,9 +1,10 @@
 ---
-layout: post
 categories: services life storage
+custom_css: posts.css
 date: 2014-01-19 18:42:32
-title: "Make a NAS with Rasberry Pi"
 img: img/hd/raspberrypi_network.jpg
+layout: post
+title: "Make a NAS with Rasberry Pi"
 ---
 
 

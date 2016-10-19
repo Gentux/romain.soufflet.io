@@ -1,9 +1,10 @@
 ---
-layout: post
 categories: life firefoxos
+custom_css: posts.css
 date: 2014-05-02 10:25:54
-title: "Upgrade Geeksphone Peak to nightly build"
 img: img/hd/firefoxOS.jpg
+layout: post
+title: "Upgrade Geeksphone Peak to nightly build"
 ---
 
 
