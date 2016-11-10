@@ -42,9 +42,9 @@ Through this simple exercice I can explore some of the language basic feature:
 * Community surrounding the language
 * … etc…
 
-## Will I keep using GO ?
+## Result
 
-Without any doubt, **YES**. This language is awesome, let's take a tour with me.
+Let's take a tour with me.
 
 I'll start with a negative point, its basic syntax. It may be confusing at first
 and I find it less readable than **Python**. It's not a big issue because we can
@@ -96,5 +96,8 @@ code, and it might break anytime.
 
 I could talk more about GO, but I really think you should give it a try if you
 want to learn more :)
+
+This is a great tool for every small components you might need. You can build an
+executable file for every platform and deploy it very fast.
 
 Bye, and happy hacking !

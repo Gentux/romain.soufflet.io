@@ -1,7 +1,6 @@
 article {
   font-size: 1.2em;
   line-height: 1.3em;
-  max-width: 800px;
 }
 
 article a {
@@ -12,9 +11,9 @@ a:hover {
   text-decoration: none;
 }
 
-a .post img {
-  float: right;
-  margin: 20px 20px;
+.post img {
+  display: block;
+  margin: auto;
 }
 
 .post-banner {
