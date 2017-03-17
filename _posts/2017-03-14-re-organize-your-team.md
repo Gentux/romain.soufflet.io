@@ -32,57 +32,73 @@ This first level is more like creating your character, you know, before you
 start your Donjon & Dragon campaign, you have to create your character and
 assign some skill points. This is the same with your team.
 
-Most team I met in my life weren't really ones, this is not just several lads
-hanging arround and sharing a manager. Team define themselve by interractions,
+Most team I met in my life weren't really ones: this is not just several lads
+hanging arround and sharing a manager. Team defines themselve by interractions,
 and it implies to create connections between people.
 
 Those connections will create unexpected behaviour, team member won't work for a
 manager, but they will for the sake of the team.
 
-First of all, to create a team with your employee or coworker, you need to give
-them responsabilities. Your team needs to embrace the project, it needs to know
-exactly the goal behind each actions.
+To achieve that, treat your team like a person, give it a name to refer to it.
 
-Secondly, defines global objectives, do not assign task to a person, give your
-task to the whole team and let the team decide who will do the actual job.
+Then, you can give it responsabilities. Your team needs to embrace the project,
+it needs to know exactly the goal behind each actions.
+
+With this new person, you won't assign a task to a specific person, give it to
+the whole team and let all members decide who will do the actual job. If someone
+gives you a task, talk with the entire team before doing anything.
 
 When you put that together, your people will start to work as a team, together,
-to solve global problems that makes sense.
+to solve global problems that makes sense. But it's not enough, you need a
+second person: a **neutral judge**
+
+Because several peoples working together will generate conflict, you need
+someone or something to help them decide what to do. If you give this role to a
+human, that'll just be another manager... let's try something different: Give
+this to automation tools.
+
+Examples:
+
+* Code quality : Use **eslint** and ask the team to define rules
+* Code review : Use **Pull request** and ask the team to chose a way to review
+  each one of them
+* Documentation : Decide to write a README.md and let the team complete it
+
+Once you put all of this in place, you have a team, a strong base to build
+something great !
 
 ## Level 1 : Train your neutral judge
 
-By default, humans evolved with an **individual mindset**. People in your team
-will try to get credit for themselves, they'll try to implement their idea even
-if they were proven wrong.
+But hey ! your neutral judge is not a person... it's not a single thing either,
+it's just a bunch of tools !!
 
-:: NOTE :: Create a personality
+Yes, but we can work this out, by giving it a personality. You can call it
+Jarvis like Iron Man, Skynet like Terminators or HAL if you want. In the reste
+of this article, we will call it **Timmy**.
 
-As a team member, you need to be vigilant and make sure teams rules are applied.
+**Timmy** won't be define as a single thing, your team know that because it's
+your team that took **Timmy** in place.
 
-For example, in dev team, you can define the following:
+And **Timmy** is not really smart, but he is rigorous and impartial. So let's
+ask him to do more stuff. Try to make him install your product for example.
 
-* We use a linter to tell if the code is pretty or not
-* We have to respect a specific and exhaustive list before submitting our pull
-  requests
-* We cannot merge our own code, it must be reviewed by at least one another
-  person
+You'll see, it's not the simplest task in the world. And when you successfully
+see your product run by **Timmy**, you know that every new team member will
+succeed too, because, hopefully, this new team member will be smarter that
+**Timmy**.
 
-All those item **have to be neutral**. No feelings in it, just code. As it is
-neutral by definition, nobody can contest its result, every one has to comply.
+You can, afterwards, define testing on your product, cause you'll have a
+standard plateform and launch procedure to launch tests.
 
-Another big part of your neutral authority is tests.
+The goal behind all of this might be difficult to see: by default, humans
+evolved with an **individual mindset**. People in your team will try to get
+credit for themselves, they'll try to implement their idea even if they were
+proven wrong.
 
-Every dev team talks about tests, I saw dozens of wrong way to implement tests,
-so today we will clarify things, here the mon common misconception :
-
-* Tests won't help you earning time
-* Tests won't improve your product quality
-* Tests won't be easy to implement
-
-**Tests will force your team to define a default environment to run your tests**
-
-And once you got that clean environment, and only then, writing tests will be
-useful.
+By giving all of the validation stuff to **Timmy**, team members won't be able
+to tell things like « it worked on my laptop », they'll colaborate to have
+**Timmy**'s approbations for the work. All team members are equal with accptance
+criteria.
 
 ## Little Break
 
@@ -90,54 +106,61 @@ Just take a moment to think about first two levels. If you follow this, you'll
 have a real team, and a real process to change an idea into code and then commit
 that code into the product.
 
-You have now the foundations, you can, and you will add more to your team to
-increase its productivity.
+Normally, following this two levels will create another unexpected behaviour,
+but a good one : A culture !
 
-But you can't make all of this happen in one day. Try to add item by item, week
-by week.
+Your team will developped their own private jokes, history and legend. They also
+have a mascott with **Timmy**.
 
-And the most important, get feedback from your team !
+
+Don't try to implement all of it in one day, it won't work. Let the team, as a
+person, integrate the whole thing. And most important, when adding a new rule or
+item to your team, get feedback, don't force them.
+
+
+You have now the foundations of the greatest team you ever had. You can pass to
+the level 2.
 
 ## Level 2 : Team automation
 
-Once again, try to focus on what's important for your team. If you try to
-automate anything because it'll save you time, it's not the good thing.
+Try now to focus on what's important for your team. If you try to automate
+anything because it'll save you time, it's not the good approach.
 
-Automation is the next level for you **neutral judge**.
+Automation is the next level for you **neutral judge**. It'll help your team to
+make less errors. **Timmy** is not the smartest of your team member, but it
+won't make mistake, remember he is not human.
 
-I suggest you another approach to automation, do you know this piece of software
-called Jenkins ? Try the same for your team, name your **neutral authority**,
-Jarvis, HAL, whatever, give it a name.
-
-Now, it has a name, the team will spontaneously give a personnality to your
-**neutral authority**, it will become the seed of a new culture, your team's
-culture. Where you can grow a lot of private joke.
-
-Let's call it **Timmy** for the rest of this article.
-
-**Timmy** will tell you if your tests pass, or not. He will reject or approved
-new pull request.
-
-**Timmy** can update your documentation alone or send email to your customers,
-just ask him.
+From now on, **Timmy** will tell you if your tests pass, or not. He will reject
+or approved new pull request. **Timmy** can update your documentation alone or
+send email to your customers, **just ask him**.
 
 
-Automation will save time to your team only once it is in place. But it's a new
-team member, treat him like that.
+This level is quite hard, cause for everything you want to automate, you need a
+human of your team to take time on this automation. And sometimes, managers
+won't agree to let you do that.
 
-Every team I saw putting a CI and impose it to a team have failed, every single
-time !
+Automation will save time to your team only once it is in place. It will be
+difficult to sell non-feature thing to your executives.
+
+
+If you reach this level with your team, you have a pretty good place to work. A
+team with its own culture, some neutral testing and building platforme. Clear
+README files to newcommers. Now is the time to make your team a success you can
+talk about to other company.
 
 ## Level 3 : CI/CD : Continuous Whatever
 
-Now you have a team, and it's a great team, with its own culture, private joke,
-identities and legend. And most of all, your team is almost autonomous.
-
-This last level will capitalize on that.
-
 The normal workflow of developement is the following
 
- Idea => Code => Tests => Integrate => Deploy => Feedback => Back to idea
+* Step 1 : Idea
+* Step 2 : Transform your idea into code
+* Step 3 : Let **Timmy** tests that code, if it's not working, back to step 2
+* Step 4 : Let **Timmy** integrate the code to the product (fallback to step 2)
+* Step 5 : Let **Timmy** deploy your code
+* Step 6 : Let **Timmy** get feedback from customers
+
+And as you can see, **Timmy** will do most of the work, human team member can
+concentrate on important human things: Getting idea and find a way to code them.
 
 You don't need a Jenkins or Drone or any other specific tools to make your own
 automation, let your team decide from their needs, let them give life to
@@ -145,17 +168,16 @@ automation, let your team decide from their needs, let them give life to
 
 The more **Timmy** is developped, the less your team as to work to get from
 **Idea** to **Customer feedback**. The team itself will reduce the development
-time. and that's the ultimate goal of every **Continuous integration**.
+time. And that's the ultimate goal of every **Continuous integration**.
 
 ## Conclusion
 
-Managing a team is not an easy skill, every one is different, every one has its
-own approach to problem solving. Getting every to work on an idea is really
-hard.
+Managing a team is not an easy task, every one is different, every one has its
+own approach to problem solving. Getting every one to work on an idea is
+**really** hard.
 
-But, as every other skill, you can learn to improve your team, accept each
-members with their differences, accept their way of thinking. It'll take some
-effort, it'll be hard.
+That's why it shouldn't be a single person job, give this to your team and look
+at them taking more and more responsabilies as weeks goes by.
 
 As your team is getting stronger, member will get closer and good thing will
 spontaneously shows up ! Trust your team ! They are good, they are working hard
