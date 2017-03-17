@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: true
 
 destination: ./_site
-plugins_dir:     ./_plugins
-layouts_dir:     ./_layouts
+plugins_dir: ./_plugins
+layouts_dir: ./_layouts
 exclude:     ['Makefile']
 keep_files:  ['.git', '.svn']

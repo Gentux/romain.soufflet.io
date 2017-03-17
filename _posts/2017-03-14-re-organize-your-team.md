@@ -1,27 +1,40 @@
-# How to move your team to the next level
-
-## Introduction
+---
+categories: management team work
+custom_css: posts.css
+date: 2017-03-14 18:42:32
+img: img/hd/mastering-git.jpeg
+layout: post
+title: Modernize your team !
+---
 
 We often hear about great organization with multiple teams, where everyone can
-talk to everyone and every piece of information is accessible. We can hear about
-*pair programing*, *code review*, *CI* or *CD*.
+talk to everyone else and every piece of information is accessible. We can hear
+about *pair programing*, *code review*, *CI* or *CD*.
 
 Yeah, all of this seems so great, but this is happening in **other** companies.
 What about my team ? How can I use all of this for our project ? And men, **what
 the hell is a CI** ?
 
-It won't be easy, it won't be cheap, but we can work this out, find solution,
-and transform your team to achive more.
+I was employed in a startup two years ago, where each task has to be delivered
+immediately, and every thing was urgent. How can you put all those great tools
+without any time allocated to it ?
+
+It won't be easy, it won't be cheap, but we can work this out, find solutions,
+and transform **ANY** team to achive more.
+
+For that, I'll take a little analogy, please think about your team as a role
+playing game character. This character will increase its power through different
+level, and we starting with a level 0, before our game can begin.
 
 ## Level 0 : Create your team
 
-This first level is more like creating your character before a role-playing
-game. Most team I met in my life are not teams, you need to create your team
-before anything else.
+This first level is more like creating your character, you know, before you
+start your Donjon & Dragon campaign, you have to create your character and
+assign some skill points. This is the same with your team.
 
-A team is not just several lads hanging arround and sharing a manager. Team
-define themselve by interractions, and it implies to create connections between
-people.
+Most team I met in my life weren't really ones, this is not just several lads
+hanging arround and sharing a manager. Team define themselve by interractions,
+and it implies to create connections between people.
 
 Those connections will create unexpected behaviour, team member won't work for a
 manager, but they will for the sake of the team.
@@ -33,13 +46,16 @@ exactly the goal behind each actions.
 Secondly, defines global objectives, do not assign task to a person, give your
 task to the whole team and let the team decide who will do the actual job.
 
-When you put that together, your people will start to work as a team.
+When you put that together, your people will start to work as a team, together,
+to solve global problems that makes sense.
 
-## Level 1 : Create a neutral judge
+## Level 1 : Train your neutral judge
 
 By default, humans evolved with an **individual mindset**. People in your team
 will try to get credit for themselves, they'll try to implement their idea even
 if they were proven wrong.
+
+:: NOTE :: Create a personality
 
 As a team member, you need to be vigilant and make sure teams rules are applied.
 
