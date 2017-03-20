@@ -2,7 +2,7 @@
 categories: management team work
 custom_css: posts.css
 date: 2017-03-14 18:42:32
-img: img/hd/modernize-your-team.jpeg
+img: img/hd/Team_Work.jpg
 layout: post
 title: Modernize your team !
 ---
@@ -76,7 +76,7 @@ Yes, but we can work this out, by giving it a personality. You can call it
 Jarvis like Iron Man, Skynet like Terminators or HAL if you want. In the reste
 of this article, we will call it **Timmy**.
 
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
+![TIMMY](/img/sd/timmy.jpg)
 
 **Timmy** won't be define as a single thing, your team know that because it's
 your team that took **Timmy** in place.
@@ -114,13 +114,11 @@ but a good one : A culture !
 Your team will developped their own private jokes, history and legend. They also
 have a mascott with **Timmy**.
 
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
+![timmy is the team](/img/hd/timmyGroup.jpg)
 
 Don't try to implement all of it in one day, it won't work. Let the team, as a
 person, integrate the whole thing. And most important, when adding a new rule or
 item to your team, get feedback, don't force them.
-
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
 
 You have now the foundations of the greatest team you ever had. You can pass to
 the level 2.
@@ -138,7 +136,7 @@ From now on, **Timmy** will tell you if your tests pass, or not. He will reject
 or approved new pull request. **Timmy** can update your documentation alone or
 send email to your customers, **just ask him**.
 
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
+![timmy provide help](/img/hd/robotHelp.gif)
 
 This level is quite hard, cause for everything you want to automate, you need a
 human of your team to take time on this automation. And sometimes, managers
@@ -146,8 +144,6 @@ won't agree to let you do that.
 
 Automation will save time to your team only once it is in place. It will be
 difficult to sell non-feature thing to your executives.
-
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
 
 If you reach this level with your team, you have a pretty good place to work. A
 team with its own culture, some neutral testing and building platforme. Clear
@@ -191,4 +187,4 @@ too !
 
 Thank you.
 
-![TIMMY](http://www.gizmodo.in/photo/47475817.cms)
+![Best team](/img/hd/a-team.gif)
