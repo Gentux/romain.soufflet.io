@@ -2,7 +2,7 @@
 categories: life firefoxos
 custom_css: posts.css
 date: 2014-05-02 10:25:54
-img: img/hd/firefoxOS.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/firefoxOS.jpg
 layout: post
 title: "Upgrade Geeksphone Peak to nightly build"
 ---

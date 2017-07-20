@@ -5,5 +5,5 @@ highlighter: true
 destination: ./_site
 plugins_dir: ./_plugins
 layouts_dir: ./_layouts
-exclude:     ['Makefile']
+exclude:     ['Makefile', 'README.md']
 keep_files:  ['.git', '.svn']

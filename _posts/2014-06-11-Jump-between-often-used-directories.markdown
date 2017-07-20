@@ -2,7 +2,7 @@
 categories: bash
 custom_css: posts.css
 date: 2014-06-11 17:36:21
-img: img/hd/worktools.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/worktools.jpg
 layout: post
 title: "Jump between often used directories"
 ---

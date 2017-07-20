@@ -2,7 +2,7 @@
 categories: services life
 custom_css: posts.css
 date: 2014-01-09 18:42:32
-img: img/hd/doityourself.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/doityourself.jpg
 layout: post
 title: "Gentux.IO opening"
 ---

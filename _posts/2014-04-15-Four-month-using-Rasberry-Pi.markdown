@@ -2,7 +2,7 @@
 categories: services life storage
 custom_css: posts.css
 date: 2014-04-15 16:30:32
-img: img/hd/Raspberry_Pi_boxed.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Raspberry_Pi_boxed.jpg
 layout: post
 title: "Four month using Rasberry Pi"
 ---

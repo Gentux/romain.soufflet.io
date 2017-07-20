@@ -2,7 +2,7 @@
 categories: management team work
 custom_css: posts.css
 date: 2017-03-14 18:42:32
-img: img/hd/Team_Work.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work.jpg
 layout: post
 title: Modernize your team !
 ---
@@ -76,7 +76,7 @@ Yes, but we can work this out, by giving it a personality. You can call it
 Jarvis like Iron Man, Skynet like Terminators or HAL if you want. In the reste
 of this article, we will call it **Timmy**.
 
-![TIMMY](/img/sd/timmy.jpg)
+![TIMMY](https://s3.eu-west-2.amazonaws.com/gentux/Images/timmy.jpg)
 
 **Timmy** won't be define as a single thing, your team know that because it's
 your team that took **Timmy** in place.
@@ -114,7 +114,7 @@ but a good one : A culture !
 Your team will developped their own private jokes, history and legend. They also
 have a mascott with **Timmy**.
 
-![timmy is the team](/img/hd/timmyGroup.jpg)
+![timmy is the team](https://s3.eu-west-2.amazonaws.com/gentux/Images/timmyGroup.jpg)
 
 Don't try to implement all of it in one day, it won't work. Let the team, as a
 person, integrate the whole thing. And most important, when adding a new rule or
@@ -136,7 +136,7 @@ From now on, **Timmy** will tell you if your tests pass, or not. He will reject
 or approved new pull request. **Timmy** can update your documentation alone or
 send email to your customers, **just ask him**.
 
-![timmy provide help](/img/hd/robotHelp.gif)
+![timmy provide help](https://s3.eu-west-2.amazonaws.com/gentux/Images/robotHelp.gif)
 
 This level is quite hard, cause for everything you want to automate, you need a
 human of your team to take time on this automation. And sometimes, managers
@@ -187,4 +187,4 @@ too !
 
 Thank you.
 
-![Best team](/img/hd/a-team.gif)
+![Best team](https://s3.eu-west-2.amazonaws.com/gentux/Images/a-team.gif)

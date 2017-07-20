@@ -2,7 +2,7 @@
 categories: python wsgi
 custom_css: posts.css
 date: 2014-04-28 17:12:02
-img: img/hd/languages.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/languages.jpg
 layout: post
 title: "Reject badly encoded request in Python WSGI applications"
 ---

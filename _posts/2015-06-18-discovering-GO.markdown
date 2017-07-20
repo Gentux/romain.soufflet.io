@@ -3,7 +3,7 @@ layout: post
 title: "Discovering GO"
 date: 2015-06-18 09:46:42
 categories: language work
-img: img/hd/Golang.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Golang.jpg
 custom_css: posts.css
 ---
 

@@ -2,7 +2,7 @@
 categories: development
 custom_css: posts.css
 date: 2014-09-09 15:31:55
-img: img/hd/architectTools.jpeg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/architectTools.jpeg
 layout: post
 title: "Software development in 2014"
 ---
