@@ -2,7 +2,7 @@
 categories: services work mep
 custom_css: posts.css
 date: 2018-05-15 11:16:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/raspberrypi_network.jpg
+img: https://www.challenges.fr/assets/img/2018/02/07/cover-r4x3w1000-5a7a9b095f63c-063-915068780.jpg
 layout: post
 title: C'est quoi mon travail exactement ?
 ---
@@ -60,7 +60,7 @@ Pour se faire, l'entreprise devra développer plusieurs choses:
 L'architecture, c'est la partie du travail qui va nous permettre de dessiner le
 schéma suivant :
 
-À faire: inclure le schéma
+![Schémas architecture](https://s3.eu-west-2.amazonaws.com/gentux/Images/a-team.gif)
 
 Et on voit que pour cette toute petite application (qui ne peut que grossir), il
 nous faut déjà 7 machines, configurer les couches réseaux et prévoir tout un tas
@@ -98,7 +98,7 @@ manière similaire, il y a toujours de petites différences entre chaque.
 
 Toutes les machines sont les mêmes, mais pas tout à fait #SameButDifferent
 
-https://media.giphy.com/media/C6JQPEUsZUyVq/giphy.gif
+![Same But Different](https://media.giphy.com/media/C6JQPEUsZUyVq/giphy.gif)
 
 Et les conséquences sont désastreuses : mettre en production est un enfer dans
 ces conditions. Chaque machine doit avoir un traitement différent, la mise en
@@ -208,7 +208,7 @@ Pour cela, on a plusieurs outils qu'on peut utiliser pour essayer de s'en tirer.
 Tout d'abord, le chiffrement des données. C'est un sujet un peu technique, alors
 je vais laisser ce merveilleux article vous expliquer de quoi il s'agit :
 
-https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351
+[HTTPS with carrier pigeons](https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351)
 
 
 Ensuite, quelque chose de très important que peu d'entreprise mette en place,
