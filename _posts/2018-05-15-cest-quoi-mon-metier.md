@@ -1,10 +1,10 @@
 ---
-categories: services work mep
+categories: services work devops sre
 custom_css: posts.css
 date: 2018-05-15 11:16:32
-img: https://www.challenges.fr/assets/img/2018/02/07/cover-r4x3w1000-5a7a9b095f63c-063-915068780.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
 layout: post
-title: C'est quoi mon travail exactement ?
+title: Déploiements en production, SRE, DevOps et autre sujets obscurs
 ---
 
 On me demande souvent ce que je fais dans la vie. Et il m'est très difficile de
@@ -19,6 +19,9 @@ technique que j'ai d'expliquer de quoi il s'agit est la phrase suivante :
 Certes, mais c'est quoi une « production » ? Ce n'est pas une notion compliquée,
 mais c'est une notion qui reposent sur plein d'autres concepts et qui rendent
 son explication assez ardu.
+
+De plus, ça ne répond pas vraiment à la question, qu'est-ce que la mise en
+production inclut comme travail ?
 
 J'en ai aussi beaucoup parler aux développeurs que je rencontre et je me suis
 aperçu que peu de développeur s'intéressent à mon domaine d'expertise. Ce n'est
@@ -60,7 +63,7 @@ Pour se faire, l'entreprise devra développer plusieurs choses:
 L'architecture, c'est la partie du travail qui va nous permettre de dessiner le
 schéma suivant :
 
-![Schémas architecture](https://s3.eu-west-2.amazonaws.com/gentux/Images/a-team.gif)
+![Schémas architecture](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png)
 
 Et on voit que pour cette toute petite application (qui ne peut que grossir), il
 nous faut déjà 7 machines, configurer les couches réseaux et prévoir tout un tas
