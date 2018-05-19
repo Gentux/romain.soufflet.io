@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2017-03-14 18:42:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work.jpg
 layout: post
+excerpt_separator: <!--more-->
 title: Modernize your team !
 ---
 
@@ -14,6 +15,8 @@ about *pair programing*, *code review*, *CI* or *CD*.
 Yeah, all of this seems so great, but this is happening in **other** companies.
 What about my team ? How can I use all of this for our project ? And men, **what
 the hell is a CI** ?
+
+<!--more-->
 
 I was employed in a startup two years ago, where each task has to be delivered
 immediately, and every thing was urgent. How can you put all those great tools
