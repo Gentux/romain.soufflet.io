@@ -95,17 +95,17 @@ Se connecter aux machines pour les configurer à la main donne des configuration
 en flocons de neige (snowflakes en anglais). Parce que comme c'est fait à la
 main, même si on désire que toutes nos machines soient configurées de manière
 similaire, il y a toujours de petites différences entre chacune. Toutes les
-machines sont les mêmes, m is pas tout à fait #SameButDifferent
+machines sont les mêmes, mais pas tout à fait #SameButDifferent
 
 Les conséquences de cette pratique sont désastreuses : mettre en production est
 un enfer dans ces conditions. Chaque machine doit avoir un traitement différent,
-la mise en production peut donc prendre des jours et on est jam is certain du
+la mise en production peut donc prendre des jours et on est jamais certain du
 résultat.
 
 L'industrialisation est donc la deuxième partie de mon travail, et je dirais la
 plus importante. Il s'agit d'un processus finalement assez long, qui demande un
 investissement aussi bien en durée qu’en moyen. La plus-value n’étant pas
-immédiate et ce n'est donc malheureusement pas toujours la priorité des
+immédiate ce n'est donc malheureusement pas toujours la priorité des
 entreprises.
 
 En industrialisant, on automatise la création des images. Parce que oui, se
@@ -135,11 +135,14 @@ environnement de qualification. Cet environnement permettra aux clients de
 valider la fonctionnalité avant de valider la mise en production.
 
 L'idée principale derrière l'industrialisation, c'est donc de créer une chaîne
-de production qui permet à l'entreprise de: Livrer plus rapidement ses clients
-Fiabiliser les livraisons Banaliser la livraison (plus fréquent, plus rapide)
-Pouvoir valider ou invalider plus rapidement les nouvelles fonctionnalités
+de production qui permet à l'entreprise de: 
 
-Même si à première vu, la mise en place de cette usine logicielle peut paraître
+* Livrer plus rapidement ses clients
+* Fiabiliser les livraisons
+* Banaliser la livraison (plus fréquent, plus rapide)
+* Pouvoir valider ou invalider plus rapidement les nouvelles fonctionnalités
+
+Même si, à première vu, la mise en place de cette usine logicielle peut paraître
 compliquée, la plus-value est indéniable. Je n'ai encore jamais vu d'entreprise
 regrettant d'avoir investi sur l'industrialisation de leur plate-forme.
 
