@@ -41,3 +41,8 @@ h2 {
 .container {
   max-width: 740px;
 }
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
