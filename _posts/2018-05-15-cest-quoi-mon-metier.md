@@ -5,7 +5,7 @@ date: 2018-05-15 11:16:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
 layout: post
 excerpt_separator: <!--more-->
-title: Déploiements en production, SRE, DevOps et autres sujets obcurs
+title: Déploiements en production, SRE, DevOps et autres sujets obscurs
 ---
 
 On me demande souvent ce que je fais dans la vie et je n’arrive pas à répondre.
@@ -221,8 +221,8 @@ Commençons par le chiffrement. Il s’agit de transformer un message afin que
 personne ne puisse le lire et votre application sera alors le seul élément à
 pouvoir le déchiffrer. Ainsi, si un attaquant arrive à intercepter des données,
 il n’aura pas la capacité de les lire et donc aucun moyen de les exploiter. Si
-ce sujet vous intéresse, je vous conseille cet article (en anglais) : HTTPS with
-carrier pigeons
+ce sujet vous intéresse, je vous conseille cet article (en anglais) : [HTTPS with
+carrier pigeons](https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351)
 
 Ensuite, ce qui est important et que peu d'entreprises mettent en place, c'est
 la procédure d'embauche et la procédure de départ. Lorsqu'un nouveau collègue
