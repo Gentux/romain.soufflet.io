@@ -5,6 +5,7 @@ date: 2018-05-15 11:16:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
 layout: post
 excerpt_separator: <!--more-->
+language: fr
 title: Déploiements en production, SRE, DevOps et autres sujets obscurs
 ---
 
@@ -53,21 +54,22 @@ exemple, l’application servira à trouver des restaurants.
 
 Pour ce faire, l'entreprise devra développer plusieurs éléments:
 
-* Une base de donnée pour y stocker les adresses et les spécificités de chaques
+* Une base de donnée pour y stocker les adresses et les spécificités de chaque
   restaurants
 * Un backend, le cœur de l'application qui permettra de faire des recherches,
-  d'enregistrer de nouveaux restaurant, etc...
+  d'enregistrer de nouveaux restaurants, etc...
 * Un frontend, la partie visible pour l’utilisateur final, souvent dans le
   navigateur web ou une application mobile.
 
-L'architecture, c'est la partie du travail qui va nous permettre de dessiner le
+L'architecture, c'est la partie du travail qui va nous permettant de dessiner le
 schéma suivant :
 
 ![Schéma d'une application 3
 tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png)
 
-On voit que pour cette petite application, il nous faut déjà 7 machines,
-configurer les couches réseaux et prévoir la redondance des services.
+Comme on peut le voir sur le schéma ci-dessus, nous avons déjà besoin de 7
+machines, puis de configurer les couches réseaux et de prévoir la redondance des
+services.
 
 Cela reste un exemple très simple, il est assez fréquent de se retrouver face à
 une vingtaine de services répartis sur 30 à 40 machines.
@@ -77,13 +79,13 @@ complexité dès la première ligne de code. Il faut faire des arbitrages et sav
 ce qui est important pour que le service soit correctement rendu à l'utilisateur
 final.
 
-Rien qu’en regardant ce schéma, j'ai d’ore et déjà une douzaine d'idées pour
-compléter l’architecture. C'est donc la première partie de mon travail,
+Rien qu’en regardant ce schéma, j'ai d’ores et déjà une douzaine d'idées pour
+compléter l’architecture. Voilà donc la première partie de mon travail, à savoir
 réfléchir au système dans sa globalité pour voir les forces et les faiblesses de
 la solution.  L'industrialisation (Le passage en production)
 
 Sauf que voilà, une fois qu'on a notre schéma d'architecture, qu'on a 30
-machines qui font tourner 20 services différents... comment est-ce qu'on
+machines qui font tourner 20 services différents... Comment est-ce qu'on
 maintient tout ça ? Comment le fait-on évoluer ?
 
 D’un point de vue technique, il suffirait de se connecter aux machines pour les
@@ -92,17 +94,17 @@ très souvent dans les entreprises et malheureusement, ce n'est pas la bonne
 solution.
 
 Se connecter aux machines pour les configurer à la main donne des configurations
-en flocons de neige (snowflakes en anglais). Parce que comme c'est fait à la
-main, même si on désire que toutes nos machines soient configurées de manière
+en flocons de neige (snowflakes en anglais). Puisque cela est fait à la main,
+même si on désire que toutes nos machines soient configurées de manière
 similaire, il y a toujours de petites différences entre chacune. Toutes les
 machines sont les mêmes, mais pas tout à fait #SameButDifferent
 
 Les conséquences de cette pratique sont désastreuses : mettre en production est
-un enfer dans ces conditions. Chaque machine doit avoir un traitement différent,
-la mise en production peut donc prendre des jours et on est jamais certain du
-résultat.
+un enfer dans ces conditions. Chaque machine devant avoir un traitement
+différent, la mise en production peut donc prendre des jours et on est jamais
+certain du résultat.
 
-L'industrialisation est donc la deuxième partie de mon travail, et je dirais la
+L'industrialisation est donc la seconde partie de mon travail, et je dirais la
 plus importante. Il s'agit d'un processus finalement assez long, qui demande un
 investissement aussi bien en durée qu’en moyen. La plus-value n’étant pas
 immédiate ce n'est donc malheureusement pas toujours la priorité des
@@ -110,43 +112,43 @@ entreprises.
 
 En industrialisant, on automatise la création des images. Parce que oui, se
 connecter aux machines pour les mettre à jour comportent des risques, donc on
-créer plutôt des images.
+crée plutôt des images.
 
 Une image dans ce contexte n’a rien à voir avec les images que l’on trouve sur
-internet aux formats png ou jpeg. Il s’agit d’une « photo instantané » d’une
-machine déjà configuré et prête à être employée. Ainsi, lorsque l’on déploie une
-machine grâce à notre image, elle est prête à délivrer le service que l’on
-attend d’elle sans qu’il y ai besoin d’opération manuelle.
+internet aux formats png ou jpeg. Il s’agit d’une « photo instantanée » d’une
+machine déjà configurée et prête à être employée. Ainsi, lorsque l’on déploie
+une machine grâce à notre image, elle est prête à délivrer le service que l’on
+attend d’elle sans qu’il y ai besoin d’opération manuelle à effectuer.
 
 Ensuite, on automatise le remplacement des anciennes images par de nouvelles,
-afin d'assurer un passage en production en douceur, avec le moins d'interruption
-de service possible.
+afin d'assurer un passage en production en douceur, tout en réduisant le risque
+d'éventuelles interruptions.
 
 Et cela va surtout permettre d'appuyer sur le bouton « mise en prod » l'esprit
 tranquille. Ceci grâce aux tests de chacunes de nos images. C’est ici que notre
 pipeline de production est important.
 
-Le pipeline est la notion de chaîne de production, un peu à l’image des chaîne
+Le pipeline est la notion de chaîne de production, un peu à l’image des chaînes
 d’assemblage des automobiles. Notre chaîne commence avec le travail des
-développeurs qui vont proposer de nouvelles fonctionnalités. Ensuite, cette
+développeurs qui proposeront de nouvelles fonctionnalités. Ensuite, cette
 fonctionnalité sera testée et approuvée par d’autres développeurs. Puis elle
 passera par l’étape de création de notre image, qui servira à créer un
 environnement de qualification. Cet environnement permettra aux clients de
 valider la fonctionnalité avant de valider la mise en production.
 
-L'idée principale derrière l'industrialisation, c'est donc de créer une chaîne
-de production qui permet à l'entreprise de: 
+L'idée principale derrière l'industrialisation est donc de créer une chaîne
+de production qui permet à l'entreprise de:
 
 * Livrer plus rapidement ses clients
 * Fiabiliser les livraisons
 * Banaliser la livraison (plus fréquent, plus rapide)
 * Pouvoir valider ou invalider plus rapidement les nouvelles fonctionnalités
 
-Même si, à première vu, la mise en place de cette usine logicielle peut paraître
+Même si, à première vue, la mise en place de cette usine logicielle peut paraître
 compliquée, la plus-value est indéniable. Je n'ai encore jamais vu d'entreprise
 regrettant d'avoir investi sur l'industrialisation de leur plate-forme.
 
-Par contre j’ai pu voir que dans de nombreux cas, l'entreprise n'est pas au
+À l'inverse, dans de nombreux cas, j’ai pu voir que l'entreprise n'est pas au
 courant qu'elle pourrait investir dans un projet d'industrialisation de ses
 mises en productions.
 
@@ -154,18 +156,21 @@ mises en productions.
 
 Mettre en production c'est bien beau mais la vie ne s'arrête pas là. Malgré
 plusieurs années à m'occuper de différentes plateformes logiciel, je suis
-toujours stupéfait par la quantité de choses qui peuvent mal tourner, même en
+toujours stupéfait par la quantité de choses pouvant mal tourner, même en
 production.
 
 Or une fois l'application en production, il faut maintenir celle-ci en état de
-marche. Une production à l'arrêt c'est une perte sèche pour l'entreprise.
+marche. Une production à l'arrêt est une perte sèche pour l'entreprise.
 L’application ne peut rapporter de l’argent à l’entreprise que si elle est
 disponible pour ses utilisateurs finaux, ses clients. Il faut donc distinguer
-plusieurs états possibles: Les conditions opérationnelles, optimales, les
-clients n’ont aucune difficultée à se connecter.  Les conditions dégradées, on
-constate certaines lenteurs, quelques déconnexions. Cet état est très frustrant
-pour l’utilisateur.  L’arrêt, la production n’est plus accessible, plus aucun
-client ne peut se connecter.
+plusieurs états possibles:
+
+* Les conditions opérationnelles, optimales, les clients n’ont aucune
+  difficultée à se connecter.
+* Les conditions dégradées, on constate certaines lenteurs, quelques
+  déconnexions. Cet état est très frustrant pour l’utilisateur.
+* L’arrêt, la production n’est plus accessible, plus aucun client ne peut se
+  connecter.
 
 On parle donc de Maintien en Conditions Opérationnelles (MCO). C'est un joli
 nom, mais incorrect selon moi. En réalité, on ne peut pas vraiment garantir de
@@ -175,9 +180,9 @@ Cependant, ce qu'on peut faire c'est récupérer un état optimal dès lors qu'u
 alerte est levée. Lorsqu'une machine s’arrête, si l'architecture est solide, le
 service restera disponible mais en mode dégradé.
 
-Le mode dégradé c'est mieux que de ne plus avoir de service. Le but, c'est de
-retrouver un état complètement opérationnel afin d’assurer une bonne expérience
-pour les utilisateurs.
+Le mode dégradé c'est toujours mieux que de ne plus avoir de service du tout. Le
+but, c'est de retrouver un état complètement opérationnel afin d’assurer une
+bonne expérience pour les utilisateurs.
 
 La bonne nouvelle c'est qu'en industrialisant la mise en production, remettre de
 nouvelles machines pour remplacer celles qui sont cassées c'est facile et
@@ -190,13 +195,15 @@ mettre en place des outils pour recevoir les alertes si quelque chose tourne mal
 sur notre système.
 
 Mais en y réfléchissant, on peut aller plus loin que juste recevoir une alerte
-et attendre qu’un technicien intervienne, on peut automatiser la réparation: On
-écarte la machine «malade» (on la garde pour comprendre l'erreur) On redémarre
-une nouvelle machine neuve qui fonctionne On relance les vérifications
+et attendre qu’un technicien intervienne, on peut automatiser la réparation:
+
+* On écarte la machine «malade» (on la garde pour comprendre l'erreur)
+* On redémarre une nouvelle machine neuve qui fonctionne
+* On relance les vérifications (**healthchecks** en anglais)
 
 Les vérifications sont l’équivalent des tests unitaires en développement. Ce
 sont de petits programmes qui peuvent nous assurer que le service est bel et
-bien en place.
+bien en place et en bonne santé.
 
 C'est assez difficile d'automatiser cette partie mais si l'industrialisation
 s'est bien passée, il n'y a pas de raison pour que la partie MCO ne se passe pas
@@ -220,7 +227,7 @@ et imperméabilisées.
 Commençons par le chiffrement. Il s’agit de transformer un message afin que
 personne ne puisse le lire et votre application sera alors le seul élément à
 pouvoir le déchiffrer. Ainsi, si un attaquant arrive à intercepter des données,
-il n’aura pas la capacité de les lire et donc aucun moyen de les exploiter. Si
+il n’aura pas la capacité de les lire et donc aucun moyens de les exploiter. Si
 ce sujet vous intéresse, je vous conseille cet article (en anglais) : [HTTPS with
 carrier pigeons](https://medium.freecodecamp.org/https-explained-with-carrier-pigeons-7029d2193351)
 
@@ -273,9 +280,12 @@ Il n'y a pas grand chose à faire quand les infrastructures elle-même cassent
 sous vos pieds, aussi solide que soit votre installation, vous en serez victime.
 
 Mais plutôt que de baisser les bras et prier pour que cela ne se produise pas ou
-se produise peu, nous pouvons nous y préparer : Imaginer les catastrophes
-potentielles Évaluer le risques de chacune Évaluer l'impact potentiel sur votre
-production Se préparer à l'impact
+se produise peu, nous pouvons nous y préparer :
+
+* Imaginer les catastrophes potentielles
+* Évaluer le risques de chacune
+* Évaluer l'impact potentiel sur votre production
+* Se préparer à l'impact
 
 Ces événements douloureux sont théoriquement rares mais croyez-moi, ça arrive,
 et plus souvent qu'on ne le pense. S'y préparer c'est un peu comme suivre une
