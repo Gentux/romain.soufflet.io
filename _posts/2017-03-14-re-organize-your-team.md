@@ -5,6 +5,7 @@ date: 2017-03-14 18:42:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work.jpg
 layout: post
 excerpt_separator: <!--more-->
+language: en
 title: Modernize your team !
 ---
 

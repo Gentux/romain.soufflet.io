@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2014-12-15 15:46:42
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/doityourself.jpg
 layout: post
+language: en
 title: "Soufflet.IO services"
 ---
 

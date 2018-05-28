@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2016-11-09 18:42:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mastering-git.jpeg
 layout: post
+language: en
 title: "Mastering GIT by reducing the pain"
 ---
 

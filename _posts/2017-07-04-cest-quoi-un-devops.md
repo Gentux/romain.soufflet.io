@@ -5,6 +5,7 @@ date: 2017-07-04 11:16:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/miniatureCestQuoiUnDevops.jpg
 layout: post
 excerpt_separator: <!--more-->
+language: fr
 title: Sérieusement, c'est quoi un DevOps ?
 ---
 
