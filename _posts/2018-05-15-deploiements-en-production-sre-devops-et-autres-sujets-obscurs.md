@@ -54,7 +54,7 @@ exemple, l’application servira à trouver des restaurants.
 
 Pour ce faire, l'entreprise devra développer plusieurs éléments:
 
-* Une base de donnée pour y stocker les adresses et les spécificités de chaque
+* Une base de données pour y stocker les adresses et les spécificités de chaque
   restaurants
 * Un backend, le cœur de l'application qui permettra de faire des recherches,
   d'enregistrer de nouveaux restaurants, etc...

@@ -21,6 +21,8 @@ Certainly, but what is a "production"? It is not a complicated notion but it is
 a notion that is based on many other concepts that make its explanation quite
 difficult.
 
+<!--more-->
+
 Moreover, we do not really answer the question, to know what "putting into
 production" really includes.
 

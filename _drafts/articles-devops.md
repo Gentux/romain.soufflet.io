@@ -3,19 +3,63 @@
 Dans le précédent article (lien ici) je parle de la production. Mais qu'est-ce
 que ça a avoir avec les termes *DevOps* et *SRE* ? Je ne prétendrai pas de
 pouvoir donner des définition claire et universelle pour ces mots mais je pense
-pouvoir éclaircir les concepts.
+pouvoir éclaircir les concepts sous-jacents.
+
+Traditionnelement, dans l'environnement informatique, nous rencontrons le schéma
+suivant:
+
+* Une ou plusieurs équipe de développement
+* Une équipe d'administrateur systèmes
+
+Et cette organisation entraîne généralement des problèmes de communications.
+
+Les développeurs veulent plus de contrôle sur l'environnement qui fait tourner
+leur applications et tiennent souvent les administrateurs pour responsable de ce
+manque de liberté.
+
+Les administrateurs ont pour missions de garder la productions stable, garantir
+la sécurité du système. Mais ils sont surtout impliqué dans les astreintes et se
+réveiller à 2 heures du matin pour un disque dur plein, ça ne fait pas plaisir
 
 
 ## La culture DevOps
 
-* L'idée => Le développement => La revue de code => Les tests
-* Savoir comment l'application est déployer
-* C'est un domaine "Ops" historiquement
-* Mais ce sont des compétences de développement
+La culture DevOps se présente en premier lieu sur le plan organisationnel. Il
+s'agit d'abolir les barrière entre les équipes de développement et les équipes
+d'administrateurs.
 
-Une définition qu'elle est belle « DevOps, c'est quand tout le monde est "Ops" »
+En s'affranchissant de ces barrière, on permet aux développeur et administrateur
+de communiquer. On obtient ainsi des développeur qui prennent conscience de ce
+qu'est la production et comment on dois s'en occuper, mais aussi des
+administrateurs capable de programmer et automatiser leurs maintenances.
 
-On parle donc surtout de culture **DevOps** et d'amélioration continue
+La collaboration va aussi permettre de redéfinir comment l'application se
+construit. On passe d'un model ou les developpeur propose un package avec un
+documentation d'installation, a une collaboration à tout les niveau de
+conception.
+
+Les processus de livraison qui en découle ressemblent généralement à celui là:
+
+* L'idée ou le besoin émis par le client avec la collaboration de profils
+  techniques
+* Le développement de cette fonctionnalité
+* La revue de code et les tests automatisée
+* Le tests fonctionnel, par le client directement
+* Le déploiements en production
+
+On parle donc de culture **DevOps** et **d'amélioration continue**. En effet,
+lorsque vos équipes techniques se réunissent autour d'une table et prennent le
+temps de regarder leurs propres manières de travailler, ils identifieront les
+passages douloureux qui ont besoin d'être redéfinit.
+
+C'est un éléments central dans l'implémentation de la culture **DevOps**, tout
+le monde est **DevOps** et tout le monde travail dans l'intérêt de l'équipe.
+
+## L'échec de la culture DevOps
+
+* De l'idée à la production
+* Une stabilité accrue
+* Au détriment de la souplesse
 
 ## SRE: Site Reliability Engineer
 
@@ -54,12 +98,6 @@ sont purement "Ops", mais nous avons besoin de la développer.
 
 Beaucoup d'entreprise se retrouve avec des équipes SRE, isoler des équipes de
 développement.
-
-## L'échec de la culture DevOps et des équipes SRE
-
-* De l'idée à la production
-* Une stabilité accrue
-* Au détriment de la souplesse
 
 ## Être créatifs
 
