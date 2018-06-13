@@ -196,29 +196,67 @@ réalisable que 100%.
 Troisièmement, nous allons découper les évolutions pour toujours avoir de petits
 incréments sur le produit en production. On se repose ici sur la notions
 d'industrialisation que je décris dans [mon précédent
-article](https://romain.soufflet.io). Grâce à l'industrialisation, mettre ne
-production est simple et rapide, plus la mise à jour est grande, plus elle
-comporte de risque de casser un éléments. Heureusement, nous savons que notre
-version N fonctionne correctement. Nous pouvons donc déployer notre version N+1,
-voir si tout fonctionne, et re-déployer la version N si ça ne fonctionne pas
-comme on le souhaite.
+article](https://romain.soufflet.io).
+
+Grâce à l'industrialisation, mettre ne production est simple et rapide, plus la
+mise à jour est grande, plus elle comporte de risque de casser un éléments.
+
+Heureusement, nous savons que notre version actuel (appelé **N**) fonctionne
+correctement. Nous pouvons donc déployer notre version suivante (appelée
+**N+1**), voir si tout fonctionne, et re-déployer la version **N** si ça ne
+fonctionne pas comme on le souhaite.
+
+Nous avons parfois même un model inverse où une version **N+1** ne fonctionne
+pas et lorsque l'on consulte les développeurs de l'application pour en discuter,
+la bonne solution qui emmerge est de déployer tout de suite la version **N+2**.
+
+Augmenter le nombre et la fréquence des mises à jour devient dés lors un gage de
+stabilité. Et ceci ne serait pas possible sans la marge de manœuvre négocié en
+amont (cf: Accepter les erreurs).
 
 ### Automatisation
 
-* Ne pas automatiser pour automatiser
-* N'automatiser que ce qui est utile de l'être
-* Chercher où ce trouve la valeur, automatiser les tâches sans valeurs
+Un aspect des plus important est l'automatisation. La plupart des équipes SRE
+cultive une vision utopiste de leur plateforme. Une vision dans laquel ils
+n'auraient juste plus de travail et pourraient rentrer chez eux alors que la
+production fonctionne parfaitement.
+
+Pour atteindre ce but, nous avons recours à l'automatisation. Cela veut
+simplement dire que nous allons écrire un programme pour faire notre travail à
+notre place. Cela parait simple dis comme cela.
+
+L'inconvénient majeure de l'automatisation, c'est que écrire du code implique
+immédiatement la création de bogue, de comportements innatendu. Mais cela
+implique aussi qu'il faut maintenir ces programmes et les faire évoluer avec
+l'entreprise.
+
+Nous devons donc être prudent sur cette partie, et bien réflechir avant de se
+lancer dnas un chantier d'automatisation. Ce point créer parfois plus de
+problème qu'il n'en résout.
+
+Alors que d'un autres côté, les avantages sont indéniables:
+
+* Gain de temps
+* Fiabilités des scripts, ils ne font pas d'erreurs contrairements aux humains
+* Plateforme neutres
+* Action plus rapide
 
 ### Les indicateurs
 
-Et finalement, les metriques
+Et finalement, parlons de la mise en place des métriques. Tout comme pour
+l'automatisation, il faut rester vigilant à ne pas se laisser entrainer par une
+campagne de recolte de métrique qui pourrait être innutile. C'est un piège dans
+lequel on tombe souvent et qui nous plonge dans une trop grandes quantité de
+données que nous ne somme pas capable d'exploiter plus tard.
 
-* On ne parle pas des metriques en production
-* Mesurer tout ce que vous pouvez
-* Vos performances, vos déploiements, le temps de remise en service... etc...
+Restons donc pragmatique et définissons ce qu'est une bonne métrique.
 
+* La métrique doit être utile
+* On doit connaitre "la norme"
+* On doit pouvoir prendre des actions dans le cas où la metrique change
+* Ne pas avoir de metrique "c'est rouge, mais normal"
 
-### À quoi ressemble donc une entreprise avec du **SRE**
+## À quoi ressemble donc une entreprise avec du **SRE**
 
 * Des équipes créativent et autonomes
 * Tester sur des environnements créer à la volée
