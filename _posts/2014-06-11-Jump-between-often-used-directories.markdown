@@ -5,6 +5,7 @@ date: 2014-06-11 17:36:21
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/worktools.jpg
 language: en
 layout: post
+public: yes
 title: "Jump between often used directories"
 ---
 

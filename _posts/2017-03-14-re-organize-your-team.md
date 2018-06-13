@@ -6,6 +6,7 @@ img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work.jpg
 layout: post
 excerpt_separator: <!--more-->
 language: en
+public: yes
 title: Modernize your team !
 ---
 

@@ -5,6 +5,7 @@ date: 2014-01-19 18:42:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/raspberrypi_network.jpg
 layout: post
 language: en
+public: yes
 title: "Make a NAS with Rasberry Pi"
 ---
 

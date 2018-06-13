@@ -5,6 +5,7 @@ date: 2014-12-15 15:46:42
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/doityourself.jpg
 layout: post
 language: en
+public: no
 title: "Soufflet.IO services"
 ---
 

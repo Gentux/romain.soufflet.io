@@ -6,6 +6,7 @@ img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
 layout: post
 excerpt_separator: <!--more-->
 language: fr
+public: yes
 title: Déploiements en production, SRE, DevOps et autres sujets obscurs
 ---
 

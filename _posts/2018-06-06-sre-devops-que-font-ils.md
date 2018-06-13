@@ -6,6 +6,7 @@ img: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fire_fighters_pra
 layout: post
 excerpt_separator: <!--more-->
 language: fr
+public: yes
 title: "Devops et SRE, De quoi s'agit-il ?"
 ---
 

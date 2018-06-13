@@ -5,6 +5,7 @@ date: 2014-04-15 16:30:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Raspberry_Pi_boxed.jpg
 layout: post
 language: en
+public: yes
 title: "Four month using Rasberry Pi"
 ---
 

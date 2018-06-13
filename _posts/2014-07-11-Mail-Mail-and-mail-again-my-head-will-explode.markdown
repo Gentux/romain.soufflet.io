@@ -6,6 +6,7 @@ description: How should we use our mails
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mails.JPG
 layout: post
 language: en
+public: yes
 title: "The way we're reading mails is wrong ! Let's go fix it"
 ---
 

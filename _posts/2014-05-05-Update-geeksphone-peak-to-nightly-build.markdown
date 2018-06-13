@@ -5,6 +5,7 @@ date: 2014-05-02 10:25:54
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/firefoxOS.jpg
 layout: post
 language: en
+public: yes
 title: "Upgrade Geeksphone Peak to nightly build"
 ---
 

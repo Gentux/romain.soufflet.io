@@ -6,6 +6,7 @@ img: https://s3.eu-west-2.amazonaws.com/gentux/Images/moderniserLOrganisationDeS
 layout: post
 excerpt_separator: <!--more-->
 language: fr
+public: yes
 title: Comment moderniser l’organisation de votre équipe de développement
 ---
 
