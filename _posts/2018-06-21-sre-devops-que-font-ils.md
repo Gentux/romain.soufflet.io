@@ -234,32 +234,95 @@ Nous devons donc être prudent sur cette partie, et bien réflechir avant de se
 lancer dnas un chantier d'automatisation. Ce point créer parfois plus de
 problème qu'il n'en résout.
 
-Alors que d'un autres côté, les avantages sont indéniables:
+Alors que d'un autres côté, les avantages sont indéniables, le gain de temps
+à long terme est indéniable et nous gagnons aussi beaucoup en fiabilité sur les
+tâches automatisée. Les différentes action sont aussi plus rapide car nous
+n'hésitons plus avant de lancer un script : Cela coûte du temps machine, peu
+cher, contrairement au temps humain.
 
-* Gain de temps
-* Fiabilités des scripts, ils ne font pas d'erreurs contrairements aux humains
-* Plateforme neutres
-* Action plus rapide
+L'automatisation nous apporte aussi une plateforme neutre, indépendante des
+machines sur lesquels les développeur travaillent. On peut ainsi être sûr et
+certains que le programme fonctionne correctement quelque soit la machine qui
+l'éxecutera. Et si on pousse ce raisonnement plus loin, on fera en sorte de
+créer nos environnements de tests automatisée au plus proche de ce que sera
+l'environnement de production final. On évite ainsi au maximum les erreurs qui
+surviennent lorsque l'ont change des éléments entre l'environnement de
+développement et l'environnement de production.
 
 ### Les indicateurs
 
 Et finalement, parlons de la mise en place des métriques. Tout comme pour
 l'automatisation, il faut rester vigilant à ne pas se laisser entrainer par une
-campagne de recolte de métrique qui pourrait être innutile. C'est un piège dans
-lequel on tombe souvent et qui nous plonge dans une trop grandes quantité de
-données que nous ne somme pas capable d'exploiter plus tard.
+campagne de recolte de métrique qui pourrait être innutile.
 
-Restons donc pragmatique et définissons ce qu'est une bonne métrique.
+Pour qu'un métrique soit utile, il faut être en mesure de la comprendre et de
+mener des actions face à elle. Ainsi, si votre mesure concerne la moyenne des
+tailles de chaussures dans votre équipe, vous pourrez comprendre la mesure, mais
+vous ne serez pas en mesure de prendre des décisions. Par contre, mesurer le
+nombre d'utilisateurs par minutes sur la production peut vous permettre
+de mener les actions qui permettront de tenir la charge.
 
-* La métrique doit être utile
-* On doit connaitre "la norme"
-* On doit pouvoir prendre des actions dans le cas où la metrique change
-* Ne pas avoir de metrique "c'est rouge, mais normal"
+Restons donc le plus pragmatique possible et posons nous toujours ces deux
+questions pour chacune des metriques que nous mettons en place:
 
-## À quoi ressemble donc une entreprise avec du **SRE**
+* Que signifie notre mesure ?
+* Quelles actions pouvons nous mettre en places lorsque la mesure varie ?
 
-* Des équipes créativent et autonomes
-* Tester sur des environnements créer à la volée
-* Ne pas avoir peur de faire des erreurs peut être source d'inspiration
+Il faut aussi garder à l'esprit que nous pouvons mettre toute sorte de mesure en
+place, ce n'est pas un domaine uniquement technique. Un autre exemple de mesure
+qui a pu m'être utile par le passé est le nombre de déploiement par semaine :
+lorsque l'indicateurs à commencé à baisser, nous avons identifié une difficulté
+croissante dans la création des nouvelles fonctionnalité, et nous avons donc pu
+acter qu'il nous fallait refaire un travail de fond sur notre base de code pour
+améliorer la situation.
 
-## Conclusion
+Vos métrique peuvent donc être de nature managériale, porter sur le
+développement des nouvelles fonctionnalité, sur le nombre de tickets ouvert ou
+fermer ou simplement sur la production qui tourne actuellement.
+
+Finissons ce sujets avec un dernier point d'attention. Imaginons que vous avez
+mesurer la satisfaction de vos équipes via un formulaire que chaque membre doit
+remplir à la fin de la semaine. Au bout de 3 semaines, votre indicateurs à
+légérement baissé et vous décidez d'offrir des croissants pour toute l'équipe.
+Deux semaines plus tard, le niveau rebaisse et vous achetez de nouveau des
+croissants. Il est fort probable que suite à cela, les formulaires soit toujours
+remplit négativement : vos équipes ont trouvé un moyen d'obtenir des croissants
+et vous ne savez plus du tout où en est le niveau de satisfaction.
+
+## Conclusion : À quoi ressemble donc une entreprise avec du **SRE**
+
+Je ne vais pas mentir, intégrer tout ces aspects dans la vie de votre entreprise
+n'est pas chose aisé. Mais rêvons un peu, et imaginons que c'est le cas, à quoi
+ressemble notre quotidien désormais ?
+
+Les développeurs, les profils **SRE** et les administrateurs travaillent mains
+dans la mains. Ça ne veut pas dire qu'ils sont toujours d'accord, bien au
+contraire, mais ils discutent autour de leur différences et contraintes et
+trouvent de meilleurs solutions.
+
+La créativités de nos équipes augmente, de nouvelles idées emergent et
+peuvent être testé, car les développeurs n'ont plus peur de demander plus de
+ressource sur les différents environnement de tests et même de production. Et
+dans le même temps, les administrateurs osent demander des ajustements
+particulier aux développeurs afin d'avoir une architecture plus stable et
+pérenne.
+
+Mais le point le plus important, c'est l'accéleration du cycle de valeur de
+votre entreprise. Passer de l'idée à la mise en production prend moins de temps
+et se trouve être plus fiable que jamais. On passe de l'idée à la conception,
+puis la réalisation, les tests, la validation et la mise en production en un
+temps reccord et en respectant chaque rôle dans la chaîne.
+
+Bien que tout ne soit jamais parfait, le cadre de travail obtenu de la sorte est
+très agréables à vivre et pourrait même avoir des effet bénéfique sur les aspect
+recrutement.
+
+## Prochainement
+
+Je prévois d'écrire prochainement un article sur les architectures immutables
+ainsi qu'un article sur la transitions d'une équipe « classique » sur un modéle
+plus proche de **SRE**.
+
+Cependant, l'écriture me prenant beaucoup de temps, je ne pourrais m'occuper que
+d'un article à la fois, n'hésitez pas à me dire ce que vous en pensez dans les
+commentaires, par mail, sur twitter ou linkedin :)
