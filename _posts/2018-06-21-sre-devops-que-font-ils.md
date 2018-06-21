@@ -1,7 +1,7 @@
 ---
 categories: work devops sre
 custom_css: posts.css
-date: 2018-05-30 13:04:45
+date: 2018-06-21 17:56:25
 img: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fire_fighters_practice_with_spraying_equipment%2C_March_1981.jpg/1200px-Fire_fighters_practice_with_spraying_equipment%2C_March_1981.jpg
 layout: post
 excerpt_separator: <!--more-->
