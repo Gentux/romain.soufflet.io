@@ -62,7 +62,7 @@ Pour ce faire, l'entreprise devra développer plusieurs éléments:
 * Un frontend, la partie visible pour l’utilisateur final, souvent dans le
   navigateur web ou une application mobile.
 
-L'architecture, c'est la partie du travail qui va nous permettant de dessiner le
+L'architecture, c'est la partie du travail nous permettant de dessiner le
 schéma suivant :
 
 ![Schéma d'une application 3
