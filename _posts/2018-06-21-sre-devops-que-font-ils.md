@@ -13,30 +13,30 @@ title: "Devops et SRE, De quoi s'agit-il ?"
 Dans le [précédent
 article](https://romain.soufflet.io/services/work/devops/sre/2018/05/15/deploiements-en-production-sre-devops-et-autres-sujets-obscurs.html)
 je parle de la production et de ce que cela implique de s'en occuper. Mais
-qu'est-ce que ça a avoir avec les termes **DevOps** et **SRE** ? Je ne prétend
+qu'est-ce que ça a avoir avec les termes **DevOps** et **SRE** ? Je ne prétends
 pas pouvoir donner une définition claire et universelle pour ces mots mais
 j'aimerais pouvoir démystifier ces concepts.
 
 <!--more-->
 
-Dans la pluparts des projets informatiques, nous avons une équipe de
+Dans la plupart des projets informatiques, nous avons une équipe de
 développeurs et une équipe d'administrateurs systèmes. Cette organisation est
-assez logique car on regroupe des unités fonctionnelles dans l'entreprise. Il en
-va de même pour l'équippe comptable, l'équipe commerciable et toutes les autres.
-Cependant cela engendre de nombreux problèmes de communications.
+assez logique, car on regroupe des unités fonctionnelles dans l'entreprise. Il
+en va de même pour l'équipe comptable, l'équipe commerciale et toutes les
+autres.  Cependant cela engendre de nombreux problèmes de communications.
 
-Les développeurs d'un côté sont ammenés à développer de nouvelles
-fonctionnalités, repercuter les changements demandé par les clients dans
-l'application qu'ils construisent et corriger les éventuels erreurs remonté par
-les utilisateurs. Leur missions est caractèrisé par les évolutions du code
+Les développeurs d'un côté sont amenés à développer de nouvelles
+fonctionnalités, répercuter les changements demandés par les clients dans
+l'application qu'ils construisent et corriger les éventuelles erreurs remontées
+par les utilisateurs. Leur mission est caractérisée par les évolutions du code
 source qu'ils écrivent, par le changement.
 
-Les administrateurs de leur côté sont en charges du maintiens en conditions
+Les administrateurs de leur côté sont en charges du maintien en conditions
 opérationnel. Chaque mise à jour met en danger l'intégrité des produits ou des
-services de l'entreprise, ainsi chaque changement est un risque. Leur missions
-se caractèrise donc par la stabilité.
+services de l'entreprise, ainsi chaque changement est un risque. Leur mission se
+caractérise donc par la stabilité.
 
-Par définition, ces deux rôles sont ammenés à être en conflit.
+Par définition, ces deux rôles sont amenés à être en conflit.
 
 Et c'est dans ce contexte que naissent les notions **Devops** et **SRE**. Je
 vais donc commencer par parler de ce qu'est **la culture DevOps**, puis des
@@ -45,51 +45,51 @@ travers que cela engendre. Ensuite je parlerai de **SRE**.
 ## La culture DevOps
 
 La culture DevOps se présente en premier lieu sur le plan organisationnel. Il
-s'agit d'abolir les barrière entre les équipes de développement et les équipes
+s'agit d'abolir les barrières entre les équipes de développement et les équipes
 d'administrateurs. Le but étant de réconcilier des missions ayant des objectifs
 différents: **Nous travaillons dans la même entreprise, pour les mêmes clients,
 nous devrions le faire ensemble**.
 
-En s'affranchissant de ces barrière, on permet aux développeurs et
+En s'affranchissant de ces barrières, on permet aux développeurs et
 administrateurs de communiquer et collaborer. On obtient ainsi des développeurs
 qui prennent conscience de ce qu'est la production et comment on s'en occupe,
 mais aussi des administrateurs capable d'automatiser leurs besoins en
 maintenances et les mécanismes de mises en production.
 
 La collaboration permet aussi de redéfinir comment l'application se construit.
-On passe d'un model en deux étapes ou les developpeurs proposent un paquet
+On passe d'un modèle en deux étapes ou les développeurs proposent un paquet
 livrable et des administrateurs qui l'installent tant bien que mal a une
-collaboration à tout les niveau de conception.
+collaboration à tous les niveaux de conception.
 
 En généralisant un peu, on arrive à un processus qui ressemble à ça:
 
 ..note : Coller l'image du cycle de développement ou le refaire
 
-Et pour chacune des étapes sur le schémas, les différents profils pourront
+Et pour chacune des étapes sur le schéma, les différents profils pourront
 s'entraider:
 
 * Définir les tâches suites aux idées ou besoins émis par le client
-* Développer / Executer cette tâche
+* Développer / Exécuter cette tâche
 * La revue de code et les tests automatisée, sur une infra le plus proche
   possible de que sera la plateforme de production
-* Le tests fonctionnel, par le client directement si possible, sur un
-  environnemenet clone de la production
-* Le déploiements en production, automatisée et le moins d'erreur possible
+* Les tests fonctionnels, par le client directement si possible, sur un
+  environnement clone de la production
+* Le déploiement en production, automatisée et le moins d'erreur possible
 
-On introduit de cette maniére la notions de **pipeline** de production. À
+On introduit de cette manière la notions de **pipeline** de production. À
 l'image des chaînes d'assemblage automobile. Parfois, on parle aussi **d'usine
 logicielle** pour désigner les chaînes tel que celles-ci.
 
 Puis on met en place **l'amélioration continue**. Les équipes techniques se
 réunissent autour d'une table et prennent le temps d'étudier leurs propres
 manières de travailler. Ils identifient les passages douloureux afin d'apporter
-les correction leur permettant d'augmenter leur vitesse et leur fiabilité.
+les corrections leur permettant d'augmenter leur vitesse et leur fiabilité.
 
-En appliquant cette methode régulièrement, on se laisse le temps de faire
-évoluer les use et coutume de l'entreprise progressivement, au rythmes des
+En appliquant cette méthode régulièrement, on se laisse le temps de faire
+évoluer les use et coutume de l'entreprise progressivement, au rythme des
 humains qui travaillent sur le projet.
 
-C'est un éléments central dans l'implémentation de la culture **DevOps**, tout
+C'est un élément central dans l'implémentation de la culture **DevOps**, tout
 le monde est **DevOps** et tout le monde travail dans l'intérêt de l'équipe. Il
 y a donc une très forte composante humaines dans l'équation.
 
@@ -102,7 +102,7 @@ conduit à déployer des solutions techniques. Certainement pas l'inverse.
 bonnes pratiques à la limite, mais pas d'une discipline en tant que tel. Ce
 n'est ni un rôle ni un ensemble d'outils.
 
-Et pourtant, de plus en plus d'offres d'emploies ou de missions porte le titre
+Et pourtant, de plus en plus d'offres d'emplois ou de missions porte le titre
 DevOps et n'ont aucune précisions sur l'équipe ou l'organisation actuel de
 l'entreprise. La pluparts de ces offres cherchent le profils en or qui pourra
 leur apporter cette culture DevOps et mettre en place leur usine logiciel.
