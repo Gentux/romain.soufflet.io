@@ -21,13 +21,15 @@ j'aimerais pouvoir démystifier ces concepts.
 
 Dans la pluparts des projets informatiques, nous avons une équipe de
 développeurs et une équipe d'administrateurs systèmes. Cette organisation est
-assez logique car on regroupe des unités fonctionnelles dans l'entreprise.
+assez logique car on regroupe des unités fonctionnelles dans l'entreprise. Il en
+va de même pour l'équippe comptable, l'équipe commerciable et toutes les autres.
 Cependant cela engendre de nombreux problèmes de communications.
 
 Les développeurs d'un côté sont ammenés à développer de nouvelles
 fonctionnalités, repercuter les changements demandé par les clients dans
-l'application qu'ils construisent. Leur missions est caractèrisé par le
-changement.
+l'application qu'ils construisent et corriger les éventuels erreurs remonté par
+les utilisateurs. Leur missions est caractèrisé par les évolutions du code
+source qu'ils écrivent, par le changement.
 
 Les administrateurs de leur côté sont en charges du maintiens en conditions
 opérationnel. Chaque mise à jour met en danger l'intégrité des produits ou des
@@ -45,7 +47,7 @@ travers que cela engendre. Ensuite je parlerai de **SRE**.
 La culture DevOps se présente en premier lieu sur le plan organisationnel. Il
 s'agit d'abolir les barrière entre les équipes de développement et les équipes
 d'administrateurs. Le but étant de réconcilier des missions ayant des objectifs
-différents. **Nous travaillons dans la même entreprise, pour les mêmes clients,
+différents: **Nous travaillons dans la même entreprise, pour les mêmes clients,
 nous devrions le faire ensemble**.
 
 En s'affranchissant de ces barrière, on permet aux développeurs et
@@ -55,25 +57,33 @@ mais aussi des administrateurs capable d'automatiser leurs besoins en
 maintenances et les mécanismes de mises en production.
 
 La collaboration permet aussi de redéfinir comment l'application se construit.
-On passe d'un model ou les developpeur propose un paquet livrable avec une
-documentation d'installation, a une collaboration à tout les niveau de
-conception.
+On passe d'un model en deux étapes ou les developpeurs proposent un paquet
+livrable et des administrateurs qui l'installent tant bien que mal a une
+collaboration à tout les niveau de conception.
 
-Les processus de livraisons qui en découlent ressemblent généralement à
-celui-ci:
+En généralisant un peu, on arrive à un processus qui ressemble à ça:
 
-* L'idée ou le besoin émis par le client avec la collaboration de profils
-  techniques
-* Le développement de la fonctionnalité
-* La revue de code et les tests automatisée
-* Le tests fonctionnel, par le client directement si possible
-* Le déploiements en production
+..note : Coller l'image du cycle de développement ou le refaire
 
-On parle ici de culture **DevOps** ou de mouvement **DevOps** et on met en place
-**l'amélioration continue**. En effet, vos équipes techniques se réunissent
-autour d'une table et prennent le temps d'étudier leurs propres manières de
-travailler. Ils identifient les passages douloureux afin d'apporter les
-correction leur permettant d'augmenter leur vitesse et leur fiabilité.
+Et pour chacune des étapes sur le schémas, les différents profils pourront
+s'entraider:
+
+* Définir les tâches suites aux idées ou besoins émis par le client
+* Développer / Executer cette tâche
+* La revue de code et les tests automatisée, sur une infra le plus proche
+  possible de que sera la plateforme de production
+* Le tests fonctionnel, par le client directement si possible, sur un
+  environnemenet clone de la production
+* Le déploiements en production, automatisée et le moins d'erreur possible
+
+On introduit de cette maniére la notions de **pipeline** de production. À
+l'image des chaînes d'assemblage automobile. Parfois, on parle aussi **d'usine
+logicielle** pour désigner les chaînes tel que celles-ci.
+
+Puis on met en place **l'amélioration continue**. Les équipes techniques se
+réunissent autour d'une table et prennent le temps d'étudier leurs propres
+manières de travailler. Ils identifient les passages douloureux afin d'apporter
+les correction leur permettant d'augmenter leur vitesse et leur fiabilité.
 
 En appliquant cette methode régulièrement, on se laisse le temps de faire
 évoluer les use et coutume de l'entreprise progressivement, au rythmes des
@@ -85,14 +95,6 @@ y a donc une très forte composante humaines dans l'équation.
 
 ## Différentes définitions et conflits
 
-Cela fait maintenant plusieurs années que je m'intéresse aux équipes de
-développements, aux comportements humains et sociaux en entreprises. C'est pour
-cela que je me suis progressivement spécialisé dans des technologies et des
-domaines d'expertise qui sont parfois appelé « outils DevOps ». Certaines
-personnes font réfèrences à mon poste en utilisant le mot « DevOps ». C'est
-d'autant plus vrai sur le plan du recrutement où on voit de plus en plus d'offre
-portant ce nom sans rien préciser d'autre sur le projet ou l'équipe.
-
 J'aimerais insister sur le fait que ce sont des facteurs humains qui m'ont
 conduit à déployer des solutions techniques. Certainement pas l'inverse.
 
@@ -100,51 +102,77 @@ conduit à déployer des solutions techniques. Certainement pas l'inverse.
 bonnes pratiques à la limite, mais pas d'une discipline en tant que tel. Ce
 n'est ni un rôle ni un ensemble d'outils.
 
-Cependant, ces confusions nous donnes deux schémas récurrent dans le monde de
-l'entreprise aujourd'hui:
+Et pourtant, de plus en plus d'offres d'emploies ou de missions porte le titre
+DevOps et n'ont aucune précisions sur l'équipe ou l'organisation actuel de
+l'entreprise. La pluparts de ces offres cherchent le profils en or qui pourra
+leur apporter cette culture DevOps et mettre en place leur usine logiciel.
 
-L'équipe de développeurs renommé DevOps: Ils ont une liberté total sur leurs
-déploiements, mais n'ont plus de support d'administrateurs systèmes pour les
-aider à s'occuper de la supervision, de la sécurité, de la redondance des
-services et autres sujets concernant les environnements de productions.
+Or il est très difficile pour un profil seul de mettre en place tout les outils
+dont l'entreprise à besoin, et même si les outils sont installé et configuré,
+faut-il encore que les employés s'en servent.
 
-L'équipe d'aministrateurs renommé DevOps: Ils gardent les même rôles et
-attributions, mais on leur demande en plus d'automatiser malgrés le fait qu'ils
-n'ont pas forcement les compétences en développement pour le faire.
+Par conséquent, la confusion **culture** / **profil** DevOps nous donnes deux
+schémas récurrent dans le monde de l'entreprise aujourd'hui:
 
-La questions suivantes est donc naturellement « Comment mettre en place cette
-culture DevOps dans mes équipes ? ». Et c'est ici qu'on introduit la notions de
-**SRE**. **SRE** et **DevOps** partagent les même principes fondateurs, et
-beaucoup voit **SRE** comme une implémentation spécifique du mouvement
-**DevOps** avec quelques extenssions.
+Premièrement l'équipe de développeurs renommé DevOps: Ils ont une liberté total
+sur leurs déploiements, mais n'ont plus de support d'administrateurs systèmes
+pour les aider à s'occuper de la supervision, de la sécurité, de la redondance
+des services et autres sujets concernant les environnements de productions.
+
+Et deuxièmement l'équipe d'aministrateurs renommé DevOps: Ils gardent les même
+rôles et attributions, mais on leur demande en plus d'automatiser malgrés le
+fait qu'ils n'ont pas forcement les compétences en développement ou l'expérience
+pour le faire.
+
+La questions qu'on se pose donc naturellement est : « Comment mettre en place
+cette culture DevOps dans mes équipes ? ». Je n'ai malheureusement pas de
+réponse toute faites à cette question, et suivant l'entreprise, les projets et
+les équipes en place les grandes étapes peuvent changer.
+
+Si je ne parle pas de ces grandes étapes dans cette article, c'est parce que
+pour bien comprendre les actions à mettre en place, nous avons besoin de creuser
+encore un peu le sujets **DevOps**.
+
+Et c'est ici qu'on introduit la notions de **SRE**. **SRE** et **DevOps**
+partagent les même principes fondateurs, et beaucoup voit **SRE** comme une
+implémentation spécifique du mouvement **DevOps** avec quelques extenssions.
+
+Je compte tout de même écrire prochainement un article complet sur la reprise de
+projets et l'implémentation de bonnes pratique pour une transitions vers une
+culture devops.
+
 
 ## SRE: Site Reliability Engineer
 
 L'ingénieur de fiabilité du site #faisTonCanadien est une notion qui nous viens
 de Google. Ben Treynor, le fondateur de l'équipe SRE chez Google, dit que c'est
 ce qu'il se passe lorsque qu'on donne les tâches d'administration à une équipe
-de développeurs.
+de développeurs. C'est un terme récent, et je n'ai d'ailleurs pas trouvé de
+traduction officiel en français.
 
 Il est commun d'entendre que **SRE** est une implémentation concréte de la
-culture **DevOps**. Pour l'expliquer nous allons donc plonger un peu plus dans
-les notions fondamentales de la culture DevOps. Cette approche nous permet
-d'avoir une image plus concréte des notions que nous avons évoqué, mais aussi de
-fixer la notions **SRE**.
+culture **DevOps**. Première bonne nouvelle, c'est qu'on parle bien de profil
+**SRE** puisque le terme « Engineer » en anglais fait référence à un ingénieur,
+donc une personne.
 
-On peut discerner 5 pilliers dans la culture **DevOps**:
+Nous allons donc plonger un peu plus dans les notions fondamentales de la
+culture DevOps. Cette approche nous permet d'avoir une image plus concréte des
+notions que nous avons évoqué, mais aussi de fixer la notions **SRE**.
 
-* Favoriser la communication dans l'entreprise
+Commençons par discerner 5 pilliers dans la culture **DevOps**:
+
+* Faciliter la communication dans l'entreprise
 * Accepter et banaliser les erreurs
 * Appliquer des changements plus petits et plus fréquements
 * Automatiser les tâches les plus chronophages
 * Relever tout les indicateurs qui pourraient être pertinents
 
-### Faciliter la communication
+### Faciliter la communication dans l'entreprise
 
 Commençons par détailler l'aspect communication qui porte donc plus sur
 l'organisation que sur des problématiques techniques. Il s'agit ici d'apporter
 un véritable esprit d'équipe dans lequel on sensibilise chaque personnes aux
-enjeus auxquels nous devons faire face. J'en parle dans un [précèdent article
+enjeux auxquels nous devons faire face. J'en parle dans un [précèdent article
 (en anglais)](https://romain.soufflet.io) mais aussi dans mon interventions [«
 Comment moderniser l'organisations de votre équipe de développement
 »](https://romain.soufflet.io)
@@ -153,27 +181,56 @@ Comment moderniser l'organisations de votre équipe de développement
 
 On oppose souvent les organistions en silos à la culture **DevOps**. Le silos
 c'est un grand conteneure à grains opaque que l'on compare au fonctionnement des
-équipes refermé sur elles-même. L'organisations en silos mène parfois à des
-situations génante où deux équipes peuvent travailler sur le même sujet sans
-savoir que l'autres équipe le fait aussi. Où alors partir 6 mois sur un projet
-qui n'apporte que très peu de valeur à l'entreprise. Rétablir la communication
-permet de faire naître une meilleur ambiance de travail et économiser ce genre
-de chantier.
+équipes refermé sur elles-même. À l'image de ces conteneurs, nous retrouvons un
+fonctionnement opaque (manque de communication) et le moins de contacts possible
+avec l'extèrieur.
 
-Cependant, même si je vois énormement de critique vers l'organisations en silos,
-je vois ce schémas très souvent appliquer. Ma conclusion ici, c'est que les
-entreprises ne font pas exprés de siloter leurs équipes. J'en conclus aussi que
-la communication est un effort à fournir. Il faut rester vigilant sur cette
-aspect et être rigoureux pour continuer de fournir cette effort sur la durée
-afin de ne pas retomber dans ces bons vieux silos.
+L'organisations en silos mène parfois à des situations génante où deux équipes
+peuvent travailler sur le même sujet sans savoir que l'autres équipe le fait
+aussi. Où alors partir 6 mois sur un projet qui n'apporte que très peu de valeur
+à l'entreprise.
 
-### Accepter les erreurs
+Cependant, détruire ces silos et rétablir la communication peut parfois être mal
+vécu, n'oublions pas que les équipes sont constituées d'être humains qui ont
+leur repaires et leurs habitudes. J'ai globalement pu obsever que rétablir la
+communication permet de faire naître une meilleur ambiance de travail et
+économiser du temps, mais cela passe toujours par une période transitoire qui
+n'est pas toujours facile à vivre.
 
-Le deuxième aspect de notre approche concerne la prise de risque et la
+De plus, une fois que la communication reviens, il faut rester vigilant afin de
+maintenir ce niveau de communication. C'est un effort constant à fournir, au
+risque de tomber de nouveau dans une organisations en silos.
+
+Dans ce contexte, notre profil *SRE* aurait tendance à mettre en place les
+outils permettant aux équipes de communiquer. Que cela passe par des listes de
+diffusions ou des feuilles de papier collé les portes des autres bureau.
+
+L'incorporation d'une personne ayant une culture DevOps ou ayant le rôle SRE est
+aussi une bonne occasion d'identifier les manques de communication entre équipe.
+
+
+### Accepter et banaliser les erreurs
+
+Le deuxième aspect l'approche **SRE** concerne la prise de risque et la
 tolérance aux erreurs. C'est contre-intuitif pour une entreprise et par
-conséquent l'un des points les plus difficile à mettre en place. On va d'abord
-définir ce qu'est une erreur, et on va se mettre d'accord sur un taux d'erreur,
-sur notre marge de manœuvre en temps qu'équippe technique.
+conséquent l'un des points les plus difficile à mettre en place.
+
+On va d'abord définir ce qu'est une erreur, et on va se mettre d'accord sur un
+taux acceptable d'erreur, sur notre marge de manœuvre. Dans notre cas, on parle
+de taux de fiabilité sur l'environnement de production, il s'agit du pourcentage
+de temps pendant lequel le service est en conditions opérationnel.
+
+Pour le petit paragraphe mathématiques, on va partir sur le nombre de secondes
+dans une année. Et nous définissons avec les clients la durée qu'il est
+acceptable de "perdre". À 100%, nous considérons que nous ne voulons pas une
+seule seconde d'indisponnibilité. À 99% nous serons indisponible 7,2 heures par
+mois.
+
+La logique est simple, maintenir un service à 100% demande des efforts
+considérables, je pense même que cela est impossible pour la plupart des
+entreprises. Alors que maintenir un service pour 99% du temps est relativement
+choses aisée. Nous disposons de 7 heures et 15 secondes pour réparer la
+production si quelques choses tourne mal par mois.
 
 Google va encore plus loin dans cette approche est parle d'un crédit d'erreur
 qu'il nous faut dépenser, si l'équipe n'a pas eu assez de panne, c'est qu'ils ne
@@ -182,21 +239,27 @@ prennent pas assez de risques.
 Sans aller jusqu'à faire un crédit pour casser la production, il est important
 de rester réaliste. J'imagine que votre client voudra avoir 100% de temps de
 production disponnible, mais l'effort technique pour atteindre cette objectif
-est immense, peut être même impossible. On va donc essayer de négocier cette
-partie et partir sur des niveau de services plus fiable comme 99% ou 95%.
+est immense.
 
-Pour le petit paragraphe mathématiques, on va partir sur le nombre de secondes
-dans une année. Et nous prenons avec les clients le temps de définir quels
-duréer est-il acceptable de "perdre". Si vous acceptez d'être indisponible 1,68
-heures par mois, vous serez à 99%. Et ce niveau de services est bien plus
-réalisable que 100%.
+Dans l'approche **SRE**, on distingue d'autres notions sur les niveaux de
+services, si le sujet vous intéresse, il s'agit des notions de **SLA**, **SLO**
+et **SLI**. Je ne détaillerai pas ces notions ici, les différences sont assez
+subtiles. Par contre, j'aimerai préciser que j'ai donnée ici des niveau de
+service entier, on peut avoir des décimales, tel que 99.8%.
+
+La pluparts des entreprises utilisent le tableau suivant pour définir leur
+niveaux de services
+
+.. notes: Mettre le tableau d'indispo
+          https://fr.wikipedia.org/wiki/Disponibilit%C3%A9
+
 
 ### Augmenter les fréquences des déploiements
 
-Troisièmement, nous allons découper les évolutions pour toujours avoir de petits
-incréments sur le produit en production. On se repose ici sur la notions
-d'industrialisation que je décris dans [mon précédent
-article](https://romain.soufflet.io).
+Troisièmement, dans une approche **SRE** nous allons découper les évolutions
+pour toujours avoir de petits incréments sur le produit en production. On se
+repose ici sur la notions d'industrialisation que je décris dans [mon précédent
+article](https://romain.soufflet.io/services/work/devops/sre/2018/05/15/deploiements-en-production-sre-devops-et-autres-sujets-obscurs.html)
 
 Grâce à l'industrialisation, mettre ne production est simple et rapide, plus la
 mise à jour est grande, plus elle comporte de risque de casser un éléments.
@@ -211,19 +274,24 @@ pas et lorsque l'on consulte les développeurs de l'application pour en discuter
 la bonne solution qui emmerge est de déployer tout de suite la version **N+2**.
 
 Augmenter le nombre et la fréquence des mises à jour devient dés lors un gage de
-stabilité. Et ceci ne serait pas possible sans la marge de manœuvre négocié en
-amont (cf: Accepter les erreurs).
+stabilité. De plus, ceci ne serait pas possible sans la marge de manœuvre
+négocié en amont. Reparlons aussi briévement de l'aspect communication, car la
+décision de revenir en arrière où de reprendre une fonctionnalité de plus ce
+fait mains dans la mains avec les équipes de développements et en accord avec
+les équipes de production.
+
+On commence à voir les bénéfices de notre rôle **SRE**.
 
 ### Automatisation
 
-Un aspect des plus important est l'automatisation. La plupart des équipes SRE
-cultive une vision utopiste de leur plateforme. Une vision dans laquel ils
-n'auraient juste plus de travail et pourraient rentrer chez eux alors que la
+Un aspect des plus important est l'automatisation. La plupart des équipes
+**SRE** cultive une vision utopiste de leur plateforme. Une vision dans laquelle
+ils n'auraient plus de travail et pourraient rentrer chez eux alors que la
 production fonctionne parfaitement.
 
 Pour atteindre ce but, nous avons recours à l'automatisation. Cela veut
-simplement dire que nous allons écrire un programme pour faire notre travail à
-notre place. Cela parait simple dis comme cela.
+simplement dire que nous allons écrire des programmes pour faire notre travail à
+notre place. Cela parait simple dit comme cela.
 
 L'inconvénient majeure de l'automatisation, c'est que écrire du code implique
 immédiatement la création de bogue, de comportements innatendu. Mais cela
@@ -231,17 +299,17 @@ implique aussi qu'il faut maintenir ces programmes et les faire évoluer avec
 l'entreprise.
 
 Nous devons donc être prudent sur cette partie, et bien réflechir avant de se
-lancer dnas un chantier d'automatisation. Ce point créer parfois plus de
-problème qu'il n'en résout.
+lancer dans un chantier d'automatisation. Nous créons parfois plus de problème
+que l'on en résout.
 
-Alors que d'un autres côté, les avantages sont indéniables, le gain de temps
-à long terme est indéniable et nous gagnons aussi beaucoup en fiabilité sur les
-tâches automatisée. Les différentes action sont aussi plus rapide car nous
-n'hésitons plus avant de lancer un script : Cela coûte du temps machine, peu
-cher, contrairement au temps humain.
+D'un autre côté, les avantages sont nombreux, le gain de temps à long terme est
+indéniable et nous gagnons aussi beaucoup en fiabilité sur les tâches
+automatisée. Les différentes action sont aussi plus rapide car nous n'hésitons
+plus avant de lancer un script : Cela coûte du temps machine, peu cher,
+contrairement au temps humain.
 
 L'automatisation nous apporte aussi une plateforme neutre, indépendante des
-machines sur lesquels les développeur travaillent. On peut ainsi être sûr et
+machines sur lesquels les développeurs travaillent. On peut ainsi être sûr et
 certains que le programme fonctionne correctement quelque soit la machine qui
 l'éxecutera. Et si on pousse ce raisonnement plus loin, on fera en sorte de
 créer nos environnements de tests automatisée au plus proche de ce que sera
@@ -280,6 +348,17 @@ Vos métrique peuvent donc être de nature managériale, porter sur le
 développement des nouvelles fonctionnalité, sur le nombre de tickets ouvert ou
 fermer ou simplement sur la production qui tourne actuellement.
 
+Un autre point important, c'est que ces métriques sont mise en place car nous
+sommes en mesure de prendre des actions fasses à elle. Nous pouvons donc
+automatiser certaines réponse.
+
+L'exemple le plus courant est celui de **l'autoscaling**. Scaling en anglais
+signifie « mettre à l'échelle ». Ici nous allons mesurer la charges sur nos
+machines de productions afin, et si nous dépassons les seuils qu'on définit en
+amont, on démarre automatiquement de nouvelles machine pour tenir la charge.
+C'est ce qu'il se passe sur beaucoup de site de commerce les jours de grandes
+affluence tel que le black friday ou les soldes.
+
 Finissons ce sujets avec un dernier point d'attention. Imaginons que vous avez
 mesurer la satisfaction de vos équipes via un formulaire que chaque membre doit
 remplir à la fin de la semaine. Au bout de 3 semaines, votre indicateurs à
@@ -288,6 +367,10 @@ Deux semaines plus tard, le niveau rebaisse et vous achetez de nouveau des
 croissants. Il est fort probable que suite à cela, les formulaires soit toujours
 remplit négativement : vos équipes ont trouvé un moyen d'obtenir des croissants
 et vous ne savez plus du tout où en est le niveau de satisfaction.
+
+Bien que rigolo, cette situation est fréquente, restons vigilant fasse à nos
+propre méthodes. Gardons à l'esprit qu'on peut toujours s'améliorer. Faites
+l'effort de garder vos mécanisme **d'amélioration continue**.
 
 ## Conclusion : À quoi ressemble donc une entreprise avec du **SRE**
 
