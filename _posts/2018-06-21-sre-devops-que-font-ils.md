@@ -2,7 +2,7 @@
 categories: work devops sre
 custom_css: posts.css
 date: 2018-06-21 17:56:25
-img: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fire_fighters_practice_with_spraying_equipment%2C_March_1981.jpg/1200px-Fire_fighters_practice_with_spraying_equipment%2C_March_1981.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/SpaceX_Dragon.png
 layout: post
 excerpt_separator: <!--more-->
 language: fr
@@ -63,7 +63,8 @@ collaboration à tous les niveaux de conception.
 
 En généralisant un peu, on arrive à un processus qui ressemble à ça:
 
-..note : Coller l'image du cycle de développement ou le refaire
+![SRE
+Workflow](https://s3.eu-west-2.amazonaws.com/gentux/Images/SRE+Workflow.png)
 
 Et pour chacune des étapes sur le schéma, les différents profils pourront
 s'entraider:
@@ -177,7 +178,9 @@ enjeux auxquels nous devons faire face. J'en parle dans un [précèdent article
 Comment moderniser l'organisations de votre équipe de développement
 »](https://romain.soufflet.io)
 
-.. NOTE: Mettre la vidéo ?
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/AS0v8oREpw8?rel=0" frameborder="0"
+allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 On oppose souvent les organistions en silos à la culture **DevOps**. Le silos
 c'est un grand conteneure à grains opaque que l'on compare au fonctionnement des
