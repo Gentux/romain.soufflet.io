@@ -256,6 +256,16 @@ niveaux de services
 .. notes: Mettre le tableau d'indispo
           https://fr.wikipedia.org/wiki/Disponibilit%C3%A9
 
+| Taux        | Temps d'arrêt par an                               | Temps d'arrêt par mois |
+| :---------- | :------------------------------------------------- | :--------------------- |
+| 90 %        | 876 heures soit 36,5 jours                         | 72 h                   |
+| 95 %        | 438 heures soit plus de 18 jours                   | 36 h                   |
+| 99 %        | 87 heures, 36 minutes soit plus de 3 jours et demi | 7,2 h                  |
+| 99,9 %      | 8 heures, 45 minutes, 36 secondes                  | 43,2 min               |
+| 99,99 %     | 52 minutes, 33,6 secondes                          | 4,32 min               |
+| 99,999 %    | 5 minutes, 15,36 secondes                          | 25,9 s                 |
+| 99,9999 %   | 31,68 secondes                                     | 2,5 s                  |
+
 
 ### Augmenter les fréquences des déploiements
 
