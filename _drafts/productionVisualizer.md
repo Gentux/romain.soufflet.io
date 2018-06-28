@@ -29,6 +29,9 @@ API Simple
 * On veut pouvoir récupérer les logs d'un job via son ID
 * On veut la liste des scripts enregistrer avec leur parametre
 
+Un job se lance quand il reçoit le signal de ce lancer => RabbitMQ
+Un job donne un signal lorsqu'il s'arrête.
+
 ## Maintenant qu'on a notre job runner, on veut une UI qui déchirre !!
 
 On va gérer les branches de nos repos git comme autant d'évennement différent
