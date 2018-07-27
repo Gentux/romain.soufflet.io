@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+http://soufflet.io/* https://romain.soufflet.io/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+http://wonderful-bohr-4270e4.netlify.com/* https://romain.soufflet.io/:splat 301!
+
