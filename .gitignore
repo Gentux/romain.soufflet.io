@@ -1,7 +1,9 @@
 build
+vendor
 
 _site
 
 CVs/*.pdf
 
 .DS_Store
+Gemfile.lock
