@@ -59,7 +59,7 @@ management software. So, I decided to make my own, a piece of software solving m
 else problems.
 
 
-[Imap-CLI](http://github.com/gentux/imap-cli) aims to provide a command line interface, a python API and a REST API to
+[Imap-CLI](https://github.com/gentux/imap-cli) aims to provide a command line interface, a python API and a REST API to
 consult and manage IMAP accounts:
 
 * Get IMAP account status (New mails, mail counting… etc…)

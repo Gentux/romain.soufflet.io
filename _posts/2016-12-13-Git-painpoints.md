@@ -12,7 +12,7 @@ title: "Mastering GIT by reducing the pain"
 Using **GIT** every day is quite normal for a developer. We work with **GIT**,
 we trust it to keep our files safe and we trust it to share them too. A long
 time ago, when I was on my first internship at
-[**Easter-eggs**](http://easter-eggs.com/) I wrote a small web service to
+[**Easter-eggs**](https://easter-eggs.com/) I wrote a small web service to
 automate a customer's **GIT** workflow.
 
 I learned a lot about **GIT** at that time. Not only the command line interface,
@@ -30,7 +30,7 @@ But, even if I'm loving it, I have to say : **GIT** is also painful:
   errors
 * More error due to more commands…
 
-![take a sip](http://www.gizmodo.in/photo/47475817.cms)
+![take a sip](https://www.gizmodo.in/photo/47475817.cms)
 
 It's difficult to make **GIT** act the way you want, you have to learn a lot for
 that. I saw a lot of programmer who actually adopted a *simpler approach*

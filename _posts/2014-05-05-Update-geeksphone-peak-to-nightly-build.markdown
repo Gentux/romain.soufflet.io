@@ -11,7 +11,7 @@ title: "Upgrade Geeksphone Peak to nightly build"
 
 
 About a year ago, I left my Nokia N900 phone to buy a Geeksphone device (
-[Peak](http://www.geeksphone.com/other-devices-2/) ). This was hard, very hard… and it still is.
+[Peak](https://www.geeksphone.com/other-devices-2/) ). This was hard, very hard… and it still is.
 
 The phone I bought was a developper preview device, I couldn't import contacts from my old device, I couldn't check my
 personal calendars through it… But still, I wanted to be part of the FirefoxOS adventure.
@@ -25,7 +25,7 @@ So I put me fears aside and stepped into the flashing process to get a nightly b
 simple, but if it goes wrong, I could lost all my contacts… Wich I entered by hand…
 
 You can read the original version of these steps
-[here](http://downloads.geeksphone.com/drivers/Manual_flash_geeksphone-eng.txt).
+[here](https://downloads.geeksphone.com/drivers/Manual_flash_geeksphone-eng.txt).
 
 First and Second steps are simple verification, have at least 50% of battery remaining and activate Remote debugging on
 the phone (go to Settings, Device Information, More Information, Developer and check on Remote Debugging).
@@ -33,7 +33,7 @@ the phone (go to Settings, Device Information, More Information, Developer and c
 Third step is for windows users only. Didn't need it on my Debian.
 
 You will then have to download a FirefoxOS image build for your phone. You can found those build in
-[Geeksphone download pages](http://downloads.geeksphone.com/). You can safely unzip it afterwards.
+[Geeksphone download pages](https://downloads.geeksphone.com/). You can safely unzip it afterwards.
 
 But wait a minute before running sixth step. You can found some piece of information out there, but nobody could clearly
 tell me if my data will be or won't be lost.
@@ -48,7 +48,7 @@ Then, you will have to run *adb* as root. So plug your phone with USB cable and 
     # adb devices
 
 It will start **adb** deamon and now can read throught your phone. You can then follow instruction to backup some data
-[here](http://firefoxosguide.com/firefox-os/how-to-backup-contacts-on-firefox-os-device-step-by-step-tutorial.html/) (I
+[here](https://firefoxosguide.com/firefox-os/how-to-backup-contacts-on-firefox-os-device-step-by-step-tutorial.html/) (I
 didn't need those)
 
 If all goes well till now, you can safely do the last part. But I couldn't run the flash.sh script given by Geeksphone

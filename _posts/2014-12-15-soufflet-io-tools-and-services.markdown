@@ -15,7 +15,7 @@ browser… etc…
 
 I am very proud to use only services I manage myself : no Google, no other
 companies services or piece of hardware, just me and my
-[**RaspberryPI**](http://www.raspberrypi.org/) (RPi for short).
+[**RaspberryPI**](https://www.raspberrypi.org/) (RPi for short).
 
 
 My services are working for about a year now, my brother use it, my parents use
@@ -35,15 +35,15 @@ got fiber installed a few days after that and did not need to bother about
 bandwith anymore.
 
 The main problem behind a RPi is resources. My first try to have a set of
-personal services was [**Owncloud**](http://owncloud.org/), performances were very bad.
+personal services was [**Owncloud**](https://owncloud.org/), performances were very bad.
 
-Then, I tried [**cozycloud**](http://cozy.io/) but no more success with it.
+Then, I tried [**cozycloud**](https://cozy.io/) but no more success with it.
 
 
 I decided to install all services I wanted one by one:
 
 * Postfix / Dovecot for mails
-* [Radicale](http://radicale.org/) for CalDav and CardDav
+* [Radicale](https://radicale.org/) for CalDav and CardDav
 * Apache moddav for remote storage
 * Vsftpd for FTP
 * OpenVPN

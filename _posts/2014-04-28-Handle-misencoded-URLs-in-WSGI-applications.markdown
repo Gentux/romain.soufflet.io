@@ -9,21 +9,21 @@ public: yes
 title: "Reject badly encoded request in Python WSGI applications"
 ---
 
-At [Easter-eggs](http://www.easter-eggs.com/) we use [Python](http://www.python.org/) and
-[WSGI](http://wsgi.readthedocs.org/en/latest/) for web applications development.
+At [Easter-eggs](https://www.easter-eggs.com/) we use [Python](https://www.python.org/) and
+[WSGI](https://wsgi.readthedocs.org/en/latest/) for web applications development.
 
 The last few months some of our applications crashed periodically. Thanks to
 [WebError ErrorMiddleware](https://github.com/Pylons/weberror), we receive an email each time an internal server error
 occurs.
 
-For example someone tried to retrieve all of our [french territories data](http://ou.comarquage.fr) with the API.
+For example someone tried to retrieve all of our [french territories data](https://ou.comarquage.fr) with the API.
 
-The problem is simple: when the request headers contains non UTF-8 characters, the [WebOb](http://webob.org/)
-[Request](http://docs.webob.org/en/latest/modules/webob.html) object throws an **UnicodeDecodeError** exception because
+The problem is simple: when the request headers contains non UTF-8 characters, the [WebOb](https://webob.org/)
+[Request](https://docs.webob.org/en/latest/modules/webob.html) object throws an **UnicodeDecodeError** exception because
 it expects the headers to be encoded in UTF-8.
 
 End-user tools like web browsers generate valid UTF-8 requests with no effort, but non UTF-8 requests can be generated
-by some odd software or by hand from a [ipython](http://ipython.org/) shell.
+by some odd software or by hand from a [ipython](https://ipython.org/) shell.
 
 Let's dive into the problem in ipython :
 
@@ -43,7 +43,7 @@ Let's dive into the problem in ipython :
     UnicodeDecodeError: 'utf8' codec can't decode byte 0xe9 in position 27: unexpected end of data
 
 This shows that U+00E9 is the Unicode codepoint for the **'é'** character (
-[see Wikipedia](http://en.wikipedia.org/wiki/%C3%89#Character_mappings)), that its UTF-8 encoding are the 2 bytes
+[see Wikipedia](https://en.wikipedia.org/wiki/%C3%89#Character_mappings)), that its UTF-8 encoding are the 2 bytes
 **'\xc3\xa9'**, and that decoding in UTF-8 a latin1 byte throws an error.
 
 The stack trace attached to the error e-mails helped us to find that the **UnicodeDecodeError** exception occurs when

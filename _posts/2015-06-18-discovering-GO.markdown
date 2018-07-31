@@ -9,12 +9,12 @@ public: no
 custom_css: posts.css
 ---
 
-Since I began to work a [**CloudWatt**](http://www.cloudwatt.com/), I've been
+Since I began to work a [**CloudWatt**](https://www.cloudwatt.com/), I've been
 quite busy and I didn't wrote a thing. Today, this will change, I have learned
 so much in 6 month, I **HAVE** to share !
 
 **CloudWatt** is a *public cloud provider*. behind this words, it's a instance
-of [**openstack**](http://www.openstack.org) delivering virtual private servers
+of [**openstack**](https://www.openstack.org) delivering virtual private servers
 for its customers.
 
 I've learned a lot and today I'll talk about my journey with the GO programming

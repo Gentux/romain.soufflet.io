@@ -9,7 +9,7 @@ public: yes
 title: "Compiling «Boot 2 Gecko» on Debian"
 ---
 
-I wrote about my [Peak](http://www.geeksphone.com/other-devices-2/) phone a while ago. It's time to write again on
+I wrote about my [Peak](https://www.geeksphone.com/other-devices-2/) phone a while ago. It's time to write again on
 FirefoxOS !
 
 
