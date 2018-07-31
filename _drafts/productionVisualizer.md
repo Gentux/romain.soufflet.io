@@ -22,6 +22,17 @@ Sauf que je suis une bille en frontend, chacun son métier :)
 * Je veux pouvoir enregistrer la sortie des script
 * Je veux stocker le code de retour de mes scripts
 
+
+## From nico
+
+Mes idées de features structurantes:
+- Event-based: un webhook GH ou Slack, c’est traité pareil
+- Auto-rebase
+- Pouvoir définir les jobs ailleurs que dans le repo
+- Pouvoir “cascader”: un push sur un repo lance des tests ailleurs
+- Capable de proposer des fix
+
+
 API Simple
 
 * On veut juste lancer des jobs et récupérer un ID de job
