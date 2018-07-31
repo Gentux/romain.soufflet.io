@@ -6,7 +6,7 @@ img: https://s3.eu-west-2.amazonaws.com/gentux/Images/SpaceX_Dragon.png
 layout: post
 excerpt_separator: <!--more-->
 language: fr
-public: yes
+public: no
 title: "Devops et SRE, De quoi s'agit-il ?"
 ---
 

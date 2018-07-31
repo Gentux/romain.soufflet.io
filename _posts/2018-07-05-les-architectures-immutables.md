@@ -1,12 +1,12 @@
 ---
-categories: work devops sre architecture
+categories: devops sre architecture
 custom_css: posts.css
 date: 2018-06-20 13:04:45
 img: https://upload.wikimedia.org/wikipedia/commons/3/32/Lego_Color_Bricks.jpg
 layout: post
 excerpt_separator: <!--more-->
 language: fr
-public: yes
+public: no
 title: "C'est beau DevOps et SRE, mais comment je met ça chez moi ?"
 ---
 
