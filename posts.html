@@ -24,12 +24,6 @@ custom_css: posts.css
               <i class="fa fa-calendar"></i>
               {{ post.date | date_to_long_string }}
             </time>
-
-            <small>
-              <a href="{{ post.url }}#disqus_thread">
-                <i class="fa fa-comment"></i> Comments
-              </a>
-            </small>
           </p>
 
           {% if post.img %}
@@ -54,5 +48,3 @@ custom_css: posts.css
     {% endfor %}
   </div>
 </section>
-
-<script id="dsq-count-scr" src="//rsoufflet.disqus.com/count.js" async></script>

@@ -2,21 +2,6 @@
 layout: default
 custom_css: posts.css
 ---
-    <script>
-      /*
-      var disqus_config = function () {
-        this.page.url = "https://romain.soufflet.io{{ page.url }}";
-        this.page.identifier = "{{ page.title }}";
-      };
-      */
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//rsoufflet.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-      })();
-    </script>
-
     {% if page.img %}
       <div style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.img }}'); background-size: cover; background-position: center;" class="post-banner"></div>
     {% endif %}
@@ -59,10 +44,6 @@ custom_css: posts.css
         </div>
         <!--End mc_embed_signup-->
 
-        <hr>
-
-        <div class="container" id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </article>
     </div>
 
