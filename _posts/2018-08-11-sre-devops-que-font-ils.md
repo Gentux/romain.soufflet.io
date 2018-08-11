@@ -36,9 +36,8 @@ le changement et l’ajout de fonctionnalités.
 Les administrateurs de leur côté sont en charge du maintien en conditions
 opérationnelles. Chaque mise à jour peut mettre en danger l'intégrité des
 produits et des services de l'entreprise. C'est pourquoi chaque changement doit
-être appréhendé comme un potentiel risque. **Leur mission se caractérise donc
-par la stabilité. **(Leur mission est donc la mise en place et la gestion de la
-stabilité du produit)
+être appréhendé comme un potentiel risque. **Leur mission est donc la mise en
+place et la gestion de la stabilité du produit**
 
 Par définition, ces deux rôles sont amenés à être en conflit. D’un côté les
 développeurs apportent du changement et de l’autre côté les administrateurs
