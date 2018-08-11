@@ -1,7 +1,7 @@
 ---
 categories: work devops sre
 custom_css: posts.css
-date: 2018-06-11 17:56:25
+date: 2018-08-11 16:38:25
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/SpaceX_Dragon.png
 layout: post
 excerpt_separator: <!--more-->
