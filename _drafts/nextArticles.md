@@ -10,13 +10,40 @@ public: no
 title: "Prochains articles"
 ---
 
-## Gestion des logs avec Kubernetes
+## Gestion des logs
 
+### Part 1
 Que dit les 12factorsApp ? Qu'est-ce qu'un log ?
 Gestion des logs as stream => Mais où les stocker ?
+
+### Part 2
+
 Volumétrie des logs => replication => suppression
 Visualisation des logs ? comment on fait, pourquoi ?
 Les implémentation
+
+## Devops 101 : par où commencer ?
+
+### Part 1: Pour les développeurs
+
+Technical knowledge:
+  * Network
+  * Container / Virtualisation
+  * SSL / Chiffrements
+Detach yourself from language
+
+### Part 2: Pour les administrateurs
+
+Learn to code
+Learn to git
+
+Adapt existing with automatable softwares
+Document things
+Let the machines do the work
+
+### Part 3: Pour l'entreprise
+
+Yep
 
 ## Stratégies de déploiement
 
