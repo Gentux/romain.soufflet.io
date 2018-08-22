@@ -12,6 +12,10 @@ body {
   background: url('/img/qbkls.png');
 }
 
+.navbar img {
+  margin-top: -10px;
+}
+
 footer {
   background-color: #222222;
   padding-top: 35px;
