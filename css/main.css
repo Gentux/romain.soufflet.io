@@ -9,6 +9,7 @@ body {
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
+  background: url('/img/qbkls.png');
 }
 
 footer {

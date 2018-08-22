@@ -2,7 +2,13 @@ article {
   font-size: 1.2em;
   line-height: 1.3em;
   max-width: 740px;
-  margin: auto;
+
+  padding: 20px;
+  background: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  border-radius: 25px;
 }
 
 article a {
