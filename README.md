@@ -13,10 +13,9 @@ This site is powered by [Jekyll](https://jekyllrb.com/)
 docker run \
   --rm \
   --volume="${PWD}:/srv/jekyll" \
-  --volume="${PWD}/vendor/bundle:/usr/local/bundle" \
   --name jekyll_watch \
   -dt jekyll/jekyll \
-  jekyll build --watch
+  ./start.sh
 ```
 
 You can start a simple webserver to serve the content of `_site` directory
