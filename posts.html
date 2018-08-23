@@ -2,47 +2,120 @@
 layout: default
 description: List of all my blog posts
 title: Romain's blog posts
-custom_css: posts.css
+custom_css: blog.css
 ---
-<section>
-  <div class="container post-item">
-    {% for post in site.posts %}
-      {% if post.public %}
-      <article>
-        <div class="post">
-          <a href="{{ post.url }}">
-            <h2>{{ post.title }}</h2>
-          </a>
+<section id="banner-blog">
+  <div class="container">
+    <h1>Blog</h1>
 
-          <p>
-            <small>
-              <span class="tags">
-                <span class="label label-primary">{{ post.language }}</span>
-              </span>
-            </small>
-            <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
-              <i class="fa fa-calendar"></i>
-              {{ post.date | date_to_long_string }}
-            </time>
-          </p>
+    <!--
+    <p class="lead">
+      Pas besoin de vous appeler Google ou Amazon pour avoir besoin d'une
+      expertise DevOps / SRE. Parlons-en !
+      <br>
+      Lorsque vous rencontrez des difficultés sur vos environnements de
+      productions, ou dans vos process de déploiements, demandez conseils à
+      votre spécialiste.
+    </p>
+    -->
+  </div>
+</section>
 
-          {% if post.img %}
-            <a href="{{ post.url }}">
-              <div style="background-image: url('{{ post.img }}')" class="post-title-image"></div>
-            </a>
-          {% endif %}
+<section id="blog">
+  <div class="container">
+    <div class="row">
+      <!-- *** LEFT COLUMN START *** -->
+      <div class="col-md-9">
+        {% for post in site.posts %}
+        {% if post.public %}
+        <article>
+          <div class="post row">
+            <div class="col-md-4">
+              {% if post.img %}
+              <a href="{{ post.url }}">
+                <div style="background-image: url('{{ post.img }}')" class="post-image"></div>
+              </a>
+              {% endif %}
+            </div>
 
-          <p>
-            {% if post.description %}
-              <span class="body">{{ post.description | markdownify }}</span>
-            {% else %}
-              <span class="body">{{ post.excerpt | strip_html }}</span>
-            {% endif %}
-          </p>
-          <a class="btn btn-primary" href="{{ post.url }}">Continuer à lire</a>
+            <div class="col-md-8">
+              <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+              </a>
+
+              <p class="post-author">
+                <small>
+                  <span class="tags">
+                    <span class="label label-primary">{{ post.language }}</span>
+                  </span>
+                </small>
+                <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
+                  <i class="fa fa-calendar"></i>
+                  {{ post.date | date_to_long_string }}
+                </time>
+              </p>
+
+              <p class="post-description">
+              {% if post.description %}
+                <span class="body">{{ post.description | markdownify }}</span>
+              {% else %}
+                <span class="body">{{ post.excerpt | strip_html }}</span>
+              {% endif %}
+              </p>
+
+              <p class="post-more">
+                <a class="btn btn-primary" href="{{ post.url }}">Continuer à lire</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <hr>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <!-- *** LEFT COLUMN END *** -->
+
+      <!-- *** RIGHT COLUMN *** -->
+        <div class="col-md-3">
+
+          <div class="google-search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+              <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Rechercher">
+                <input type="hidden" name="sitesearch" value="https://romain.soufflet.io">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <hr>
+
+          <!-- Begin MailChimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+            <form action="https://soufflet.us18.list-manage.com/subscribe/post?u=5f4bd71a2dbd5232b99fcf457&amp;id=4583e9a28a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <img class="ml-logo" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/prod_healer_logo_transparent_small.png" alt="Prod'Healer">
+                <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5f4bd71a2dbd5232b99fcf457_4583e9a28a" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: inline;"></div>
+              </div>
+            </form>
+          </div>
+
+          <!--End mc_embed_signup-->
+
         </div>
-      </article>
-      {% endif %}
-    {% endfor %}
+        <!-- *** RIGHT COLUMN END *** -->
+    </div>
   </div>
 </section>
