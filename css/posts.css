@@ -4,11 +4,11 @@ article {
   max-width: 740px;
 
   padding: 20px;
-  background: white;
+  background: #ecf0f1;
   margin-bottom: 20px;
   margin-top: 10px;
 
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 article a {

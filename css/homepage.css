@@ -17,7 +17,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  padding: 2em 0em 6em;
+  padding: 6em 0em 6em;
   text-align: center;
 }
 
@@ -47,6 +47,13 @@ a:hover {
 
 /* Social Links
 ---------------------------------- */
+#social{
+  background: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .social-links {
   padding: 0;
   list-style: none;
@@ -62,7 +69,7 @@ a:hover {
   color: #55acee;
 }
 .social-links li.github a {
-  color: #FFFFFF;
+  color: #000;
 }
 .social-links li.linkedin a {
   color: #007bb6;
@@ -81,4 +88,46 @@ a:hover {
 
 .social-links li.github a:hover {
   color: #555555;
+}
+
+#more {
+  background: url('/img/qbkls.png');
+  border: 1px solid #888;
+}
+
+#more .box-image-text {
+  background: #ecf0f1;
+  border-radius: 10px;
+  padding: 10px;
+  transition-duration: .4s;
+}
+
+#more .box-image-text:hover {
+  transform: scale(1.04);
+}
+
+#more .box-image-text .top {
+  height: 220px;
+}
+
+#more .box-image-text h4 {
+}
+
+#more .box-image-text .intro {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#more .col-article {
+  padding-left: 0;
+  padding rigth: 10px;
+}
+
+#more .read-more {
+  text-align: center;
+}
+
+.container {
+  max-width: 100%
 }
