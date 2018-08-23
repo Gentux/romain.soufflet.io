@@ -124,6 +124,11 @@ a:hover {
   padding rigth: 10px;
 }
 
+#more .author-category {
+  font-size: 13px;
+  color: #585858;
+}
+
 #more .read-more {
   text-align: center;
 }
