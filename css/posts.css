@@ -15,6 +15,15 @@
   max-width: 100%;
 }
 
+.img-rounded {
+  height: 60px;
+  width: auto;
+  border-radius: 100%;
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .ml-logo {
   width: 100%;
 }

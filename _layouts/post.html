@@ -9,12 +9,17 @@ custom_css: posts.css
 <div class="container">
   <header>
     <h1>{{ page.title }}</h1>
-    <p class="post-date">
-    <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
-      <i class="fa fa-calendar"> </i>
-      {{ page.date | date_to_long_string }}
-    </time>
-    </p>
+    <div class="post-date row">
+      <img alt="me" class="img-rounded" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/gentux-sd-snow.jpg">
+
+      <p>
+        par <a href="https://romain.soufflet.io">Romain Soufflet</a>,
+        <br>
+        le <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date_to_long_string }}
+        </time>
+      </p>
+    </div>
   </header>
 </div>
 
