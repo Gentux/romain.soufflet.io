@@ -43,6 +43,9 @@ a:hover {
 #banner img {
   border-radius: 10px;
   margin-bottom: 30px;
+  max-width: 100%;
+  height: auto;
+  max-height: 132px;
 }
 
 /* Social Links
@@ -92,7 +95,7 @@ a:hover {
 
 #more {
   background: url('/img/qbkls.png');
-  border: 1px solid #888;
+  border-top: 1px solid #888;
 }
 
 #more .box-image-text {
@@ -121,7 +124,7 @@ a:hover {
 
 #more .col-article {
   padding-left: 0;
-  padding rigth: 10px;
+  margin-bottom: 21px;
 }
 
 #more .author-category {
