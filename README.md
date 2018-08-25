@@ -13,19 +13,19 @@ This site is powered by [Jekyll](https://jekyllrb.com/)
 docker run \
   --rm \
   --volume="${PWD}:/srv/jekyll" \
-  --volume="${PWD}/vendor/bundle:/usr/local/bundle" \
-  -it jekyll/jekyll \
-  jekyll build
+  --name jekyll_watch \
+  -dt jekyll/jekyll \
+  ./start.sh
 ```
 
 You can start a simple webserver to serve the content of `_site` directory
 
 ```
 docker run \
-  --port 80:8000 \
+  -p 9000:80 \
   --name romain.soufflet.io \
-  --volume ${PWD}/_site:/usr/share/nginx/html:ro
+  --volume ${PWD}/_site:/usr/share/nginx/html:ro \
   -d nginx
 ```
 
-And access it on http://localhost:8000
+And access it on http://localhost:9000
