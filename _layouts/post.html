@@ -16,7 +16,7 @@ custom_css: posts.css
         par <a href="https://romain.soufflet.io">Romain Soufflet</a>,
         <br>
         le <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date_to_long_string }}
+          {{ page.date | date: '%d/%m/%Y' }}
         </time>
       </p>
     </div>

@@ -40,7 +40,7 @@ custom_css: blog.css
                 </small>
                 <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
                   <i class="fa fa-calendar"></i>
-                  {{ post.date | date_to_long_string }}
+                  {{ post.date | date: '%d/%m/%Y' }}
                 </time>
               </p>
 
