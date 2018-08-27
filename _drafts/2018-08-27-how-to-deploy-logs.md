@@ -153,27 +153,41 @@ envoyons chaque entrée une par une, soit on lui fait des paquet de X entrées.
 C'est ici qu'on trouve cette notion de *flux* qui est utilisé dans la
 définition de [*twelve-factor app*](https://12factor.net/fr/).
 
+### Supression
+
 Maintenant, essayez d'imaginer que chaque services qui composent votre
-production centralise les journaux au même endroits. Il apparaît logiquement que
-cette machine vient d'acquèrir une très forte valeurs. Nous allons donc y
-accorder un peu d'attention.
+production centralise les journaux au même endroits. Il apparaît logiquement
+que cette machine vient d'acquèrir une très forte valeurs en receuillant tout
+les journaux. Nous allons donc y accorder un peu d'attention.
 
 De la même manière qu'un journal peut grossir et saturer une machine, si on met
-plusieurs journaux sur une machine, elle peut se saturer. Je vais donc expliquer
-la notions de *rotation* des journaux.
+plusieurs journaux sur une machine, elle va saturer au bout d'un certain temps.
+Nous allons donc devoir mettre en place une *rotation* des journaux.
 
-La *rotation* c'est un script qui va s'executer régulièrement pour effacer les
-anciens journaux. Cela nous permet de garantir qu'il y aura toujours de la place
-sur la machine car nous faisons régulièrement de la place.
+La *rotation* est un script qui s'execute régulièrement pour effacer, renommer
+ou compresser les anciens journaux. Cela nous permet de garantir qu'il y aura
+toujours de la place sur la machine car nous faisons régulièrement de la place.
+
+Mais nous ne pouvons pas juste supprimer des informations qui pourrait nous être
+utile. Nous avons donc besoin de définir une *stratégie de rétention des
+journaux*
+
+ * Combien temps de journal doit-on garder
+ * À partir de quel taille un journal devient-il trop gros ?
+ * Comment organise-t-on les sauvegarde pour s'assurer de ne rien perdre
+   d'important ?
+
+Parce que la suppression peut être dangereuse, dans certains cas, les
+informations contenue dans nos journaux peuvent être couvert légalement et avoir
+des contraintes tel que « Nous garderons la liste des accés au bâtiments 34c
+pendant 5 ans ».
+
+Il est donc important de s'assurer que les journaux archivé sont bien stoqués
+dans des entrepot dediée.
 
 ## La consultation
 
-Tout ça c'est bien gentil, mais si on supprime les logs, à quoi cela servait-il
-de les récolté en premier lieu ?
-
-- Backup les anciens logs
 - Pouvoir les remettre pour consultation
-
 - Voir les courbes aide à la décision
 - Définir les alertes
 
