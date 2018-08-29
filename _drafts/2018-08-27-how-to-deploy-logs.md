@@ -15,18 +15,12 @@ appelles **journaux** en français et sont en quelques sortes l'équivalent du
 journal de bord du capitaine d'un navire.
 
 À la manière d'un long périple en mer, de nombreux évennements peuvent pertuber
-l'execution du programme, et savoir ce qu'il se passe nous aide à surmonter les
-différentes difficulté de notre voyage.
-
-En lisant ces journaux on comprend ce qui s'est passé durant le voyage. Nous
-pouvons alors identifier les difficultés passées et prendre les décisions pour
-les éviter à l'avenir.
-
-La qualité du journal du bord, sa précision et sa complétude dépendent du
-capitaine. Tout comme nos journaux applicatifs dépendent de nos développeurs.
+l'execution du programme. En lisant ces journaux on comprend ce qui s'est passé.
+Nous pouvons alors identifier les difficultés passées et prendre les décisions
+pour les éviter à l'avenir.
 
 Je vais essayer avec cette article d'éclairer les notions de journaux
-applicatifs. Pour cela, je vais définir ce que sont ces journaux exactement,
+applicatifs. Pour cela, je vais définir ce que sont ces journaux,
 comment les stoquer, et finalement comment les consulter.
 
 J'écrirai par la suite une deuxième partie pour détailler l'implémentation de
@@ -130,13 +124,8 @@ journaux est un sujet récurrent quand on parle d'application en production.
 
 Depuis le début de ma carrière, je n'ai jamais vu une seule entreprise
 s'affranchir définitement de l'erreur _No space left on device_. Et la plupart
-du temps il s'agit de journaux mal géré qui remplisse le disque dur de la
-machine.
-
-Une machine a toujours besoin d'écrire des informations temporaire sur le
-disque. Même si votre application ne le fait pas, le système d'exploitation lui
-en aura besoin. Un disque dur remplit à 100% resulte donc forcément en erreur
-sur votre application.
+du temps il s'agit de journaux mal gérés qui remplissent le disque dur des
+machines.
 
 Comment stoquer les journaux de notre applications ? La première solution, la
 plus courante d'ailleurs, c'est de les mettre dans des fichiers texte sur la
@@ -183,7 +172,7 @@ des contraintes tel que « Nous garderons la liste des accés au bâtiments 34c
 pendant 5 ans ».
 
 Il est donc important de s'assurer que les journaux archivé sont bien stoqués
-dans des entrepot dediée.
+dans des entrepots dediés.
 
 ## La consultation
 
