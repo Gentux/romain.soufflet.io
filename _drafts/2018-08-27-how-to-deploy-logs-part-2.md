@@ -7,69 +7,11 @@ layout: post
 excerpt_separator: <!--more-->
 language: fr
 public: yes
-title: Le déploiement : Les logs (1er partie, les bases)
+title: Le déploiement : Les logs (2ème partie, architecture)
 ---
 
-Quand une application tourne en production, elle produit des **logs**. On les
-appelles **journaux** en français et sont en quelques sortes l'équivalent du
-journal de bord du capitaine d'un navire.
 
-À la manière d'un long périple en mer, de nombreux évennements peuvent pertuber
-l'execution du programme. En lisant ces journaux on comprend ce qui s'est passé.
-Nous pouvons alors identifier les difficultés passées et prendre les décisions
-pour les éviter à l'avenir.
-
-Je vais essayer avec cette article d'éclairer les notions de journaux
-applicatifs. Pour cela, je vais définir ce que sont ces journaux,
-comment les stoquer, et finalement comment les consulter.
-
-J'écrirai par la suite une deuxième partie pour détailler l'implémentation de
-ces logs avec des cas plus concrets.
-
-## Les types de logs
-
-En matière de développement, il existe une référence incontournable : [The
-twelve-factors app](https://12factor.net/fr/). Ce référentiel de bonne pratiques
-nous donnes une très bonne définitions des journaux :
-
-  Les logs sont des flux (en) d’agrégats d’évènements, ordonnés dans le temps,
-  collectés à travers les flux de sortie de tous les processus et services
-  externes qui tournent. Les logs, dans leur forme brute, sont au format texte
-  avec un événement par ligne (bien que les traces d’exécutions puissent
-  s’étaler sur plusieurs lignes). Les logs n’ont pas de début ou de fin fixe,
-  mais se remplissent en continu tant que l’application est en marche.
-
-Même si cette définition est très juste, elle n'est pas très accessibles pour
-des profiles non technique. Je vais donc essayer une approche basé sur
-l'exemple, je vais décrire les trois principaux types de journaux que l'on
-trouve dans la pluparts des applications, et ces différents exemple devrait vous
-donner une bonnes images de ce que sont les journaux.
-
-Tout d'abord, parmis les journaux que va écrire notre application, nous avons
-les journaux utilisateurs. Ils nous disents *qui* effectue *quelle* action et
-*quand*.
-
-Nous avons ensuite des journaux fonctionnels avec des informations plus
-techniques sur le fonctionnement de notre application. Un exemple connu d'erreur
-fonctionnel est l'erreur « 404 Not found ». Avec le protocole HTTP (qui nous
-sert à consulter les sites internet), les erreurs entre 400 et 499 sont des
-erreurs liées à une mauvaise requête de l'utilisateurs (404 signifiant que l'URL
-est incorect). Les journaux fonctionnels font aussi apparaître les erreur
-supérieures à 500, ce sont les erreurs de programmation, les comportement
-innatendus.
-
-Et finalement, nous pouvons avoir les logs techniques, ceux-ci sortent du cadre
-de notre application et concernent plutôt l'environnement d'execution, on pourra
-y mesurer les temps de réponses de l'application, la consommation de ressource
-physique tel que la quantité de mémoire ou l'utilisation du processeur.
-
-Chaque évenement nous donnes donc une nouvelle entrée dans notre journal, chaque
-élément est daté et contient une description qui sera plus où moins longue.
-
-Si l'on reprend notre analogie du capitaine et de son journal de bord, nous
-pouvons aussi comprendre que la qualité, la quantité et la pertinence des logs
-dépendent directement du capitaine qui les écrit. Nous reparlerons de l'écriture
-de nos journaux dans la deuxième partie qui parlera de l'implémentation.
+Intro bien gaulé
 
 ## La volumétrie et le stockage
 
@@ -174,61 +116,23 @@ pendant 5 ans ».
 Il est donc important de s'assurer que les journaux archivé sont bien stoqués
 dans des entrepots dediés.
 
+## Conclusion partie 2
+
+
+# Partie 3 : La consultation et l'exploitation
+
+## L'enrichissement des logs
+
+Les tags, pour savoir d'ou qu'ils viennent
+Prometheus
+
 ## La consultation
 
-- Pouvoir les remettre pour consultation
-- Voir les courbes aide à la décision
-- Définir les alertes
-
-## Conclusion
-
-Ready for part 2 ?
-
-
-
-# Partie 2 : L'implémentation
-
-## Intro
-
-Dans le précédent article, on parle des logs de maniére général afin de poser les bases.
-
-Maintenant on va architecturer notre collecte de logs pour l'utiliser dasn des cas concret. Je vais m'appuyer sur des technologies existentes
-
-## Les applications
-
-- Votre application doit être stateless
-- La volumétrie d'une application... multiplié par le nombre d'instance
-- Quand vous en faites tourner 10 000... ça devient plus compliqué
-- Individuellement, qu'est-ce qui se passe ? Le pouvoir des multiplications
-
-Les tags ! viva prometheus
-
-## Centralisation des logs : Prometheus
-
-L'architecture de vos logs va grandemetn impacté leurs performances
-
-Chaque application exporte les logs, mais où ?
-Gestion des logs as stream => Mais où les stocker ?
-
-Volumétrie des logs, Replication, Suppression
-Comment on implémente tout ça ?
-
-Ne pas tout mettre au même endroit
-
-## Visualiser les logs : Grafana
-
-Visualisation des logs ? comment on fait, pourquoi ?
-Les implémentation
-
-Grafana, l'un des plus connus. Mais la performance est importante
-
-Partie fun ! Mais complexe en réalité quand y a beaucoup d'instances dans la production
+- Graffana, les jolies courbes
+- Mais aussi des systèmes de detection d'anomalies
 
 ## Le monitoring
 
-Pas vraiment de régle, et c'est bien là tout le problème.
-L'application peut casser de bien des manières différentes
+- Voir les courbes aide à la décision
 
-Surveiller les metrics saine.
-Établir des seuilles d'alerte cohérents avec votre produit
-Éviter les alertes innutile
+## Conclusion partie 3
