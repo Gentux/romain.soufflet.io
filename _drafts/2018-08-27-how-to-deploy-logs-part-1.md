@@ -6,7 +6,7 @@ img: https://s3.eu-west-2.amazonaws.com/gentux/Images/store_and_consult_logs.jpg
 layout: post
 excerpt_separator: <!--more-->
 language: fr
-public: yes
+public: no
 title: Le déploiement : Les logs (1er partie, les bases)
 ---
 
@@ -21,6 +21,8 @@ pour les éviter à l'avenir.
 
 Je vais essayer avec cette article de définir et présenter les journaux
 applicatifs: Quels sont les types de journaux et à quoi servent-ils ?
+
+<!--more-->
 
 J'écrirai par la suite une deuxième partie pour montrer une vue d'ensemble de la
 gestion des journaux et finalement une troisième partie pour parler de
@@ -43,28 +45,28 @@ Même si cette définition est très juste, elle n'est pas très accessibles pou
 des profiles non technique. Je vais donc essayer une approche basé sur
 l'exemple, je vais décrire les trois principaux types de journaux que l'on
 trouve dans la pluparts des applications, et ces différents exemple devrait vous
-donner une bonnes images de ce que sont les journaux.
+donner une bonnes vue d'ensemble.
 
 ### Les journaux utilisateurs
 
-Tout d'abord, parmis les journaux que va écrire notre application, nous avons
-les journaux utilisateurs. Ils nous disents *qui* effectue *quelle* action et
-*quand*. Si on prend l'exemple d'un site de commerce en ligne, nous pourrions
-trouver une entrée qui ressemble à « 15h45: L'utilisateur JM240 a validé la
-commande R4039 ».
+Tout d'abord nous avons les journaux utilisateurs. Ils nous disents *qui*
+effectue *quelle* action et *quand*. Si on prend l'exemple d'un site de commerce
+en ligne, nous pourrions trouver une entrée qui ressemble à « 15h45:
+L'utilisateur JM240 a validé la commande R4039 ».
 
-Ces journaux sont très simple à comprendra par n'importe quel humains. Ils
-correspondent à des actions que les utilisateurs peuvent effectué. Cependant,
+Ces journaux sont très simple à comprendre par n'importe quel humain. Ils
+correspondent à des actions que les utilisateurs peuvent effectuer. Cependant,
 derrière cette simplicité à lire et comprendre se cache une grande difficulté de
 conception.
 
-En effet, un profil développeur qui doit s'occuper de rendre l'achat possible ne
-pensera pas forcement à écrire proprement l'information dans les journaux. De
-par mon expérience, j'ai souvent vu des développeurs ayant pour tâches d'ajouter
-l'écriture des journaux dans une application existantes.
+Derrière chaque action utilisateur se cache des dizaines d'actions automatisées
+par nos différents programmes. Il est difficile dans ce contexte de savoir ce
+qui est important d'écrire où non. Demander à un développeur d'ajouter
+l'écriture des journeaux dans un programme existant, c'est un peu comme demander
+à un pilote d'avion de voler : très bien, mais on va où ?
 
-De plus, même si mon exemple est très simple, il est parfois difficile de savoir
-ce qui est intéressant d'écrire et ce qui ne l'est pas.
+En ce qui concerne les journaux utilisateurs, le besoin doit être formulé
+fonctionnelement pour que les développeur sachent quoi écrire, et quand.
 
 ### Les journaux fonctionnels
 
@@ -85,12 +87,30 @@ Beaucoup de logiciels collaborent pour nous fournir notre solution compléte.
 De ce fait, ces journaux sont facile à comprendre pour n'importe quel ingénieur,
 car ils ont le même format dans tout les projets.
 
+Sur les applications écrites par nos équipes, c'est un réflexe qu'il faut
+acquérir. Écrire les informations qui pourrait être important aux personnes qui
+exploitent l'applications et pour cela, il faut que l'équipe de développement
+collabore avec l'équipe d'exploitant. On revient ici sur les notions DevOps que
+je détails dans d'autres articles [ici]() et [là]()
+
 ### Les journaux techniques
 
 Et finalement, nous avons les logs techniques, ceux-ci sortent du cadre
 de notre application et concernent plutôt l'environnement d'execution, on pourra
 y mesurer les temps de réponses de l'application, la consommation de ressource
 physique tel que la quantité de mémoire ou l'utilisation des processeurs.
+
+Le plus souvent pour ceux là, on parle de sondes entretenu et déployer par les
+équipes d'exploitation. L'erreur la plus fréquente que je trouve chez mes
+clients et justement de ne pas inclure les développeurs dans cette discussions.
+
+Par exemple, j'ai récemment vu un comportement sur les machines de productions
+avec une consomation mémoire en constante augmentation. Aucune alerte n'est
+levée jusqu'à ce que la machine soit au bord de la panne, l'équipe
+d'exploitation automatise alors une « solution » : On redémarre l'application
+lorsqu'on atteint 80%. C'est une très mauvaise solution, le bon réflexe ici
+aurait été d'inviter les développeurs à corriger la fuite mémoire.
+
 
 ## L'usage des journaux
 
@@ -126,4 +146,12 @@ internet.
 ## Conclusion
 
 Bien entendu, je ne peux pas être exhaustif sur l'usage que l'on fait de ces
-journaux, cela dépend beaucoup du produit et de l'entreprise
+journaux, cela dépend beaucoup du produit et de l'entreprise. J'ai tenté dans
+cette article de donner une vision d'ensemble de ce que sont les logs et à quoi
+ils servent.
+
+Dans le prochains articles, je vais rentrer dans des considérations un peu plus
+technique sur la gestions des journaux, leur stockage.
+
+Dans une troisièmes partie, nous parlerons des usages plus avancé tel que le
+monitoring où la consultation des logs en temps réel.

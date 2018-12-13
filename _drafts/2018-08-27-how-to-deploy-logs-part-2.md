@@ -10,8 +10,9 @@ public: yes
 title: Le déploiement : Les logs (2ème partie, architecture)
 ---
 
-
 Intro bien gaulé
+
+<!--more-->
 
 ## La volumétrie et le stockage
 
