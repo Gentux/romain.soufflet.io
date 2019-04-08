@@ -1,12 +1,12 @@
 ---
 categories: docker container infrastructure
 custom_css: posts.css
-date: 2018-12-12 15:51:00
-img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/DevObs.jpeg"
+date: 2019-04-07 12:32:10
+img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers.jpg"
 layout: post
 excerpt_separator: <!--more-->
 language: fr
-public: no
+public: yes
 title: "5 minutes pour les conteneurs (docker)"
 ---
 
@@ -19,11 +19,11 @@ Dans ces technos hype, on peut trouver *docker*. Si vous travaillez en
 informatique, vous avez sûrement entendu parler de docker ou plus généralement
 de la notion de *conteneur*.
 
+<!--more-->
+
 Par contre, en avoir entendu parler ou l'avoir utilisé ne garantit pas la
 compréhension de l’ensemble ni sa bonne utilisation. Alors si on en parlait ?
 Notre objectif : 5 minutes de lecture pour comprendre les conteneurs.
-
-<!--more-->
 
 # C'est quoi un conteneur en informatique ?
 
@@ -34,7 +34,7 @@ conteneur je vais quand même faire une digression sur les
 Sur une machine, qu’elle soit virtuelle ou physique, on a un OS (Operating
 System) dont le travail est de gérer des processus et leurs liens avec le
 matériel. Basiquement, les applications que votre entreprise produit seront des
-processus que l'OS  pourra exécuter sur les machines de production.
+processus que l'OS  pourra exécuter et gérer sur les machines de production.
 
 Pour qu'un processus fonctionne correctement, en simplifiant il lui faudrait 3
 éléments :
@@ -72,14 +72,14 @@ Donc pour faire une liste non-exhaustive:
 * Clareté de l'infrasture, lister les conteneur et leurs configurations suffit
   pour présenter l'ensemble de la solution déployée
 
-# Doit-on dire « Docker » ou « Container » ?
+# Doit-on dire « Docker » ou « Conteneur » ?
 
 Alors oui, y a souvent confusions parce que *docker* est l'outil le plus
 utilisé et le plus connu actuellement pour faire des *conteneur*.
 
 Mais en réalité, *docker* n'est qu'un moteur parmis d'autres. N'hésitez pas à
 vous renseigner sur le site d'[Open Container
-Initiative](https://www.opencontainers.org/).
+Initiative](https://www.opencontainers.org/) (*OCI*).
 
 La volonté d'*OCI* est de définir un standard industriel pour utiliser les
 conteneurs. Pour cela, il définit deux normes. La première est *runtime-spec*
