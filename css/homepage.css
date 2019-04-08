@@ -80,6 +80,9 @@ a:hover {
 .social-links li.atom a {
   color: #FF6600;
 }
+.social-links li.mail a {
+  color: #2c4257;
+}
 .social-links li a:hover {
   color: #BBBBBB;
   -webkit-transition: all 0.2s ease-in-out;
