@@ -11,7 +11,7 @@ title: "5 minutes pour les conteneurs (docker)"
 ---
 
 En informatique, coexistent de nombreuses technologies. Dans tout cet
-écosystème, il y a des technos qui naissent, d'autres qui meurent mais il y a
+écosystème, il y a des technos qui naissent, d'autres qui meurent, mais il y a
 surtout des technos tellement *hype* et *funky* que passer à côté est un
 exploit à part entière.
 
@@ -50,7 +50,7 @@ Un processus, avec ou sans conteneur, effectue le même travail. J'irai même
 jusqu'à dire qu'il va légèrement plus vite sans conteneur. Alors pourquoi cette
 euphorie autour des conteneurs ?
 
-En un mot : l'Isolation. C'est là que le mot conteneur est très bien choisit :
+En un mot : l'Isolation. C'est là que le mot conteneur est très bien choisi :
 on place le processus dans une boîte où il se retrouve seul.
 
 Un conteneur n'a pas accès aux autres conteneurs, ils ne savent pas que
@@ -62,26 +62,26 @@ Donc pour faire une liste non-exhaustive:
 
 * Sécurité, un processus A n'a pas accès aux fichiers manipulés par le processus
   B
-* Sécurité, le processus n'a accès qu'aux ressources réseaux qu'on a définit
+* Sécurité, le processus n'a accès qu'aux ressources réseaux qu'on a défini
   pour lui
-* Portabilité, quelque soit l'OS sur lequel on utilise nos conteneur, ils
+* Portabilité, quel que soit l'OS sur lequel on utilise nos conteneurs, ils
   fonctionneront de la même manière
 * Possibilité pour les développeurs d'utiliser le même conteneur dans leurs
   phases de tests et en production et ainsi réduire les sources d'erreurs
-* Clareté de l'infrastructure, lister les conteneurs et leurs configurations suffit
+* Clarté de l'infrastructure, lister les conteneurs et leurs configurations suffit
   pour présenter l'ensemble de la solution déployée
 
 # Doit-on dire « Docker » ou « Conteneur » ?
 
 Alors oui, il y a souvent confusion parce que *docker* est l'outil le plus
 utilisé et le plus connu actuellement pour faire des *conteneurs* mais en
-réalité ce n'est qu'un moteur parmis d'autres. N'hésitez pas à vous
+réalité ce n'est qu'un moteur parmi d'autres. N'hésitez pas à vous
 renseigner sur le site d'[Open Container
 Initiative](https://www.opencontainers.org/) (*OCI*).
 
 La volonté d'*OCI* est de définir un standard industriel pour utiliser les
 conteneurs. Pour cela, il définit deux normes. La première est *runtime-spec*
-qui spécifie comment doit être executé un conteneur. La deuxième est
+qui spécifie comment doit être exécuté un conteneur. La deuxième est
 *image-spec* pour définir comment sauvegarder, partager et réutiliser les
 images de conteneur.
 
@@ -101,4 +101,4 @@ en déduire que l'image est un système fiable.
 Arf, j'ai dépassé, mais au moins vous avez du contenu pour pouvoir répondre si
 on vous parle de conteneur maintenant.
 
-À vous de jouez ! ;)
+À vous de jouer ! ;)
