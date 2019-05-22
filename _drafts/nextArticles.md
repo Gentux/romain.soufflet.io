@@ -33,7 +33,12 @@ Let the machines do the work
 
 Yep
 
-
-
-
 ## Les contrats d'API
+
+
+
+
+
+## Mon organisation
+
+
