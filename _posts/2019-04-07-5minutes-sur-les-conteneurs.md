@@ -25,7 +25,7 @@ Par contre, en avoir entendu parler ou l'avoir utilisé ne garantit pas la
 compréhension de l’ensemble ni sa bonne utilisation. Alors si on en parlait ?
 Notre objectif : 5 minutes de lecture pour comprendre les conteneurs.
 
-# C'est quoi un conteneur en informatique ?
+## C'est quoi un conteneur en informatique ?
 
 Avant d’aborder le sujet des conteneurs je vais faire une digression sur les
 [processus](https://fr.wikipedia.org/wiki/Processus_(informatique)).
@@ -44,7 +44,7 @@ Pour qu'un processus fonctionne correctement, en simplifiant il lui faudrait 3
 
 Le *conteneur*, c'est la boîte qui va donner ces 3 éléments aux `processus`.
 
-# Pourquoi utiliser un conteneur ?
+## Pourquoi utiliser un conteneur ?
 
 Un processus, avec ou sans conteneur, effectue le même travail. J'irai même
 jusqu'à dire qu'il va légèrement plus vite sans conteneur. Alors pourquoi cette
@@ -71,7 +71,7 @@ Donc pour faire une liste non-exhaustive:
 * Clarté de l'infrastructure, lister les conteneurs et leurs configurations suffit
   pour présenter l'ensemble de la solution déployée
 
-# Doit-on dire « Docker » ou « Conteneur » ?
+## Doit-on dire « Docker » ou « Conteneur » ?
 
 Alors oui, il y a souvent confusion parce que *docker* est l'outil le plus
 utilisé et le plus connu actuellement pour faire des *conteneurs* mais en
@@ -85,7 +85,7 @@ qui spécifie comment doit être exécuté un conteneur. La deuxième est
 *image-spec* pour définir comment sauvegarder, partager et réutiliser les
 images de conteneur.
 
-# Les images ?
+## Les images ?
 
 Une image de conteneur est une archive qui contient tout ce dont votre
 conteneur a besoin pour être exécuté. Vous pourrez donc l'utiliser sur
@@ -96,7 +96,7 @@ prend l'image du projet *nginx* par exemple, elle est quotidiennement utilisée
 par des milliers d'entreprises.  Nous pouvons donc en déduire que l'image est
 fiable.
 
-# On avait dit 5 minutes !
+## On avait dit 5 minutes !
 
 Arf, j'ai dépassé, mais au moins vous avez du contenu pour pouvoir répondre si
 on vous parle de conteneur maintenant.
