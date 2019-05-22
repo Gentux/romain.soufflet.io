@@ -1,7 +1,7 @@
 ---
 categories: docker container infrastructure
 custom_css: posts.css
-date: 2019-04-07 12:32:10
+date: 2019-05-22 12:32:10
 img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers.jpg"
 layout: post
 excerpt_separator: <!--more-->
@@ -89,12 +89,12 @@ images de conteneur.
 
 Une image de conteneur est une archive qui contient tout ce dont votre
 conteneur a besoin pour être exécuté. Vous pourrez donc l'utiliser sur
-plusieurs machines.
+différentes machines.
 
-Ces images peuvent être partagées, copiées, modifiées et repartagées pour faire
-des produits communautaires. Comme peut l'être l'image du projet *nginx* qui
-est quotidiennement utilisée par des milliers d'entreprises. Nous pouvons donc
-en déduire que l'image est un système fiable.
+Ces images peuvent être partagées, copiées, modifiées puis repartagées. Si je
+prend l'image du projet *nginx* par exemple, elle est quotidiennement utilisée
+par des milliers d'entreprises.  Nous pouvons donc en déduire que l'image est
+fiable.
 
 # On avait dit 5 minutes !
 
