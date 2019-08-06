@@ -7,23 +7,23 @@ layout: post
 excerpt_separator: <!--more-->
 language: fr
 public: yes
-title: "5 minutes pour Kubernetes"
+title: "5 minutes pour démystifier Kubernetes"
 ---
 
-Tout le monde parle de *kubernetes*. Apparement, c'est trop génial et ça résout
-plein de problémes de déploiement. Mais concrétement, la pluparts des
-développeurs que je croise aujourd'hui me disent qu'ils ne connaissent pas
-*kubernetes*, ce que ça offre (ou pas) et comment le mettre en place.
+Les applications qui sont développé de nos jours se basent sur *kubernetes*. Mais
+concrétement, la pluparts des développeurs que je croise aujourd'hui me disent
+qu'ils ne connaissent pas *kubernetes*, ce que ça offre (ou pas) et comment le
+mettre en place.
 
 Sauf que voilà, on a pas tous 3 jours à investir dans l'étude d'un nouveau
 produit, surtout avec la taille et la compléxité que représente *kubernetes*.
 
-Alors on zap l'intro, on passe dans le vif du sujet et je présente *Kubernetes*
-en 5 minutes !
+Alors on zap l'intro, on passe dans le vif du sujet et on débroussaille le sujet
+*Kubernetes* en 5 minutes !
 
 <!--more-->
 
-# C'est quoi K8S ?
+## C'est quoi K8S ?
 
 On va faire simple, on est pressé. *Kubernetes* c'est long à écrire, alors
 souvent on croise *K8S* qui utilise le même modéle que *i18n*, à savoir qu'il y
