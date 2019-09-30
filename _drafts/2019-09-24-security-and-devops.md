@@ -147,26 +147,64 @@ identique au premier, mais c'est un deuxième disque. Dans les environnements
 *scalable* on va parler de stratégie de réplications car il ne sera pas
 néscessaire d'avoir toutes les données sur tout les disques. Il est aussi
 probable que vous ayez accés à des solutions techniques tel que Ceph pour gérer
-cette réplication de données.
+cette réplication de données. (TODO, a étoffer)
 
-Niveau 3 : Backup. On en arrive au niveau *backup*.
+Niveau 3 : Backup. Ici nous allons commencer à modifier la manière de stocker
+nos données. Pour beaucoup d'entreprise, le backup est simplement un dump de la
+base de données. J'ai une préfèrence très clair pour postgresql qui propose une
+commande *pg_dump* et permet de créer une sorte de photos instantanée de votre
+base qui sera facilement récupérable.
 
-Niveau 4 : La sauvegarde à froid.
+Niveau 4 : La sauvegarde à froid. Ce dernier niveau est une sorte de
+contre-mesure pour les backups. Si vous stocker vos backups au même endroit que
+vos servers... quand tout brûle, les backups brûlent avec. Une copie sur un
+disque dur en local qu'on stocke dans la cave chez Mémé permet parfois
+d'améliorer la sécurité pour un coût relativement négligeable.
 
-## Mesure concréte #3 : Comprendre et Corriger
+## Mesure concréte #3 : Prévenir l'apocalypse
 
-les métriques, analyse post-mortem
-Maintenant qu'on s'est rétablie
+Les deux première mesure que je présente sont essentielles. Savoir reconstruire
+depuis zero et savoir restauré, c'est garantir qu'on pourra reprendre l'activité
+peu importe la gravité de la situation.
 
-## Mesure concréte #4 : Prévention de l'apocalypse
+Si je devais résumé ces deux étapes je dirais qu'on a évalué notre environnement
+de production comme ayant 2 états possible:
 
-Les actions qui nous permettent "facilement" de passer au travers
+* Vert : Votre environnement fonctionne parfaitement
+* Rouge: Le service n'est plus accessible
 
-* Préventions de l'apocalypse
+Ce n'est malheureusemenet pas aussi simple, il existe toute une variété d'état
+entre le *vert* et le *rouge* où le service se retrouve dégradé. Les causes
+probable de défaillance et leur conséquence sont très nombreuse mais nous allons
+synthétiser tout ça.
+
+Pour mesurer l'état de notre système, nous allons utiliser des sondes. Il s'agit
+d'un outil de mesure ponctuelle faites à un instant *t*. Durant cette mesure, si
+le service répond, c'est *vert*, sinon, c'est *rouge*.
+
+Mais 2 états ne suffisent pas à donner un vrai diagnostique de votre production.
+Les services que nous déployons de nos jours sont assez complexes. Nous allons
+donc éviter d'avoir une seule sonde qui nous donne un état vert ou rouge.
+Privilégier plutôt une sonde qui vous donnera le temps de réponse de votre
+service en *milliseconde* par exemple.
+
+Puis nous multiplirons les sondes pour avoir l'états de tout les composant de
+notre production, chaque temps de réponse. Des outils merveilleux existent pour
+réaliser de très jolie tableau de bord (a.k.a. *dashboard*)
+
+[Capture d'ecran grafana](url)
+
+## Mesure concréte #5 : Construire son bastion
+
 * Mises à jour de sécurité
+* Chiffrement
+
+## Mesure concréte #6 : Au delà du domaine technique
+
 * Gestion des acréditations
 * Disponibilité RH
-* Chiffrement
+* Processus de mise en production
+* Documentation ?
 
 ## Et plein d'autres menaces
 
