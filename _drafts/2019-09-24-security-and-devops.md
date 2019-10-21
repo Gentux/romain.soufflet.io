@@ -217,63 +217,100 @@ série de données (*timeseries* en anglais). Puis nous multiplirons les sondes
 pour avoir l'états de tout les composants de notre production.
 
 Le principal avantage de cette approche est de pouvoir mettre ces données dans
-un graphique et ainsi constituer de beaux tableau de bord qui nous donne une
+un graphique et ainsi assembler de beaux tableaux de bord qui nous donne une
 vision plus précises et plus visuel de nos environnements.
 
 [Capture d'ecran grafana](url)
 
-// Il manque une paragraphe ou deux sur les alertes
+Les métriques constituent alors une sorte d'audit de santé permanent dans votre
+environnement et à l'image de notre audit de sécurité, il sert *uniquement*
+à nous donner des informations sur l'états de santé.
 
-// Relecture
+Les métriques prennent tout leur sens une fois couplé à un système d'alerte.
+Sans rentrer dans les détails, il s'agit de spécifier des seuil par delà
+lesquels les équipes d'exploitations seront notifié d'une anomalie.
 
 ## Mesure concréte #4 : Construire son bastion
 
-Nous avons les moyens de mesurer les performances de notre produit ou de notre
-service. Cependant, pour que ces performance reste optimal, nous devons protéger
-nos environnement.
+L'image d'un camp militaire reviens souvent dans les domaines liés à la sécurité
+informatique. Les mots que nous employons sont souvent issue de la culture
+militaire. Cette analogie reste très utilisé car elle permet de communiquer des
+idées techniques simplement.
 
-On va donc passer aux mesures et contres mesures de sécurité. Ces un sujet que
-j'apprécie particulièrement car il me donne l'impression de faire partie de
-l'équipe de James Bond. Ici on va pouvoir marteler des phrases comme « Ne faites
-confiance à rien ni personnes » ou encore « Méfiez vous de votre réseau ». Nous
-allons même pouvoir parler *firewall* et *encryption* comme dans les séries
-américaines.
+Avec cette image, la première étape est de batir un périmétre sécurisé autour de
+notre environnement applicatif. Techniquement, il s'agira principalement de
+notions réseaux.
 
-Commençons par parler de *chiffrement*. Il s'agit d'un domaine passionnant qui
-transforme n'importe quel phrase en une série de chiffres et permet au
-destinataire de retransformer ces chiffres pour lire la phrase d'orgine. Là où
-ce domaine est particulièrement intéressant, c'est qu'il est possible d'avoir
-une conversation avec un inconnu à l'autre bout du monde et quand même être sûr
-que cette personne est la seule au monde à pouvoir lire votre message.
+Nous aurons une partie purement technique en faisant passer les flux réseaux par
+différents équipements tel que des *firewall* pour nous assurer les actions des
+utilisateur ne leur permettent pas d'intérférer avec les éléments sensibles.
+
+Pour la partie entretien et actions humaines, nous construisons *un bastion
+SSH*. J'écrirai un article pour étoffer cette notion de bastion SSH. Concernant
+la sécurité, tout ce que vous avez besoin de retenir c'est d'avoir un système
+qui vous permette de gérer vos habilitation qui aura les fonctions suivantes:
+
+* Donner les droits à un nouvel employé
+* Retirer les droites suite à un départ
+* S'assurer à chaque connexions que le compte a bel et bien les bon droits  pour
+  accéder à l'environnement
+* Garder un journal d'accés : Savoir qui est venu, à quelle heure et pour
+  quelle(s) raison(s)
+
+Dans notre image de camp militaire, cela correpond à la parti administrative et
+déclarative de toute les entrées et sorties du site. Continuons avec cette image
+et imaginons maintenant que chacune de ces entrés ou sorties transporte des
+objets de valeur, des données dans le monde informatique.
+
+Afin de cacher ces données d'un observateur ennemi potentiel, nous allons les
+cacher dans des boite noir opaque, ce procédé est appelé *chiffrement*.
+
+Il s'agit d'un domaine passionnant qui transforme n'importe quel phrase en une
+série de chiffres et permet au destinataire de retransformer ces chiffres pour
+lire la phrase d'orgine. Là où ce domaine est particulièrement intéressant,
+c'est qu'il est possible d'avoir une conversation avec un inconnu à l'autre bout
+du monde et quand même être sûr que cette personne est la seule au monde à
+pouvoir lire votre message.
 
 En réalité, cette dernière affirmation est très théorique. Nous avons des
 démonstration mathématique pour évaluer la difficulté à déchiffrer le message.
 Cependant, entre la demonstration et la pratique, nous avons l'implémentation
-qui parfois recèle des anomalies.
+(de quelles manière notre démonstration mathématique à été programmée) qui
+parfois recèle des anomalies.
 
-Ce qui nous méne aux mise à jour de sécurités. Lorsqu'une faille est découverte,
-elle est rendu publique. Cela ne se fait pas du jour au lendemain, en général
-nous avons déjà installà la mise à jour avant d'être au courant qu'il y a une
-faille.
+Avec un domaine aussi abstrait et spécifique, il y a de fortes chance pour que
+vous ne soyez pas en mesure de savoir si une faille se cache dans les outils que
+vous utilisez et vous n'aurez probablement pas les moyens de corriger ces
+failles.
 
-Néanmoins, en chiffrant les échanges avec le clients, nous garantissons aux
-clients qu'ils sont bien en train de communiquer avec nous et que leur données
-ne parviennent qu'à nous.
+Ce qui nous méne aux mises à jour de sécurités. Lorsque qu'un faille est
+découverte par quelqu'un quelque part dasn le monde, les experts du domaine
+corrige se problème sans les bibliothéques de fonctions libre disponible sur
+internet pour que tout le monde en bénéficie.
 
-Suivons donc ces données, maintenant que nous les avons reçu, les clients
-s'attendent à ce que nous les protégions. J'ai déjà parler un peu plus haut de
-la partie sauvegarde et backup, par contre je n'ai pas préciser qu'il vous est
-possible d'anonymiser les données ou de les chiffrer.
+La parenthése *chiffrement* va s'arrêter là et nous allons poursuivre avec
+l'anonymat de nos utilisateurs. Premièrement j'aimerai préciser que le
+chiffrement permet de garantir à l'utilisateur qu'il communique bien avec nous
+et qu'il peut donc avoir confiance dans l'envoi de ses données.
 
-TODO: étoffer anonymisation et chiffrement
+Reprenons deux minutes l'image de notre camp militaire. Pour que l'application
+fonctionne nous avons besoin d'ouvrir chaque boite noir qui nous parviens. Sauf
+certains cas vraiment spécifique. Par conséquent, si quelqu'un désire voler des
+données, plutôt que de s'attaquer à convoi il lui suffit d'entrer dans un des
+entrepot où les données sont ouvertes.
 
-TODO: gérer les accés SSH => Bastion
+Les bonnes pratiques nous incitent donc de continuer à chiffrer au maximum les
+données même si notre base de données est sécurisé. Je ne vais pas m'étendre ici
+et laissé vos équipes technique ce qu'il est possible de réaliser ici.
+L'inconvénient d'avoir des données chiffré en base de données et que votre
+programme ne pourra pas les parcourir. C'est un compromis que vous seul pouvez
+faire en fonction de vos besoin et possibilitées.
 
-## Mesure concréte #7 : Au delà du domaine technique
+## Mesure concréte #5 : Au delà du domaine technique
 
 Toutes les mesures évoqué jusqu'à maintenant sont d'ordre technique. Un autre
-point à noter c'est que toutes ces mesures peuvent et doivent être entreprises
-pendant le développement du projet.
+point à noter c'est que toutes ces mesures peuvent et doivent être entreprises
+pendant le développement du projets.
 
 Maintenant, nous allons explorer l'application du point de vue d'un auditeur. Il
 y a beaucoup plus dans un projet informatique que l'aspect techniques.
@@ -305,23 +342,23 @@ votre application. Ce rôle existe toujours et il est bien distincte du rôle
 
 L'audit de sécurité va vous encourager à segmenter et isoler tout ces différents
 rôles et cela peut vite devenir un problèmes. En suivant des recommendation à la
-lettre on se retrouve vite a siloter l'entreprise.
+lettre on se retrouve a siloter l'entreprise.
 
 Gardez à l'esprit que l'audit est souvent réaliser par une personne externe qui
 ne connait pas votre produit ni votre entreprise. Vous avez le contrôle de vos
-équipes et de votre manière de travailler, c'est donc vous qui pourront définir
-les meilleurs stratégie pour garantir la sécurités.
+équipes et de votre manière de travailler, c'est donc à vous de définir les
+meilleurs stratégie pour garantir la sécurités.
 
 Résumons un peu tout ça pour garder un peu de concrét. Tout au long de votre
 projet vous devrez maintenir la liste des différents rôle autour de votre
 application (en général nous avons le *développement*, *l'intégration* et
-*l'exploitation*). A chaque rôle, savoir quels personnes peuvent endosser le
-rôle, on parle ici d'accréditation et cela s'accompagne de savoir comment
-intégrer les nouveaux arrivants mais aussi de savoir comment refuter l'accès aux
-anciens employés. Ensuite vous devriez avoir un moyen de tracer quel personne à
-mener quel actions et quand.
+*l'exploitation*). C'est important de savoir quels personnes peuvent endosser
+chacun de ces rôles à tout moment, nous parlons ici d'accréditation et cela
+s'accompagne de savoir comment intégrer les nouveaux arrivants mais aussi de
+savoir comment refuter l'accès aux anciens employés. Ensuite vous devriez avoir
+un moyen de tracer quelle personne à mené quelles actions et quand.
 
-Ça fait beaucoup de choses à mettre en place mais rassurez-vous, nous n'avons
+Çela fait beaucoup d'éléments à mettre en place mais rassurez-vous, nous n'avons
 pas besoin de tout faire parfaitement.
 
 Une derniére note sur ces points. Il arrive dans les équipes de petites taille
@@ -344,24 +381,25 @@ J'ai beaucoup parlé des menaces techniques car je garde un point de vue
 d'ingénieur. Mais gardons à l'esprit que les menaces peuvent prendre bien
 d'autres formes.
 
-J'ai déjà parlé d'un problème RH, si l'équipe disparaît que faisons nous ? Mais
-parfois dans de grandes structure, une décision du patron suffit à faire
-disparaitre un projet entier, on terminer un contrat avec un prestataire.
+J'ai évoqué les problèmes de ressources humaines avec les arrivées et départs
+d'employés, mais si l'équipe entière disparaît que faisons nous ? J'ai croisé ce
+cas dans de grandes structure, une décision du patron suffit à faire
+disparaitre un projet entier, ou terminer un contrat avec un prestataire.
 
 Les poursuites judiciaire sont aussi une menace, il y a même une économie
-identifié sur ce genre de choses appelé *patent troll*
+identifié appelé *patent troll* aux états-unis.
 
-J'ai encore un exemple de menace sortie de nul part. Lors d'une mission pour une
-trés grandes structures, nous travaillons avec une autre section de l'entreprise
-(on parle de 50 à 70 personnes environ). Tout se passait bien, aussi bien sur le
-plan humain que sur la montée en compétence de tout le monde. Sauf qu'une
-trentaine de ces personnes faisait partie d'une entreprise prestataire.
-
-Le contrat avec cette entreprise c'est terminée, et l'entreprise a prit un autre
-prestataire. Comment ruiner des milliers d'heures cumulée de travail. L'histoire
+Un exemple de menace sortie de nul part. Lors d'une mission pour une trés
+grandes structures, nous travaillions avec une autre section (on parle de 50 à
+70 personnes environ). Tout se passait bien, aussi bien sur le plan humain que
+sur la montée en compétence de tout le monde. Sauf qu'une trentaine de ces
+personnes faisait partie d'une entreprise prestataire dont le contrat touchait à
+sa fin. Comment ruiner des milliers d'heures cumulée de travail. L'histoire
 fini plutôt bien, les nouveaux profils s'intégre bien et montent en compétences
 tranquillement.
 
+Nous avons simplement perdu 6 mois de travail humain pour gérer cette mauvaise
+transition.
 
 ## Bilan de sécurité DevOps
 
