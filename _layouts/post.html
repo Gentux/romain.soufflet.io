@@ -72,6 +72,21 @@ custom_css: posts.css
         </div>
 
         <!--End mc_embed_signup-->
+
+        <hr>
+
+        <div>
+          <h4>Top des articles</h4>
+          {% for post in site.posts limit: 6 %}
+          {% if post.public %}
+
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <br>
+          <br>
+        {% endif %}
+        {% endfor %}
+        </div>
+
         <!-- *** RIGHT COLUMN END *** -->
       </div>
     </div>
