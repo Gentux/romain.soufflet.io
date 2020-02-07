@@ -6,7 +6,7 @@ img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/et-si-on-parlait-devops.j
 layout: post
 toporder: 4
 excerpt_separator: <!--more-->
-lang: fr
+language: fr
 public: yes
 title: "Transition DevOps en terrain difficile"
 ---
