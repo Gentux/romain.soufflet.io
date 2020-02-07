@@ -16,11 +16,11 @@ En informatique, coexistent de nombreuses technologies. Dans tout cet
 surtout des technos tellement *hype* et *funky* que passer à côté est un
 exploit à part entière.
 
+<!--more-->
+
 Dans ces technos hype, on peut trouver *docker*. Si vous travaillez en
 informatique, vous avez sûrement entendu parler de docker ou plus généralement
 de la notion de *conteneur*.
-
-<!--more-->
 
 Par contre, en avoir entendu parler ou l'avoir utilisé ne garantit pas la
 compréhension de l’ensemble ni sa bonne utilisation. Alors si on en parlait ?
