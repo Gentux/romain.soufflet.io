@@ -50,3 +50,32 @@ p, ul {
   line-height: 30px;
   margin-bottom: 23 px;
 }
+
+
+.top-stories .item {
+  clear: both;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #eeeeee;
+}
+.top-stories .item .image {
+  float: left;
+  width: 25%;
+  margin-right: 10px;
+}
+.top-stories .item .name {
+  width: 70%;
+  margin-left: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.top-stories .item .text {
+  clear: both;
+}
+.top-stories .item h5 {
+  margin-top: 0;
+}
+.top-stories .item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}

@@ -75,15 +75,25 @@ custom_css: posts.css
 
         <hr>
 
-        <div>
+        <div class="top-stories">
           <h4>Top des articles</h4>
           {% assign topstories = site.posts | sort: "toporder" %}
           {% for post in topstories limit: 5 %}
           {% if post.public %}
-
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <br>
-          <br>
+            <div class="item same-height-row clearfix">
+              <div class="image same-height-always">
+                <a href="{{ post.url }}">
+                  {% if post.img %}
+                  <img src="{{ post.img }}" class="img-responsive" alt="" >
+                  {% else %}
+                  <img src="/img/placeholder.png" class="img-responsive" alt="">
+                  {% endif %}
+                </a>
+              </div>
+              <div class="name same-height-always">
+                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+              </div>
+            </div>
         {% endif %}
         {% endfor %}
         </div>
