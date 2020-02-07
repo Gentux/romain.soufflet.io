@@ -77,7 +77,8 @@ custom_css: posts.css
 
         <div>
           <h4>Top des articles</h4>
-          {% for post in site.posts limit: 6 %}
+          {% assign topstories = site.posts | sort: "toporder" %}
+          {% for post in topstories limit: 5 %}
           {% if post.public %}
 
           <a href="{{ post.url }}">{{ post.title }}</a>

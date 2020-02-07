@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2014-11-19 19:32:42
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/firefoxOS.jpg
 layout: post
+toporder: 14
 language: en
 public: yes
 title: "Compiling «Boot 2 Gecko» on Debian"

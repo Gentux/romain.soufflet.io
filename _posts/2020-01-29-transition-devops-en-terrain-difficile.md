@@ -2,8 +2,9 @@
 categories: services work devops sre
 custom_css: posts.css
 date: 2020-01-29 08:26:32
-img: https://gentux.s3.eu-west-2.amazonaws.com/Images/et-si-on-parlait-devops.jpg
+img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/et-si-on-parlait-devops.jpg"
 layout: post
+toporder: 4
 excerpt_separator: <!--more-->
 lang: fr
 public: yes
