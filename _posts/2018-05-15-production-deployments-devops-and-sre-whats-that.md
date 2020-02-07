@@ -5,6 +5,7 @@ date: 2018-05-15 11:16:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
 layout: post
 excerpt_separator: <!--more-->
+toporder: 7
 language: en
 public: no
 title: Production deployments, DevOps, SRE and other strange subjects
@@ -16,13 +17,13 @@ Not because my work is fuzzy, but because it's based on concepts that most
 people do not understand. The least technical way I explain what I'm working on
 is:
 
+<!--more-->
+
 "I'm in charge of putting into production".
 
 Certainly, but what is a "production"? It is not a complicated notion but it is
 a notion that is based on many other concepts that make its explanation quite
 difficult.
-
-<!--more-->
 
 Moreover, we do not really answer the question, to know what "putting into
 production" really includes.

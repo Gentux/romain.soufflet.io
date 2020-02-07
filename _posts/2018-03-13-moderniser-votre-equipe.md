@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2017-07-04 11:16:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/moderniserLOrganisationDeSonEquipe.jpg
 layout: post
+toporder: 8
 excerpt_separator: <!--more-->
 language: fr
 public: yes

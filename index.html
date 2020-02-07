@@ -93,9 +93,9 @@ title: "Prod'Healer"
       </p>
 
       <div class="row">
-        {% for post in site.posts limit: 4 %}
-        {% if post.public %}
-        <div class="col-md-3 col-sm-6 col-article">
+        {% assign posts = site.posts | where:"language","fr" %}
+        {% for post in posts limit: 6 %}
+        <div class="col-md-4 col-sm-6 col-article">
           <div class="box-image-text blog">
             <div class="vertical-center-container top">
               <div class="vertical-center-table-cell image">
@@ -119,7 +119,6 @@ title: "Prod'Healer"
             </div>
           </div>
         </div>
-        {% endif %}
         {% endfor %}
       </div>
     </div>

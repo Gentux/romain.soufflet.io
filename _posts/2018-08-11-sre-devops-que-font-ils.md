@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2018-08-11 16:38:25
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte.jpeg
 layout: post
+toporder: 1
 excerpt_separator: <!--more-->
 language: fr
 public: yes
@@ -13,12 +14,14 @@ title: "Devops et SRE, De quoi s'agit-il ?"
 Dans le [précédent
 article](https://romain.soufflet.io/services/work/devops/sre/2018/05/15/deploiements-en-production-sre-devops-et-autres-sujets-obscurs.html)
 je parle de la production et de ce que cela implique de s'en occuper.  Mais
-quels rapports avec les termes **DevOps** et **SRE** ? Je ne prétends pas
-pouvoir donner une définition claire et universelle pour ces mots mais
-j'aimerais pouvoir les démystifier et en rendre la compréhension plus
-accessible.
+quels rapports avec les termes **DevOps** et **SRE** ?
 
 <!--more-->
+
+Je ne prétends pas pouvoir donner une définition claire et universelle pour ces
+mots mais j'aimerais pouvoir les démystifier et en rendre la compréhension plus
+accessible.
+
 
 Dans la plupart des projets informatiques, nous avons une équipe de
 développeurs et une équipe d'administrateurs systèmes. Regrouper des unités

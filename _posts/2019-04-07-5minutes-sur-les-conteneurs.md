@@ -4,6 +4,7 @@ custom_css: posts.css
 date: 2019-05-22 12:32:10
 img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers.jpg"
 layout: post
+toporder: 2
 excerpt_separator: <!--more-->
 language: fr
 public: yes
@@ -15,11 +16,11 @@ En informatique, coexistent de nombreuses technologies. Dans tout cet
 surtout des technos tellement *hype* et *funky* que passer à côté est un
 exploit à part entière.
 
+<!--more-->
+
 Dans ces technos hype, on peut trouver *docker*. Si vous travaillez en
 informatique, vous avez sûrement entendu parler de docker ou plus généralement
 de la notion de *conteneur*.
-
-<!--more-->
 
 Par contre, en avoir entendu parler ou l'avoir utilisé ne garantit pas la
 compréhension de l’ensemble ni sa bonne utilisation. Alors si on en parlait ?
