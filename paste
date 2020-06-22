@@ -1,0 +1,33 @@
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    IdentityFile ~/.ssh/id_rsa
+
+Host services.bastion-z1.pi.minint.fr services.bastion-z2.pi.minint.fr services.bastion-z3.pi.minint.fr
+    User souffler
+
+Host services.bastion-z1.r2.pi.minint.fr services.bastion-z2.r2.pi.minint.fr services.bastion-z3.r2.pi.minint.fr
+    User souffler
+
+Host 10.228.*
+    User debian
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+
+Host 10.228.12?.* 10.228.13?.* 10.228.140.* 10.228.141.* 10.228.142.* 10.228.143.*
+    ProxyCommand ssh services.bastion-z1.pi.minint.fr -W %h:%p
+
+Host 10.228.144.* 10.228.145.* 10.228.146.* 10.228.147.* 10.228.148.* 10.228.149.* 10.228.15?.*
+    ProxyCommand ssh services.bastion-z2.pi.minint.fr -W %h:%p
+
+Host 10.228.16?.* 10.228.170.* 10.228.171.* 10.228.172.* 10.228.173.* 10.228.174.* 10.228.175.*
+    ProxyCommand ssh services.bastion-z3.pi.minint.fr -W %h:%p
+
+Host 10.228.?.* 10.228.10.* 10.228.11.* 10.228.12.* 10.228.13.* 10.228.14.* 10.228.15.*
+    ProxyCommand ssh services.bastion-z1.r2.pi.minint.fr -W %h:%p
+
+Host 10.228.16.* 10.228.17.* 10.228.18.* 10.228.19.* 10.228.2?.* 10.228.30.* 10.228.31.*
+    ProxyCommand ssh services.bastion-z2.r2.pi.minint.fr -W %h:%p
+
+Host 10.228.32.* 10.228.33.* 10.228.34.* 10.228.35.* 10.228.36.* 10.228.37.* 10.228.38.* 10.228.39.* 10.228.4?.*
+    ProxyCommand ssh services.bastion-z3.r2.pi.minint.fr -W %h:%p
