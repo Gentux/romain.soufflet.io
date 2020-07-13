@@ -1,33 +1,208 @@
-Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 3
-    IdentityFile ~/.ssh/id_rsa
+---
 
-Host services.bastion-z1.pi.minint.fr services.bastion-z2.pi.minint.fr services.bastion-z3.pi.minint.fr
-    User souffler
+image: $NEXUS_URL/python:3.8
 
-Host services.bastion-z1.r2.pi.minint.fr services.bastion-z2.r2.pi.minint.fr services.bastion-z3.r2.pi.minint.fr
-    User souffler
+variables:
+  HTTP_PROXY: 'http://pio.skydns.local:3128'
+  HTTPS_PROXY: 'http://pio.skydns.local:3128'
+  NO_PROXY: 'localhost,127.0.0.1,skydns.local'
+  CONFIG_DIR: "$CI_PROJECT_DIR/configs"
+  LOG_CONF_PATH: "$CONFIG_DIR/forgeLog.conf"
 
-Host 10.228.*
-    User debian
-    UserKnownHostsFile /dev/null
-    StrictHostKeyChecking no
+stages:
+- syntax
+- sast
+- unittests
+- build
+- release
 
-Host 10.228.12?.* 10.228.13?.* 10.228.140.* 10.228.141.* 10.228.142.* 10.228.143.*
-    ProxyCommand ssh services.bastion-z1.pi.minint.fr -W %h:%p
+#################
+### TEMPLATES ###
+#################
 
-Host 10.228.144.* 10.228.145.* 10.228.146.* 10.228.147.* 10.228.148.* 10.228.149.* 10.228.15?.*
-    ProxyCommand ssh services.bastion-z2.pi.minint.fr -W %h:%p
+.template: &template_build
+  stage: build
+  image:
+    name: $NEXUS_URL/docker:19.03.5
+  before_script:
+    - CI_IMAGE_NAME="webservice"
+    - FILE_PATH="webservice/Dockerfile"
+  script:
+    - docker info
+    - docker build --no-cache
+                   --tag ${CI_IMAGE_NAME}:${CI_COMMIT_SHA}
+                   --build-arg http_proxy=$HTTP_PROXY
+                   --build-arg https_proxy=$HTTPS_PROXY
+                   --build-arg no_proxy=$NO_PROXY
+                   --build-arg GIT_COMMIT=$CI_COMMIT_SHA
+                   --build-arg image_base_name=$NEXUS_URL/python
+                   -f $FILE_PATH .
+    - mkdir images
+    - docker save ${CI_IMAGE_NAME}:${CI_COMMIT_SHA} > images/${CI_IMAGE_NAME}_${CI_COMMIT_SHA}.tar
+    - tar -zcf images.tar.gz images/
+    - docker rmi ${CI_IMAGE_NAME}:${CI_COMMIT_SHA}
+  artifacts:
+    paths:
+      - images.tar.gz
+  tags:
+  - forge
 
-Host 10.228.16?.* 10.228.170.* 10.228.171.* 10.228.172.* 10.228.173.* 10.228.174.* 10.228.175.*
-    ProxyCommand ssh services.bastion-z3.pi.minint.fr -W %h:%p
+.template: &template_release
+  stage: release
+  image:
+    name: $NEXUS_URL/docker:19.03.5
+  before_script:
+    - CI_IMAGE_VERSION="latest"
+    - CI_IMAGE_NAME="webservice"
+  script:
+    - mkdir /root/.docker
+    - |
+      cat > "/root/.docker/config.json" <<EOF
+      {
+        "auths": {
+          "${NEXUS_URL}": {
+            "auth": "${NEXUS_CREDS}"
+          }
+        }
+      }
+      EOF
+    - |
+      if [[ -n "$CI_COMMIT_TAG" ]]; then
+        CI_IMAGE_VERSION=$(echo $CI_COMMIT_TAG | sed 's/.*\#//')
+        CI_IMAGE_NAME=$(echo $CI_COMMIT_TAG | sed 's/\#.*//')
+      fi
+    - docker info
+    - tar zxf images.tar.gz
+    - docker load -i images/${CI_IMAGE_NAME}_${CI_COMMIT_SHA}.tar
+    - docker tag ${CI_IMAGE_NAME}:${CI_COMMIT_SHA} ${NEXUS_URL}/forge/internal/${CI_IMAGE_NAME}:${CI_IMAGE_VERSION}
+    - docker push ${NEXUS_URL}/forge/internal/${CI_IMAGE_NAME}:${CI_IMAGE_VERSION}
+    - docker rmi ${NEXUS_URL}/forge/internal/${CI_IMAGE_NAME}:${CI_IMAGE_VERSION}
+    - docker rmi ${CI_IMAGE_NAME}:${CI_COMMIT_SHA}
+  tags:
+  - forge
 
-Host 10.228.?.* 10.228.10.* 10.228.11.* 10.228.12.* 10.228.13.* 10.228.14.* 10.228.15.*
-    ProxyCommand ssh services.bastion-z1.r2.pi.minint.fr -W %h:%p
+######################
+### END TEMPLATES ####
+######################
 
-Host 10.228.16.* 10.228.17.* 10.228.18.* 10.228.19.* 10.228.2?.* 10.228.30.* 10.228.31.*
-    ProxyCommand ssh services.bastion-z2.r2.pi.minint.fr -W %h:%p
+Pylint:
+  stage: syntax
+  before_script:
+    - pip install pylint pylint-exit anybadge
+  script:
+    - mkdir ./pylint
+    - python webservice/setup.py install
+    - pylint --disable=C0103 --output-format=text ./*/*.py | tee ./pylint/pylint.log || pylint-exit $?
+    - PYLINT_SCORE=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' ./pylint/pylint.log)
+    - anybadge --label=Pylint --file=pylint/pylint.svg --value=$PYLINT_SCORE 3=red 5=orange 7=yellow 10=green
+    - echo "Pylint score is $PYLINT_SCORE"
+  artifacts:
+    paths:
+      - ./pylint/
+  tags:
+  - forge
 
-Host 10.228.32.* 10.228.33.* 10.228.34.* 10.228.35.* 10.228.36.* 10.228.37.* 10.228.38.* 10.228.39.* 10.228.4?.*
-    ProxyCommand ssh services.bastion-z3.r2.pi.minint.fr -W %h:%p
+Static Code Analysis Tests:
+  stage: sast
+  before_script:
+    - pip install bandit
+  script:
+  - python webservice/setup.py install
+  - mkdir ./bandit/
+  - bandit -lll -iii -r . -f json -o ./bandit/bandit.json
+  artifacts:
+    paths:
+      - ./bandit/
+  when: always
+  tags:
+  - forge
+
+PyUnitTests:
+  stage: unittests
+  image:
+    name: $NEXUS_URL/forge/internal/webservice:latest
+  script:
+    - pip install tox
+    - tox
+  when: always
+  tags:
+  - forge
+
+build_webservice:
+  <<: *template_build
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^webservice/
+      when: on_success
+    - if: $CI_COMMIT_BRANCH
+      changes:
+      - webservice/*
+      - Dockerfile
+      when: on_success
+
+build_healthcheck:
+  <<: *template_build
+  before_script:
+    - CI_IMAGE_NAME="healthcheck"
+    - FILE_PATH="healthcheck/Dockerfile"
+  rules:
+    - if: $CI_COMMIT_TAG  =~ /^healthcheck/
+      when: on_success
+    - if: $CI_COMMIT_BRANCH
+      changes:
+      - healthcheck/*
+      when: on_success
+
+build_notifier:
+  <<: *template_build
+  before_script:
+    - CI_IMAGE_NAME="notifier"
+    - FILE_PATH="frg_notifier/Dockerfile"
+  rules:
+    - if: $CI_COMMIT_TAG  =~ /^notifier/
+      when: on_success
+    - if: $CI_COMMIT_BRANCH
+      changes:
+      - frg_notifier/*
+      when: on_success
+
+release_webservice:
+  <<: *template_release
+  stage: release
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^webservice/
+      when: on_success
+    - if: '$SCHEDULED == "true"'
+      when: on_success
+  needs:
+    - job: build_webservice
+      artifacts: true
+
+release_healthcheck:
+  <<: *template_release
+  stage: release
+  before_script:
+    - CI_IMAGE_VERSION="latest"
+    - CI_IMAGE_NAME="healthcheck"
+  rules:
+    - if: $CI_COMMIT_TAG  =~ /^healthcheck/
+      when: on_success
+    - if: '$SCHEDULED == "true"'
+      when: on_success
+  needs:
+    - job: build_healthcheck
+      artifacts: true
+
+release_notifier:
+  <<: *template_release
+  stage: release
+  before_script:
+    - CI_IMAGE_VERSION="latest"
+    - CI_IMAGE_NAME="notifier"
+  rules:
+    - if: $CI_COMMIT_TAG  =~ /^notifier/
+      when: on_success
+    - if: '$SCHEDULED == "true"'
+      when: on_success
+  needs:
+    - job: build_notifier
+      artifacts: true
