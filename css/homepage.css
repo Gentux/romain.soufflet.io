@@ -17,7 +17,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  padding: 6em 0em 6em;
+  padding: 3em 0em 2em;
   text-align: center;
 }
 
@@ -117,12 +117,14 @@ a:hover {
 }
 
 #more .box-image-text h4 {
+  min-height: 2.5em;
 }
 
 #more .box-image-text .intro {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
+  min-height: 9em;
 }
 
 #more .col-article {
