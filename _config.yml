@@ -7,3 +7,7 @@ plugins_dir: ./_plugins
 layouts_dir: ./_layouts
 exclude:     ['vendor', 'Makefile', 'README.md']
 keep_files:  ['.git', '.svn']
+
+collections:
+  formations:
+    collection_dir: _formations

@@ -1,0 +1,109 @@
+---
+layout: default
+custom_css: formations.css
+---
+
+{% if page.img %}
+  <div class="formation-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.img }}'); background-size: cover; background-position: center;"></div>
+{% endif %}
+
+<div class="container">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <div class="formation-date row">
+      <img alt="me" class="img-rounded" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/gentux-sd-snow.jpg">
+
+      <p>
+        par <a href="https://romain.soufflet.io">Romain Soufflet</a>,
+        <br>
+        le <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: '%d/%m/%Y' }}
+        </time>
+      </p>
+    </div>
+  </header>
+</div>
+
+<div class="formation-page">
+  <div class="container">
+    <div class="row">
+      <!-- *** LEFT COLUMN START *** -->
+      <div class="col-md-9">
+        <article>
+          <div class="formation">
+            {{ content }}
+          </div>
+        </article>
+      </div>
+      <!-- *** LEFT COLUMN END *** -->
+
+      <!-- *** RIGHT COLUMN *** -->
+      <div class="col-md-3 sidebar">
+        <div class="google-search">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+              <input type="search" name="q" class="form-control" placeholder="Rechercher">
+              <input type="hidden" name="sitesearch" value="https://romain.soufflet.io">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+
+        <hr>
+
+        <!-- Begin MailChimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+          <form action="https://soufflet.us18.list-manage.com/subscribe/post?u=5f4bd71a2dbd5232b99fcf457&amp;id=4583e9a28a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <img class="ml-logo" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/prod_healer_logo_transparent_small.png" alt="Prod'Healer">
+              <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="adresse e-mail" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5f4bd71a2dbd5232b99fcf457_4583e9a28a" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: inline;"></div>
+            </div>
+          </form>
+        </div>
+
+        <!--End mc_embed_signup-->
+
+        <hr>
+
+        <div class="top-stories">
+          <h4>Top des articles</h4>
+          {% assign topstories = site.formations | sort: "toporder" %}
+          {% for formation in topstories limit: 5 %}
+          {% if formation.public %}
+            <div class="item same-height-row clearfix">
+              <div class="image same-height-always">
+                <a href="{{ formation.url }}">
+                  {% if formation.img %}
+                  <img src="{{ formation.img }}" class="img-responsive" alt="" >
+                  {% else %}
+                  <img src="/img/placeholder.png" class="img-responsive" alt="">
+                  {% endif %}
+                </a>
+              </div>
+              <div class="name same-height-always">
+                <h5><a href="{{ formation.url }}">{{ formation.title }}</a></h5>
+              </div>
+            </div>
+        {% endif %}
+        {% endfor %}
+        </div>
+
+        <!-- *** RIGHT COLUMN END *** -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--End mc_embed_signup-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580229947f73602c"></script>

@@ -14,12 +14,15 @@ title: Déploiements en production, SRE, DevOps et autres sujets obscurs
 On me demande souvent ce que je fais dans la vie et je n’arrive pas à répondre.
 
 Non pas parce que mon travail est flou, mais parce qu'il repose sur des concepts
-que la plupart des gens ne maîtrisent pas. La manière la moins technique que
-j'ai d'expliquer ce sur quoi je travaille est la suivante:
+que la plupart des gens ne maîtrisent pas.
+
+<!--more-->
+
+La manière la moins technique que j'ai d'expliquer ce sur quoi je travaille est
+la suivante:
 
 « je m'occupe de la mise en production ».
 
-<!--more-->
 
 Certes, mais c'est quoi une « production » ? Ce n'est pas une notion compliquée
 mais c'est une notion qui repose sur pleins d'autres concepts qui rendent son
