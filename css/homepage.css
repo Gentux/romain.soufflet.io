@@ -11,13 +11,7 @@ a:hover {
 /* Banner home page
 ---------------------------------- */
 #banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3.eu-west-2.amazonaws.com/gentux/Images/datacenter-min.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #FFFFFF;
-  padding: 3em 0em 2em;
+  background: url('/img/qbkls.png');
   text-align: center;
 }
 
@@ -98,7 +92,6 @@ a:hover {
 
 #more {
   background: url('/img/qbkls.png');
-  border-top: 1px solid #888;
 }
 
 #more .box-image-text {
@@ -139,6 +132,10 @@ a:hover {
 
 #more .read-more {
   text-align: center;
+}
+
+#more img {
+  width: 100%;
 }
 
 .container {

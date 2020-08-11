@@ -1,85 +1,101 @@
 ---
 layout: backbone
 ---
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">
-            <img src="https://s3.eu-west-2.amazonaws.com/gentux/Images/white_logo_transparent.png" height="40" class="d-inline-block align-top" alt="{{ site.name }}">
-          </a>
-        </div>
-        <div class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/formations.html">Formations</a></li>
-            <li><a href="/posts.html">Blog</a></li>
-            <li><a href="/atom.xml">RSS</a></li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Accueil</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          {% assign current = page.url | downcase | split: '/' %}
+
+          <li class="nav-item {% if current[1] == 'formations.html' %}active{% endif %}">
+            <a class="nav-link" href="/formations.html">Formations</a>
+          </li>
+          <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
+            <a class="nav-link" href="/posts.html">Blog</a>
+          </li>
+          <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
+            <a class="nav-link" href="/about.html">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">RSS</a>
+          </li>
+        </ul>
+
+        <div class="google-search">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search" class="form-inline my-lg-0">
+            <div class="input-group">
+              <input type="search" name="q" class="form-control" placeholder="Rechercher">
+              <input type="hidden" name="sitesearch" value="https://romain.soufflet.io">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
+    </nav>
 
     {{ content }}
 
     <footer id="footer">
       <div class="container">
-        <div class="col-md-4 col-sm-6">
-          <h4>À propos</h4>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <h4>À propos</h4>
 
-          <p>
-          Je m'appelle Romain Soufflet, et je propose actuellement mon
-          expertise DevOps/SRE au travers de missions en tant qu'indépendant.
-          </p>
+            <p>
+            Je m'appelle Romain Soufflet, et je propose actuellement mon
+            expertise DevOps/SRE au travers de missions en tant qu'indépendant.
+            </p>
 
-          <p>
-          Après plusieurs années de développement logiciel, je m’intéresse
-          aux déploiements et aux chaînes de production logicielles. Depuis
-          une dizaine d'année maintenant, un nouveau corps de métiers est né
-          : <em>DevOps</em>.
-          </p>
+            <p>
+            Après plusieurs années de développement logiciel, je m’intéresse
+            aux déploiements et aux chaînes de production logicielles. Depuis
+            une dizaine d'année maintenant, un nouveau corps de métiers est né
+            : <em>DevOps</em>.
+            </p>
 
-          <hr class="hidden-md hidden-lg hidden-sm">
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <h4>Derniers articles</h4>
-
-          <div class="blog-entries">
-            {% for post in site.posts limit: 4 %}
-            {% if post.public %}
-            <div class="item same-height-row clearfix">
-              <div class="image same-height-always">
-                <a href="{{ post.url }}">
-                  {% if post.img %}
-                  <img src="{{ post.img }}" class="img-responsive" alt="" >
-                  {% else %}
-                  <img src="/img/placeholder.png" class="img-responsive" alt="">
-                  {% endif %}
-                </a>
-              </div>
-              <div class="name same-height-always">
-                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
+            <hr class="d-md-none d-lg-none d-xl-none">
           </div>
 
-          <hr class="hidden-md hidden-lg">
-        </div>
+          <div class="col-md-4 col-sm-6">
+            <h4>Derniers articles</h4>
 
-        <div class="col-md-4 col-sm-6">
-          <h4>Romain Soufflet</h4>
+            <div class="blog-entries">
+              {% for post in site.posts limit: 4 %}
+              {% if post.public %}
+              <div class="item same-height-row clearfix">
+                <div class="image same-height-always">
+                  <a href="{{ post.url }}">
+                    {% if post.img %}
+                    <img src="{{ post.img }}" class="img-responsive" alt="" >
+                    {% else %}
+                    <img src="/img/placeholder.png" class="img-responsive" alt="">
+                    {% endif %}
+                  </a>
+                </div>
+                <div class="name same-height-always">
+                  <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
 
-          <p>
-            <a href="mailto:romain+website@soufflet.io">romain@soufflet.io</a>
-          </p>
+            <hr class="d-md-none d-lg-none d-xl-none">
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <h4>Romain Soufflet</h4>
+
+            <p>
+              <a href="mailto:romain+website@soufflet.io">romain@soufflet.io</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
