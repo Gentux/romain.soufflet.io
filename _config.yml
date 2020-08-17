@@ -11,3 +11,4 @@ keep_files:  ['.git', '.svn']
 collections:
   formations:
     collection_dir: _formations
+    output: true

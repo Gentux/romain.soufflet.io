@@ -4,6 +4,7 @@ length: 1 jour
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte.jpeg
 layout: formation
 excerpt_separator: <!--more-->
+categories: devops sre
 toporder: 1
 public: yes
 title: "La culture DevOps et le rôle SRE"
