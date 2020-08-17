@@ -2,7 +2,7 @@
 categories: work devops sre
 custom_css: posts.css
 date: 2018-08-11 16:38:25
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte.jpeg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte-small.jpeg
 layout: post
 toporder: 1
 excerpt_separator: <!--more-->

@@ -11,7 +11,6 @@ a:hover {
 /* Banner home page
 ---------------------------------- */
 #banner {
-  background: url('/img/qbkls.png');
   text-align: center;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -92,39 +91,12 @@ a:hover {
   color: #555555;
 }
 
-#more {
-  background: url('/img/qbkls.png');
-}
 
-#more .box-image-text {
-  background: #ecf0f1;
-  border-radius: 10px;
-  padding: 10px;
-  transition-duration: .4s;
-}
-
-#more .box-image-text:hover {
-  transform: scale(1.04);
-}
-
-#more .box-image-text .top {
-  height: 220px;
-}
-
-#more .box-image-text h4 {
-  min-height: 2.5em;
-}
-
-#more .box-image-text .intro {
+#more .intro {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
   min-height: 9em;
-}
-
-#more .col-article {
-  padding-left: 0;
-  margin-bottom: 21px;
 }
 
 #more .author-category {
@@ -137,13 +109,5 @@ a:hover {
 }
 
 #more img {
-  width: 100%;
-}
-
-.container {
-  max-width: 100%
-}
-
-.row {
-  overflow: hidden;
+  max-height: 360px;
 }
