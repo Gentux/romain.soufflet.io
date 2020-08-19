@@ -91,23 +91,18 @@ a:hover {
   color: #555555;
 }
 
-
-#more .intro {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  min-height: 9em;
+#main-page .image {
+  min-width: 50%;
 }
-
-#more .author-category {
+#main-page .intro p {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  margin-bottom: auto;
+}
+#main-page .author-category {
   font-size: 13px;
   color: #585858;
 }
-
-#more .read-more {
+#main-page .read-more {
   text-align: center;
-}
-
-#more img {
-  max-height: 360px;
 }
