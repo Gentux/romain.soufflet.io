@@ -1,7 +1,7 @@
 ---
 custom_css: formations.css
 length: 1 jour
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mastering-git.jpeg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mastering-git-small.jpeg
 layout: formation
 excerpt_separator: <!--more-->
 toporder: 5

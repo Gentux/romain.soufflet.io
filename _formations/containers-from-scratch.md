@@ -1,7 +1,7 @@
 ---
 custom_css: formations.css
 length: 2 jour
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers-small.jpg
 layout: formation
 excerpt_separator: <!--more-->
 toporder: 3

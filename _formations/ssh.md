@@ -1,7 +1,7 @@
 ---
 custom_css: formations.css
 length: 1 jour
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/languages.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/languages-small.jpg
 layout: formation
 excerpt_separator: <!--more-->
 toporder: 6
