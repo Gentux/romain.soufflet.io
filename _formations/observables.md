@@ -9,9 +9,8 @@ public: yes
 title: "Les Observables"
 ---
 
-Repenser les notions de supervision et monitoring. Les observables est une autre façon de penser les tâches
-d’administrations. Pouvoir comprendre ce qui se passe dans une infrastructure et anticiper les problèmes plutôt que de
-réagir à des pannes.
+L'observabilité est une autre façon de penser les tâches de supervisions et de monitoring. Pouvoir comprendre ce qui se
+passe dans une infrastructure et anticiper les problèmes plutôt que de réagir aux pannes.
 
 Objectif : Identifier des indicateurs et mettre en place un plan pour rendre votre infrastructure observable.
 

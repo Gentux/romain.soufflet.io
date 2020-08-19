@@ -55,6 +55,18 @@ iframe {
     vertical-align: middle;
 }
 
+/* Banner home page
+---------------------------------- */
+#banner {
+  text-align: center;
+}
+
+#banner img {
+  margin-bottom: 30px;
+  max-width: 100%;
+  height: auto;
+  max-height: 185px;
+}
 
 #footer {
   background: #555555;

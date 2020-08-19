@@ -1,6 +1,6 @@
-a:hover {
+a {
   text-decoration: none;
-  color: #BBBBBB;
+  color: #2c4257;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -8,39 +8,14 @@ a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* Banner home page
----------------------------------- */
-#banner {
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-
-#banner h2 {
-  color: #FFFFFF;
-  font-size: 3em;
-  line-height: 1em;
-  margin: 0 0 0.5em 0;
-  padding: 0;
-}
-
-#banner p {
-  font-size: 1.5em;
-  margin: 1.5em 0 0 0;
-  line-height: 1.5em;
-}
-
-#banner p.description-text {
-  max-width: 900px;
-  margin: auto;
-}
-
-#banner img {
-  border-radius: 10px;
-  margin-bottom: 30px;
-  max-width: 100%;
-  height: auto;
-  max-height: 132px;
+a:hover {
+  text-decoration: none;
+  color: #a36328;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Social Links

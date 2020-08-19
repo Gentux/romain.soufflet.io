@@ -4,17 +4,10 @@ description: La meilleure source d'informations pour les sujets liés au DevOps,
 custom_css: homepage.css
 title: "Prod'Healer"
 ---
-
-<section id="banner">
-  <div class="container">
-    <img src="https://gentux.s3.eu-west-2.amazonaws.com/Images/color_logo_transparent-small.png" height="132" alt="Prod'Healer" />
-  </div>
-</section>
-
-<section id="more">
+<section id="main-page">
   <div class="container">
     <div class="row">
-      {% assign posts = site.posts | where:"language","fr" %}
+      {% assign posts = site.posts | where:"language","fr" | sort: "toporder" %}
       {% for post in posts limit: 6 %}
         {% if forloop.index == 1 %}
         <div class="col-md-12 col-sm-12 col-article">
@@ -28,7 +21,7 @@ title: "Prod'Healer"
         <div class="col-md-6 col-sm-6 col-article">
           <div class="d-md-flex flex-md-column d-sm-flex flex-sm-column mb-2">
         {% endif %}
-            <div class="p-2">
+            <div class="p-2 image">
               {% if post.img %}
                 <img src="{{ post.img }}" class="rounded mx-auto d-block img-fluid w-100" alt="" />
               {% else %}
@@ -41,13 +34,21 @@ title: "Prod'Healer"
               <p class="author-category">
                 Publié le {{ post.date | date: '%d/%m/%Y' }}
               </p>
-              <p class="intro">{{ post.excerpt | strip_html }}</p>
+              <div class="intro">
+                {{ post.excerpt }}
+              </div>
               <p class="read-more">
                 <a href="{{ post.url }}" class="btn btn-primary">Continuer à lire</a>
               </p>
             </div>
+
           </div>
         </div>
+        {% if forloop.index == 1 or forloop.index == 4%}
+        <div class="col-md-12 col-sm-12 col-article d-none d-md-block d-lg-block">
+          <hr>
+        </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
