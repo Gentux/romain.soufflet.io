@@ -7,99 +7,45 @@ custom_css: blog.css
 
 <section id="main-page">
   <div class="container">
-    <div class="row">
-      <!-- *** LEFT COLUMN START *** -->
-      <div class="col-md-9">
-        {% for post in site.posts %}
-        {% if post.public %}
-        <article>
-          <div class="post row">
-            <div class="col-md-4">
-              {% if post.img %}
-              <a href="{{ post.url }}">
-                <div style="background-image: url('{{ post.img }}')" class="post-image"></div>
-              </a>
-              {% endif %}
-            </div>
-
-            <div class="col-md-8">
-              <a href="{{ post.url }}">
-                <h3>{{ post.title }}</h3>
-              </a>
-
-              <p class="post-author">
-                <small>
-                  <span class="tags">
-                    <span class="label label-primary">{{ post.language }}</span>
-                  </span>
-                </small>
-                <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
-                  <i class="fa fa-calendar"></i>
-                  {{ post.date | date: '%d/%m/%Y' }}
-                </time>
-              </p>
-
-              <p class="post-description">
-              {% if post.description %}
-                <span class="body">{{ post.description | markdownify }}</span>
-              {% else %}
-                <span class="body">{{ post.excerpt | strip_html }}</span>
-              {% endif %}
-              </p>
-
-              <p class="post-more">
-                <a class="btn btn-primary" href="{{ post.url }}">Continuer à lire</a>
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <hr>
+    {% for post in site.posts %}
+    {% if post.public %}
+    <div class="d-md-flex flex-md-row d-sm-flex flex-sm-column mb-2">
+      <div class="p-2 image">
+        <a href="{{ post.url }}">
+        {% if post.img %}
+          <img src="{{ post.img }}" class="rounded mx-auto d-block img-fluid w-100" alt="" />
+        {% else %}
+          <img src="/img/placeholder.png" class="img-fluid img-thumbnail" alt="" />
         {% endif %}
-        {% endfor %}
+        </a>
       </div>
-      <!-- *** LEFT COLUMN END *** -->
 
-      <!-- *** RIGHT COLUMN *** -->
-        <div class="col-md-3">
+      <div class="p-2 content">
+        <h4>{{ post.title }}</h4>
 
-          <div class="google-search">
-            <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
-              <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="Rechercher">
-                <input type="hidden" name="sitesearch" value="https://romain.soufflet.io">
-                <span class="input-group-btn">
-                  <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-                </span>
-              </div>
-            </form>
-          </div>
+        <p class="post-author">
+          <small>
+            <span class="tags">
+              <span class="label label-primary">{{ post.language }}</span>
+            </span>
+          </small>
+          <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
+            <i class="fa fa-calendar"></i>
+            {{ post.date | date: '%d/%m/%Y' }}
+          </time>
+        </p>
 
-          <hr>
-
-          <!-- Begin MailChimp Signup Form -->
-          <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-          <style type="text/css">
-#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-          </style>
-          <div id="mc_embed_signup">
-            <form action="https://soufflet.us18.list-manage.com/subscribe/post?u=5f4bd71a2dbd5232b99fcf457&amp;id=4583e9a28a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-                <img class="ml-logo" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/prod_healer_logo_transparent_small.png" alt="Prod'Healer">
-                <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="adresse e-mail" required>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5f4bd71a2dbd5232b99fcf457_4583e9a28a" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: inline;"></div>
-              </div>
-            </form>
-          </div>
-
-          <!--End mc_embed_signup-->
-
+        <div class="intro">
+          {{ post.excerpt }}
         </div>
-        <!-- *** RIGHT COLUMN END *** -->
+        <p class="post-more">
+          <a class="btn btn-primary" href="{{ post.url }}">Continuer à lire</a>
+        </p>
+      </div>
     </div>
+
+    <hr>
+    {% endif %}
+    {% endfor %}
   </div>
 </section>

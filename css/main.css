@@ -201,3 +201,16 @@ iframe {
 .navbar img {
   margin-top: -10px;
 }
+
+.image-left, .image-right {
+  max-width: 45%;
+  margin-top: 1em;
+}
+.image-left {
+  float: left;
+  margin-right: 1em;
+}
+.image-right {
+  float: right;
+  margin-left: 1em;
+}
