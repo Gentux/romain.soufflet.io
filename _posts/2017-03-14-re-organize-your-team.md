@@ -2,7 +2,7 @@
 categories: management team work
 custom_css: posts.css
 date: 2017-03-14 18:42:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Team_Work-small.jpg
 layout: post
 toporder: 10
 excerpt_separator: <!--more-->

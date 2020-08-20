@@ -1,5 +1,6 @@
 #main-page .image {
   max-width: 450px;
+  min-width: 45%;
   margin: auto;
 }
 #main-page .intro p {

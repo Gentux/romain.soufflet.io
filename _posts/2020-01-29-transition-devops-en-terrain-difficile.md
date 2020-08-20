@@ -21,9 +21,8 @@ DevOps. Les bienfaits de cette transformation semblent aujourd’hui faire parti
 des faits établis. Cependant, bien que de nombreux articles en parlent, mener
 la transformation n’est pas toujours simple.
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q9VV4rfGFXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 [Les
 slides](https://slides.com/gentux/transformation-devops-quelles-realites#/)
 sont disponnibles en ligne
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q9VV4rfGFXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

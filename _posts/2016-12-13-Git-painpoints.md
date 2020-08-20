@@ -2,7 +2,7 @@
 categories: services life
 custom_css: posts.css
 date: 2016-11-09 18:42:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mastering-git.jpeg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mastering-git-small.jpeg
 layout: post
 toporder: 11
 language: en

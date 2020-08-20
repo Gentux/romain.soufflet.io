@@ -2,7 +2,7 @@
 categories: services life storage
 custom_css: posts.css
 date: 2014-04-15 16:30:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Raspberry_Pi_boxed.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/Raspberry_Pi_boxed-small.jpg
 layout: post
 toporder: 20
 language: en

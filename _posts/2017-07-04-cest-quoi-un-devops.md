@@ -2,7 +2,7 @@
 categories: services work devops sre
 custom_css: posts.css
 date: 2017-07-04 11:16:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/miniatureCestQuoiUnDevops.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/miniatureCestQuoiUnDevops-small.jpg
 layout: post
 toporder: 9
 excerpt_separator: <!--more-->
