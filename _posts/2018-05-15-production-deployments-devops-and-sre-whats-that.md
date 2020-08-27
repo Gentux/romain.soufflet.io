@@ -63,7 +63,7 @@ Architecture is the part of the work that will allow us to draw the following
 diagram:
 
 ![Schéma d'une application 3
-tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png)
+tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png){:.rounded .img-fluid}
 
 We see that for this small application, we already need 7 machines, configure
 network layers and provide redundancy services.

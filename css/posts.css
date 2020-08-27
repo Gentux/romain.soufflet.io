@@ -1,21 +1,10 @@
-.post-banner {
-  width: 100%;
-  height: 300px;
-  box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+p, ul {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 23 px;
 }
 
-.post-page {
-    background: white;
-    padding-top: 21px;
-}
-
-.post img {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-.img-rounded {
+.img-author {
   height: 60px;
   width: auto;
   border-radius: 100%;
@@ -24,8 +13,9 @@
   margin-left: 20px;
 }
 
-.ml-logo {
-  width: 100%;
+article>footer {
+  margin: auto;
+  max-width: 500px;
 }
 
 #mc_embed_signup_scroll {
@@ -43,39 +33,4 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-}
-
-p, ul {
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 23 px;
-}
-
-
-.top-stories .item {
-  clear: both;
-  padding: 5px 0;
-  margin-bottom: 10px;
-  border-bottom: solid 1px #eeeeee;
-}
-.top-stories .item .image {
-  float: left;
-  width: 25%;
-  margin-right: 10px;
-}
-.top-stories .item .name {
-  width: 70%;
-  margin-left: 10px;
-  display: table-cell;
-  vertical-align: middle;
-}
-.top-stories .item .text {
-  clear: both;
-}
-.top-stories .item h5 {
-  margin-top: 0;
-}
-.top-stories .item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
 }

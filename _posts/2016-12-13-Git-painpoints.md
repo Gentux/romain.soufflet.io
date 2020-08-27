@@ -31,7 +31,7 @@ But, even if I'm loving it, I have to say : **GIT** is also painful:
   errors
 * More error due to more commands…
 
-![take a sip](https://www.gizmodo.in/photo/47475817.cms)
+![take a sip](https://www.gizmodo.in/photo/47475817.cms){:.rounded .img-fluid}
 
 It's difficult to make **GIT** act the way you want, you have to learn a lot for
 that. I saw a lot of programmer who actually adopted a *simpler approach*
@@ -42,7 +42,7 @@ mv my-repo my-repo.bak
 git clone <url-of-my-repo>
 ```
 
-![this is horrible](https://media.giphy.com/media/t3iWR3dkTsW9q/giphy.gif)
+![this is horrible](https://media.giphy.com/media/t3iWR3dkTsW9q/giphy.gif){:.rounded .img-fluid}
 
 So let's try to learn some ways to do better, some ways to master your
 repository and not going crazy about it.

@@ -1,5 +1,5 @@
 ---
-custom_css: formations.css
+custom_css: formation.css
 length: 1 jour
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte-small.jpeg
 layout: formation

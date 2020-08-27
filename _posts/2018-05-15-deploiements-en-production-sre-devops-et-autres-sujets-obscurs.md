@@ -70,7 +70,7 @@ L'architecture, c'est la partie du travail nous permettant de dessiner le
 schéma suivant :
 
 ![Schéma d'une application 3
-tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png)
+tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png){:.rounded .img-fluid}
 
 Comme on peut le voir sur le schéma ci-dessus, nous avons déjà besoin de 7
 machines, puis de configurer les couches réseaux et de prévoir la redondance des

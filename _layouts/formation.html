@@ -1,44 +1,20 @@
 ---
 layout: default
-custom_css: formations.css
+custom_css: posts.css
 ---
 
-{% if page.img %}
-  <div class="formation-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.img }}'); background-size: cover; background-position: center;"></div>
-{% endif %}
-
-<div class="container">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <div class="formation-date row">
-      <img alt="me" class="img-rounded" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/gentux-sd-snow.jpg">
-
-      <p>
-        par <a href="https://romain.soufflet.io">Romain Soufflet</a>,
-        <br>
-        le <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date: '%d/%m/%Y' }}
-        </time>
-      </p>
-    </div>
-  </header>
-</div>
-
-<div class="formation-page">
+<section id="main-page">
   <div class="container">
-    <div class="row">
-      <!-- *** LEFT COLUMN START *** -->
-      <div class="col-md-9">
-        <article>
-          <div class="formation">
-            {{ content }}
-          </div>
-        </article>
-      </div>
-      <!-- *** LEFT COLUMN END *** -->
+    <article>
+      <header>
+        <h1>{{ page.title }}</h1>
 
-      <!-- *** RIGHT COLUMN *** -->
-      <div class="col-md-3 sidebar">
+        <img src="{{ page.img }}" class="img-fluid rounded" />
+      </header>
+
+      {{ content }}
+
+      <footer>
         <!-- Begin MailChimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
         <style type="text/css">
@@ -59,37 +35,10 @@ custom_css: formations.css
         </div>
 
         <!--End mc_embed_signup-->
-
-        <hr>
-
-        <div class="top-stories">
-          <h4>Top des articles</h4>
-          {% assign topstories = site.formations | sort: "toporder" %}
-          {% for formation in topstories limit: 5 %}
-          {% if formation.public %}
-            <div class="item same-height-row clearfix">
-              <div class="image same-height-always">
-                <a href="{{ formation.url }}">
-                  {% if formation.img %}
-                  <img src="{{ formation.img }}" class="img-responsive" alt="" >
-                  {% else %}
-                  <img src="/img/placeholder.png" class="img-responsive" alt="">
-                  {% endif %}
-                </a>
-              </div>
-              <div class="name same-height-always">
-                <h5><a href="{{ formation.url }}">{{ formation.title }}</a></h5>
-              </div>
-            </div>
-        {% endif %}
-        {% endfor %}
-        </div>
-
-        <!-- *** RIGHT COLUMN END *** -->
-      </div>
-    </div>
+      </footer>
+    </article>
   </div>
-</div>
+</section>
 
 <!--End mc_embed_signup-->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580229947f73602c"></script>

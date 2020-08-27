@@ -74,7 +74,7 @@ une collaboration à tous les niveaux de conception.
 En généralisant un peu, on arrive à un processus qui ressemblerait à ça:
 
 ![SRE
-Workflow](https://s3.eu-west-2.amazonaws.com/gentux/Images/SRE+Workflow.png)
+Workflow](https://s3.eu-west-2.amazonaws.com/gentux/Images/SRE+Workflow.png){:.rounded .img-fluid}
 
 Et pour chacunes de ces étapes, les différents profils pourront s'entraider:
 
