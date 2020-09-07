@@ -20,19 +20,22 @@ layout: backbone
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav w-100 justify-content-around">
             {% assign current = page.url | downcase | split: '/' %}
-
+<!--
             <li class="nav-item {% if current[1] == 'formations.html' %}active{% endif %}">
               <a class="nav-link" href="/formations.html">Formations</a>
             </li>
             <li class="nav-item {% if current[1] == 'hebergements.html' %}active{% endif %}">
               <a class="nav-link" href="/hebergements.html">Hébergement</a>
             </li>
+-->
             <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
               <a class="nav-link" href="/posts.html">Blog</a>
             </li>
+<!--
             <li class="nav-item {% if current[1] == 'coffee.html' %}active{% endif %}">
               <a class="nav-link" href="/coffee.html">Café DevOps</a>
             </li>
+-->
             <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
               <a class="nav-link" href="/about.html">À propos</a>
             </li>
