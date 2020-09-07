@@ -1,9 +1,8 @@
 name: Romain Soufflet
-markdown: redcarpet
+markdown: kramdown
 highlighter: true
 
 destination: ./_site
-plugins_dir: ./_plugins
 layouts_dir: ./_layouts
 exclude:     ['vendor', 'Makefile', 'README.md']
 keep_files:  ['.git', '.svn']
