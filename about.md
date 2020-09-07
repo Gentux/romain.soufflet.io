@@ -5,69 +5,69 @@ title: Notre équipe
 custom_css: about.css
 ---
 
-# À propos de Prod'Healer
+# À propos
 
 ![moi](https://gentux.s3.eu-west-2.amazonaws.com/Images/prod-healer-logo-color-miniature.png){:.img-fluid .img-thumbnail .image-left}
 
-L'industrie logicielle est en permanente ébulitions depuis ses débuts. Les
-technologies se suivent, se remplacent, s'améliorent et il devient difficile de
-s'y retrouver.
 
-Les connaissances techniques necéssaires pour comprendre les changements induit
-par des technologies tel que le cloud ou les containers sont loins d'être
-évidentes et les entreprises sont alors contraintes de faire appel à des
-profils spécialisés.
+L'industrie logicielle est en permanente ébullition depuis ses débuts. Les
+technologies se suivent, se remplacent, s’améliorent et il devient difficile de
+s’y retrouver.
 
-La multiplication des technologies informatiques incitent de nombreux ingénieurs
-aujourd'hui à choisir un domaine très précis et ne plus être en mesure ou ne
-souhaite plus s'occuper d'autres produits.
+Les connaissances techniques nécessaires pour comprendre les changements induit
+par des technologies telles que le cloud ou les containers sont loins d’être
+évidentes. Face à ces difficultées les entreprises sont contraintes de faire
+appel à des profils spécialisés dans le domaine.
 
-C'est à partir de ce constat que nous avons créer *Prod'Healer*.
+La multiplication des technologies informatiques incite de nombreux ingénieurs à
+se spécialiser dans un domaine très précis. En faisant ce choix, ces ingénieurs
+ne sont plus en mesure ou ne souhaitent plus s’occuper de produits situés en
+dehors de leur zone de spécialisation.
 
-Une aide agnostique de toutes technologie qui vise à aider n'importe quel
-entreprise à reprendre le controle de son service IT.
+C’est à partir de ce constat que j’ai créé *Prod’Healer*.
 
+Un ensemble global de données qui vise à aider n’importe quel entreprise à
+reprendre le contrôle de son service IT.
 
-## Nos valeurs
+## Les valeurs
 
 ![moi](https://s3.eu-west-2.amazonaws.com/gentux/Images/worktools-small.jpg){:.img-fluid .img-thumbnail .image-right}
 
-Un langage de programmation, au même titre qu'une distribution GNU/Linux ou une
-solution d'orchestration de conteneurs n'est qu'un outils.
+Un langage de programmation, au même titre qu’une distribution GNU/Linux ou une
+solution d’orchestration de conteneurs, n’est qu’un outil parmis d’autres.
 
-Nous construisons des infrastructures de plus en plus complexes au fur et à
-mesure que les années passent. Le materiel est de plus en plus performant, les
-standards de données sont mieux adaptées, les applications sont plus faciles
-à écrire.
+En construisant des infrastructures de plus en plus complexes au fur et à mesure
+que les années passent, le matériel devient de plus en plus performant, les
+standards de données sont mieux adaptées, les applications sont plus faciles à
+écrire.
 
-Et l'effet négatifs de ce monde en pleine accélération, c'est que notre
-surproduction logiciel nous ammène une surprudoction de dette techniques.
+L'effet négatif de ce monde en pleine accélération, c’est que notre
+surproduction logicielle nous amène une surproduction de “dettes” techniques. 
 
-Avec *Prod'Healer*, nous pensons que le meilleurs moyen de reprendre le controle
-et de le garder est de revenir sur la planche à dessein, prévoir plutôt que
+Avec *Prod’Healer*, je pense que le meilleur moyen de reprendre le contrôle et de
+le garder est de revenir sur la planche à dessein, de prévoir plutôt que de
 subir.
 
-Nous souhaitons devenir un interlocuteur de confiance en mesure de vous
-permettre d'atteindre vos objectif et tirer le meilleur partie de vos services
+Je souhaite pouvoir devenir un interlocuteur de confiance en mesure de vous
+permettre d’atteindre vos objectifs et tirer le meilleur parti de vos services
 IT.
 
-## L'équipe
+## À propos de moi
 
 ![moi](https://gentux.s3.eu-west-2.amazonaws.com/Images/gentux-sd.png){:.img-fluid .img-thumbnail .image-left}
 
-Au origine de ma carrières, j'étais un jeune développeur plein de belles idées
-mais surtout un jeune développeur accroc au *beau* code.
+Au origine de ma carrière, j’étais un développeur plein de belles idées mais
+surtout un développeur accroc au beau code.
 
-Le *beau* code, celui qu'on lit avec plaisir. Il est clair et concis, il fait
-exactement ce pourquoi il a été écris sans ambiguités et sans erreur bien
-entendu.
+Le *beau* code, celui qu’on lit avec plaisir. Ce code est clair et concis, il fait
+exactement ce pourquoi il a été écrit sans ambiguïtés et sans erreurs.
 
-Après plusieurs années de recherche, de refactoring, changement de
-spécification, de framework ou encore d'équipe, je me suis rendu à l'évidence,
-le code parfait n'existe pas et va falloir s'y faire.
+Après plusieurs années de recherche, de refactoring, de changement de
+spécification, de framework ou encore d’équipe, je me suis rendu à l’évidence,
+le code parfait n’existe pas et je devrais faire avec cette vérité.
 
-C'est à ce moment là que j'ai commencé à élargir mon horizon et à m'intéresser à
-ce que devient mon code une fois qu'il n'est plus entre mes mains.
+C’est à ce moment là que j’ai commencé à élargir mon horizon et à m’intéresser à
+ce que devient mon code une fois qu’il n’est plus entre mes mains.
 
-Voici donc ce que je suis devenus, un développeur qui donne un coup de main sur
-l'infra, et ce faisant, n'a plus le temps de coder.
+Voici donc qui je suis devenu, un développeur qui donne un coup de main sur
+l’infrastructure et ce faisant, n’a plus le temps de coder.
