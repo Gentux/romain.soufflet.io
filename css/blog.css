@@ -8,3 +8,10 @@
   line-height: 1.4;
   margin-bottom: auto;
 }
+
+#main-page a {
+  color: #3c484e;
+}
+#main-page a:hover {
+  text-decoration: none;
+}

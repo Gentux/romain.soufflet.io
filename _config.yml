@@ -7,6 +7,9 @@ layouts_dir: ./_layouts
 exclude:     ['vendor', 'Makefile', 'README.md']
 keep_files:  ['.git', '.svn']
 
+plugins:
+  - jekyll-regex-replace
+
 collections:
   formations:
     collection_dir: _formations

@@ -13,6 +13,10 @@ body {
   */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #a36328;
+}
+
 p, ul{
   font-size: 18px;
   line-height: 24px;

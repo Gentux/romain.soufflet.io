@@ -20,28 +20,27 @@ custom_css: blog.css
         </a>
       </div>
 
-      <div class="p-2 content">
-        <h4>{{ post.title }}</h4>
+      <a href="{{ post.url }}">
+        <div class="p-2 content">
+          <h4>{{ post.title }}</h4>
 
-        <p class="post-author">
-          <small>
-            <span class="tags">
-              <span class="label label-primary">{{ post.language }}</span>
-            </span>
-          </small>
-          <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
-            <i class="fa fa-calendar"></i>
-            {{ post.date | date: '%d/%m/%Y' }}
-          </time>
-        </p>
+          <p class="post-author">
+            <small>
+              <span class="tags">
+                <span class="label label-primary">{{ post.language }}</span>
+              </span>
+            </small>
+            <time class="pubdate" datetime="{{ post.date | date_to_xmlschema }}">
+              <i class="fa fa-calendar"></i>
+              {{ post.date | date: '%d/%m/%Y' }}
+            </time>
+          </p>
 
-        <div class="intro">
-          {{ post.excerpt }}
+          <div class="intro">
+            {{ post.excerpt }}
+          </div>
         </div>
-        <p class="post-more">
-          <a class="btn btn-primary" href="{{ post.url }}">Continuer à lire</a>
-        </p>
-      </div>
+      </a>
     </div>
 
     <hr>
