@@ -14,12 +14,12 @@ title: "Transition DevOps en terrain difficile"
 Retour d'expérience d'une transition DevOps dans un contexte à fortes
 contraintes techniques et humaines.
 
-<!--more-->
-
 De nos jours, beaucoup d’entreprises se transforment et adoptent la culture
 DevOps. Les bienfaits de cette transformation semblent aujourd’hui faire partie
 des faits établis. Cependant, bien que de nombreux articles en parlent, mener
 la transformation n’est pas toujours simple.
+
+<!--more-->
 
 [Les
 slides](https://slides.com/gentux/transformation-devops-quelles-realites#/)

@@ -9,6 +9,8 @@ custom_css: posts.css
       <header>
         <h1>{{ page.title }}</h1>
 
+        <img src="{{ page.img }}" class="img-fluid rounded" />
+
         <div class="post-date">
           <img alt="me" class="img-thumbnail img-fluid img-author" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/gentux-sd-snow.jpg">
 
@@ -20,13 +22,11 @@ custom_css: posts.css
             </time>
           </p>
         </div>
-
-        <img src="{{ page.img }}" class="img-fluid rounded" />
-
       </header>
 
-      {{ content }}
-
+      <div class="article-content">
+        {{ content }}
+      </div>
 
       <footer>
         <!-- Begin MailChimp Signup Form -->

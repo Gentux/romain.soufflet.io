@@ -1,9 +1,19 @@
-article>h1 {
+article h1 {
   padding-bottom: 0.5rem;
 }
-article>h2 {
+article h2 {
   padding-bottom: 0.5rem;
   padding-top: 1rem;
+}
+article .article-content {
+  max-width: 740px;
+  margin: auto;
+}
+article a {
+  color: #a36328;
+}
+article a:hover {
+  color: #2c4257;
 }
 
 .img-author {
@@ -22,6 +32,9 @@ article>h2 {
 article>footer {
   margin: auto;
   max-width: 500px;
+}
+article>footer img {
+  max-width: 100%;
 }
 
 #mc_embed_signup_scroll {
