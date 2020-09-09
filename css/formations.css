@@ -8,6 +8,10 @@
   line-height: 1.4;
   margin-bottom: auto;
 }
+.article-image {
+  max-width: 450px;
+  align-self: center;
+}
 
 .img-rounded {
   height: 60px;

@@ -1,7 +1,11 @@
-p, ul {
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 23 px;
+article>h1 {
+  padding-bottom: 0.5rem;
+  color: #a36328;
+}
+article>h2 {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  color: #a36328;
 }
 
 .img-author {
@@ -11,6 +15,10 @@ p, ul {
   float: left;
   margin-right: 20px;
   margin-left: 20px;
+}
+.article-image {
+  max-width: 450px;
+  align-self: center;
 }
 
 article>footer {

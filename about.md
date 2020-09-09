@@ -2,13 +2,10 @@
 layout: about
 description: À propos de Prod'Healer
 title: Notre équipe
-custom_css: about.css
+custom_css: posts.css
 ---
 
 # À propos
-
-![moi](https://gentux.s3.eu-west-2.amazonaws.com/Images/prod-healer-logo-color-miniature.png){:.img-fluid .img-thumbnail .image-left}
-
 
 L'industrie logicielle est en permanente ébullition depuis ses débuts. Les
 technologies se suivent, se remplacent, s’améliorent et il devient difficile de
@@ -31,8 +28,6 @@ reprendre le contrôle de son service IT.
 
 ## Les valeurs
 
-![moi](https://s3.eu-west-2.amazonaws.com/gentux/Images/worktools-small.jpg){:.img-fluid .img-thumbnail .image-right}
-
 Un langage de programmation, au même titre qu’une distribution GNU/Linux ou une
 solution d’orchestration de conteneurs, n’est qu’un outil parmis d’autres.
 
@@ -54,8 +49,13 @@ IT.
 
 ## À propos de moi
 
-![moi](https://gentux.s3.eu-west-2.amazonaws.com/Images/gentux-sd.png){:.img-fluid .img-thumbnail .image-left}
+<div class="d-md-flex flex-md-row d-sm-flex flex-sm-column mb-2">
 
+  <div class="p-2 article-image" markdown="1">
+![moi](https://gentux.s3.eu-west-2.amazonaws.com/Images/gentux-sd.png)
+  </div>
+
+  <div class="p-2 content" markdown="1">
 Au origine de ma carrière, j’étais un développeur plein de belles idées mais
 surtout un développeur accroc au beau code.
 
@@ -71,3 +71,5 @@ ce que devient mon code une fois qu’il n’est plus entre mes mains.
 
 Voici donc qui je suis devenu, un développeur qui donne un coup de main sur
 l’infrastructure et ce faisant, n’a plus le temps de coder.
+  </div>
+</div>
