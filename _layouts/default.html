@@ -12,6 +12,7 @@ layout: backbone
       <div class="container">
         <a class="navbar-brand" href="/">
           <img src="https://gentux.s3.eu-west-2.amazonaws.com/Images/prod-healer-logo-color-miniature.png" width="30" height="30" alt="" loading="lazy">
+          Accueil
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -20,6 +21,9 @@ layout: backbone
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav w-100 justify-content-around">
             {% assign current = page.url | downcase | split: '/' %}
+            <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
+              <a class="nav-link" href="/about.html">À propos</a>
+            </li>
 <!--
             <li class="nav-item {% if current[1] == 'formations.html' %}active{% endif %}">
               <a class="nav-link" href="/formations.html">Formations</a>
@@ -29,16 +33,13 @@ layout: backbone
             </li>
 -->
             <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
-              <a class="nav-link" href="/posts.html">Blog</a>
+              <a class="nav-link" href="/posts.html">Articles</a>
             </li>
 <!--
             <li class="nav-item {% if current[1] == 'coffee.html' %}active{% endif %}">
               <a class="nav-link" href="/coffee.html">Café DevOps</a>
             </li>
 -->
-            <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
-              <a class="nav-link" href="/about.html">À propos</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="/atom.xml">RSS</a>
             </li>

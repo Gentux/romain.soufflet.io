@@ -8,7 +8,7 @@ toporder: 1
 excerpt_separator: <!--more-->
 language: fr
 public: yes
-title: "Devops et SRE, De quoi s'agit-il ?"
+title: "Devops et SRE, de quoi s'agit-il ?"
 ---
 
 Dans le [précédent

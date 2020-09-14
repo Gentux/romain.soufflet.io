@@ -95,8 +95,8 @@ iframe {
   padding-left: 0;
   list-style: none;
 }
-#footer ul a {
-  color: #999999;
+#footer a {
+  color: #FFF;
 }
 #footer ul a:hover {
   color: #467fbf;
@@ -183,6 +183,9 @@ iframe {
   font-size: 13px;
   line-height: 15px;
   margin-bottom: 10px;
+}
+#copyright a {
+  color: #FFF;
 }
 
 #footer p {
