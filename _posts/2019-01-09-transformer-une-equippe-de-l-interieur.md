@@ -2,7 +2,7 @@
 categories: services work devops sre
 custom_css: posts.css
 date: 2019-01-08 10:26:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/butterfly-tranformation.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/butterfly-tranformation-small.jpg
 layout: post
 excerpt_separator: <!--more-->
 toporder: 5

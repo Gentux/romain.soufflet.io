@@ -3,7 +3,7 @@ categories: bash
 custom_css: posts.css
 date: 2014-07-11 11:47:26
 description: How should we use our mails
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mails.JPG
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/mails-small.JPG
 toporder: 16
 layout: post
 language: en

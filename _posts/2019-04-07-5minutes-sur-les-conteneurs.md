@@ -2,7 +2,7 @@
 categories: docker container infrastructure
 custom_css: posts.css
 date: 2019-05-22 12:32:10
-img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers.jpg"
+img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/Containers-small.jpg"
 layout: post
 toporder: 2
 excerpt_separator: <!--more-->

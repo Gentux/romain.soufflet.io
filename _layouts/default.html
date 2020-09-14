@@ -1,85 +1,123 @@
 ---
 layout: backbone
 ---
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <section id="banner">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">
-            <img src="https://s3.eu-west-2.amazonaws.com/gentux/Images/white_logo_transparent.png" height="40" class="d-inline-block align-top" alt="{{ site.name }}">
-          </a>
-        </div>
-        <div class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/posts.html">Blog</a></li>
-            <li><a href="/projects.html">Projets</a></li>
-            <li><a href="/atom.xml">RSS</a></li>
+        <img src="https://gentux.s3.eu-west-2.amazonaws.com/Images/color_logo_transparent-small.png" alt="Prod'Healer"/>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="https://gentux.s3.eu-west-2.amazonaws.com/Images/prod-healer-logo-color-miniature.png" width="30" height="30" alt="" loading="lazy">
+          Accueil
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav w-100 justify-content-around">
+            {% assign current = page.url | downcase | split: '/' %}
+            <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
+              <a class="nav-link" href="/about.html">À propos</a>
+            </li>
+<!--
+            <li class="nav-item {% if current[1] == 'formations.html' %}active{% endif %}">
+              <a class="nav-link" href="/formations.html">Formations</a>
+            </li>
+            <li class="nav-item {% if current[1] == 'hebergements.html' %}active{% endif %}">
+              <a class="nav-link" href="/hebergements.html">Hébergement</a>
+            </li>
+-->
+            <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
+              <a class="nav-link" href="/posts.html">Articles</a>
+            </li>
+<!--
+            <li class="nav-item {% if current[1] == 'coffee.html' %}active{% endif %}">
+              <a class="nav-link" href="/coffee.html">Café DevOps</a>
+            </li>
+-->
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">RSS</a>
+            </li>
+            <li class="nav-item">
+              <div class="google-search">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search" class="form-inline my-lg-0">
+                  <div class="input-group">
+                    <input type="search" name="q" class="form-control" placeholder="Rechercher">
+                    <input type="hidden" name="sitesearch" value="https://romain.soufflet.io">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
     {{ content }}
 
     <footer id="footer">
       <div class="container">
-        <div class="col-md-4 col-sm-6">
-          <h4>À propos</h4>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <h4>À propos</h4>
 
-          <p>
-          Je m'appelle Romain Soufflet, et je propose actuellement mon
-          expertise DevOps/SRE au travers de missions en tant qu'indépendant.
-          </p>
+            <p>
+            Je m'appelle Romain Soufflet, et je propose actuellement mon
+            expertise DevOps/SRE au travers de missions en tant qu'indépendant.
+            </p>
 
-          <p>
-          Après plusieurs années de développement logiciel, je m’intéresse
-          aux déploiements et aux chaînes de production logicielles. Depuis
-          une dizaine d'année maintenant, un nouveau corps de métiers est né
-          : <em>DevOps</em>.
-          </p>
+            <p>
+            Après plusieurs années de développement logiciel, je m’intéresse
+            aux déploiements et aux chaînes de production logicielles. Depuis
+            une dizaine d'année maintenant, un nouveau corps de métiers est né
+            : <em>DevOps</em>.
+            </p>
 
-          <hr class="hidden-md hidden-lg hidden-sm">
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <h4>Derniers articles</h4>
-
-          <div class="blog-entries">
-            {% for post in site.posts limit: 4 %}
-            {% if post.public %}
-            <div class="item same-height-row clearfix">
-              <div class="image same-height-always">
-                <a href="{{ post.url }}">
-                  {% if post.img %}
-                  <img src="{{ post.img }}" class="img-responsive" alt="" >
-                  {% else %}
-                  <img src="/img/placeholder.png" class="img-responsive" alt="">
-                  {% endif %}
-                </a>
-              </div>
-              <div class="name same-height-always">
-                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
+            <hr class="d-md-none d-lg-none d-xl-none">
           </div>
 
-          <hr class="hidden-md hidden-lg">
-        </div>
+          <div class="col-md-4 col-sm-6">
+            <h4>Derniers articles</h4>
 
-        <div class="col-md-4 col-sm-6">
-          <h4>Romain Soufflet</h4>
+            <div class="blog-entries">
+              {% for post in site.posts limit: 4 %}
+              {% if post.public %}
+              <div class="item same-height-row clearfix">
+                <div class="image same-height-always">
+                  <a href="{{ post.url }}">
+                    {% if post.img %}
+                    <img src="{{ post.img }}" class="img-responsive" alt="" >
+                    {% else %}
+                    <img src="/img/placeholder.png" class="img-responsive" alt="">
+                    {% endif %}
+                  </a>
+                </div>
+                <div class="name same-height-always">
+                  <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
 
-          <p>
-            <a href="mailto:romain+website@soufflet.io">romain@soufflet.io</a>
-          </p>
+            <hr class="d-md-none d-lg-none d-xl-none">
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <h4>Romain Soufflet</h4>
+
+            <p>
+              <a href="mailto:romain+website@soufflet.io">romain@soufflet.io</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
@@ -100,10 +138,65 @@ layout: backbone
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    // NOTE: Scroll performance is poor in Safari
+    // - this appears to be due to the events firing much more slowly in Safari.
+    //   Dropping the scroll event and using only a raf loop results in smoother
+    //   scrolling but continuous processing even when not scrolling
+    $(document).ready(function () {
+
+        var nav = document.querySelector('.navbar');
+        var feed = document.querySelector('#banner');
+        var page = document.querySelector('#main-page');
+
+        var lastScrollY = window.scrollY;
+        var lastWindowHeight = window.innerHeight;
+        var lastDocumentHeight = $(document).height();
+        var ticking = false;
+
+        function onScroll() {
+            lastScrollY = window.scrollY;
+            requestTick();
+        }
+
+        function onResize() {
+            lastWindowHeight = window.innerHeight;
+            lastDocumentHeight = $(document).height();
+            requestTick();
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(update);
+            }
+            ticking = true;
+        }
+
+        function update() {
+            var trigger = feed.getBoundingClientRect().bottom + window.scrollY;
+            var progressMax = lastDocumentHeight - lastWindowHeight;
+
+
+            // show/hide nav
+            if (lastScrollY >= trigger) {
+                nav.classList.add('fixed-top');
+                page.classList.add('body-fixed-top');
+            } else {
+                nav.classList.remove('fixed-top');
+                page.classList.remove('body-fixed-top');
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onResize, false);
+
+        update();
+
+    });
+</script>

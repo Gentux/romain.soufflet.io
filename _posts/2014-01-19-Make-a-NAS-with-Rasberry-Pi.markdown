@@ -2,7 +2,7 @@
 categories: services life storage
 custom_css: posts.css
 date: 2014-01-19 18:42:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/raspberrypi_network.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/raspberrypi_network-small.jpg
 layout: post
 toporder: 21
 language: en

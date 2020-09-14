@@ -1,4 +1,6 @@
 source "https://rubygems.org"
-gem "redcarpet"
+gem "kramdown"
+gem "kramdown-parser-gfm"
 gem "jekyll"
 gem "jekyll-watch"
+gem "jekyll-regex-replace"

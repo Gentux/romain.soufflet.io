@@ -2,7 +2,7 @@
 categories: FirefoxOS debian docker
 custom_css: posts.css
 date: 2014-11-19 19:32:42
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/firefoxOS.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/firefoxOS-small.jpg
 layout: post
 toporder: 14
 language: en

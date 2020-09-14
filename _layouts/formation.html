@@ -10,23 +10,9 @@ custom_css: posts.css
         <h1>{{ page.title }}</h1>
 
         <img src="{{ page.img }}" class="img-fluid rounded" />
-
-        <div class="post-date">
-          <img alt="me" class="img-thumbnail img-fluid img-author" src="https://s3.eu-west-2.amazonaws.com/gentux/Images/gentux-sd-snow.jpg">
-
-          <p>
-            par <a href="/about.html">Romain Soufflet</a>,
-            <br>
-            le <time class="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
-              {{ page.date | date: '%d/%m/%Y' }}
-            </time>
-          </p>
-        </div>
       </header>
 
-      <div class="article-content">
-        {{ content }}
-      </div>
+      {{ content }}
 
       <footer>
         <!-- Begin MailChimp Signup Form -->

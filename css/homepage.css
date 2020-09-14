@@ -1,6 +1,6 @@
-a:hover {
+footer a {
   text-decoration: none;
-  color: #BBBBBB;
+  color: #a36328;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -8,44 +8,21 @@ a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* Banner home page
----------------------------------- */
-#banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3.eu-west-2.amazonaws.com/gentux/Images/datacenter-min.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #FFFFFF;
-  padding: 6em 0em 6em;
-  text-align: center;
+footer a:hover {
+  text-decoration: none;
+  color: #2c4257;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-#banner h2 {
-  color: #FFFFFF;
-  font-size: 3em;
-  line-height: 1em;
-  margin: 0 0 0.5em 0;
-  padding: 0;
+#main-page a {
+  color: #3c484e;
 }
-
-#banner p {
-  font-size: 1.5em;
-  margin: 1.5em 0 0 0;
-  line-height: 1.5em;
-}
-
-#banner p.description-text {
-  max-width: 900px;
-  margin: auto;
-}
-
-#banner img {
-  border-radius: 10px;
-  margin-bottom: 30px;
-  max-width: 100%;
-  height: auto;
-  max-height: 132px;
+#main-page a:hover {
+  text-decoration: none;
 }
 
 /* Social Links
@@ -96,53 +73,18 @@ a:hover {
   color: #555555;
 }
 
-#more {
-  background: url('/img/qbkls.png');
-  border-top: 1px solid #888;
+#main-page .image {
+  min-width: 50%;
 }
-
-#more .box-image-text {
-  background: #ecf0f1;
-  border-radius: 10px;
-  padding: 10px;
-  transition-duration: .4s;
-}
-
-#more .box-image-text:hover {
-  transform: scale(1.04);
-}
-
-#more .box-image-text .top {
-  height: 220px;
-}
-
-#more .box-image-text h4 {
-}
-
-#more .box-image-text .intro {
+#main-page .intro p {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 14px;
   line-height: 1.4;
+  margin-bottom: auto;
 }
-
-#more .col-article {
-  padding-left: 0;
-  margin-bottom: 21px;
-}
-
-#more .author-category {
+#main-page .author-category {
   font-size: 13px;
   color: #585858;
 }
-
-#more .read-more {
+#main-page .read-more {
   text-align: center;
-}
-
-.container {
-  max-width: 100%
-}
-
-.row {
-  overflow: hidden;
 }

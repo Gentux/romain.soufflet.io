@@ -2,7 +2,7 @@
 categories: services work devops sre
 custom_css: posts.css
 date: 2018-05-15 11:16:32
-img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success.jpg
+img: https://s3.eu-west-2.amazonaws.com/gentux/Images/deploy_success-small.jpg
 layout: post
 toporder: 3
 excerpt_separator: <!--more-->
@@ -14,12 +14,15 @@ title: Déploiements en production, SRE, DevOps et autres sujets obscurs
 On me demande souvent ce que je fais dans la vie et je n’arrive pas à répondre.
 
 Non pas parce que mon travail est flou, mais parce qu'il repose sur des concepts
-que la plupart des gens ne maîtrisent pas. La manière la moins technique que
-j'ai d'expliquer ce sur quoi je travaille est la suivante:
+que la plupart des gens ne maîtrisent pas.
+
+<!--more-->
+
+La manière la moins technique que j'ai d'expliquer ce sur quoi je travaille est
+la suivante:
 
 « je m'occupe de la mise en production ».
 
-<!--more-->
 
 Certes, mais c'est quoi une « production » ? Ce n'est pas une notion compliquée
 mais c'est une notion qui repose sur pleins d'autres concepts qui rendent son
@@ -67,7 +70,7 @@ L'architecture, c'est la partie du travail nous permettant de dessiner le
 schéma suivant :
 
 ![Schéma d'une application 3
-tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png)
+tiers](https://s3.eu-west-2.amazonaws.com/gentux/Images/3+tier+archtectures.png){:.rounded .img-fluid}
 
 Comme on peut le voir sur le schéma ci-dessus, nous avons déjà besoin de 7
 machines, puis de configurer les couches réseaux et de prévoir la redondance des
