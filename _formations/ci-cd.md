@@ -1,10 +1,10 @@
 ---
-custom_css: formations.css
+custom_css: formation.css
 length: 3 jour
 img: https://gentux.s3.eu-west-2.amazonaws.com/Images/formations_pipelines-small.jpg
 layout: formation
 excerpt_separator: <!--more-->
-toporder: 4
+toporder: 1
 public: yes
 title: "Les pipelines CI/CD"
 ---

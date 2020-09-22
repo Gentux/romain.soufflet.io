@@ -6,7 +6,7 @@ layout: formation
 excerpt_separator: <!--more-->
 categories: devops sre
 toporder: 1
-public: yes
+public: no
 title: "La culture DevOps et le rôle SRE"
 ---
 
