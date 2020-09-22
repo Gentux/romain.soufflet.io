@@ -5,6 +5,7 @@ date: 2018-08-11 16:38:25
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/plan-maison-architecte-small.jpeg
 layout: post
 toporder: 1
+comments: true
 excerpt_separator: <!--more-->
 language: fr
 public: yes
