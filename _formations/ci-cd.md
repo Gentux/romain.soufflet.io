@@ -22,20 +22,70 @@ et maintenir vos propres *pipeline*.
 ## Objectif
 
 Pouvoir créer et maintenir les pipelines d'intégrations et de déploiements
-continue de l'entreprises.
+continue de l'entreprises. Nous aborderons tout les concepts et bonnes pratiques
+pour accompagner le travail des développeurs jusqu'en production :
 
-Maitriser tout les concepts de productions logiciel pour accompagner le travail
-de développeurs jusqu'à la production.
+* Automatiser l'intégration de vos développement aux logiciels de l'entreprises.
+* Gérer les versions logiciel et ainsi le reporting des nouvelles anomalies
+* Automatiser les tests unitaires et fonctionnels
+* Livrer de manière automatique ou one-click
+* Adopter la statégie de déploiement la mieux adapter à vos besoins
+* Permettre aux PO et profiles non-technique de gérer les déploiement eux-mêmes
 
 ## Programme
 
-* Chapitre 1: L'intégration
-* Chapitre 2: La livraison
-* Chapitre 3: Le déploiement
-* Chapitre 4: Les pipelines
-* Chapitre 5: Automatisation
+1. L'intégration (La **CI**)
+    * Définition de "intégration"
+    * Branching models (atelier utilisant **git**)
+    * **Peer review** et **Pull request**
+    * Tests automatisées
+    * **Continuous Integration**
+2. La livraison (La **CD**)
+    * Les tags et le **versionning**h
+    * Les dépots de binaires (atelier utilisant une **registry docker**)
+    * **Continuous Delivery**
+3. Le déploiement (L'autre **CD**)
+    * Les environnements
+    * Stratégies de déploiements
+    * **Continuous Deployments**
+4. Les pipelines
+    * Principes généraux à garder en tête
+    * Infra as Code
+    * Docker et la containerisation
+5. Chapitre 5: Automatisation
+    * Validations humaines
+    * Validations automatiques
+    * Reporting automatique
+    * Observable de la CI
 
 ## Sessions et tarif
+
+| Nombre de participants | Tarif unitaire |
+| :--- | ---: |
+| 2 à 3 personnes | 1 200€ HT |
+| 4 à 6 personnes | 1 000€ HT |
+
+### Besoin d’une formation en entreprise sur-mesure ?
+
+Pour une formation personnalisée, en accord avec vos besoins, dans vos locaux,
+dans les nôtres ou à distance, décrivez-nous votre besoin en détail.
+
+Habituellement, le coût pédagogique d’une intra pour cette formation,
+forfaitaire jusqu’à 10 apprenants, est de 5 000 € HT en format réduit 2 jours
+et 7 500 € HT en format 3 jours.
+
+## Pré-requis
+
+La formation s’adresse principalement aux entreprises ou équipes devant fournir
+des livraisons logiciels.
+
+Elle vise aussi bien les équipes livrant entièment manuellement que celles qui
+veulent améliorer les process et scripts existants.
+
+Une connaissance préalable de **git** est requis.
+
+La connaissance des concepts de conteneurisation est préférables, mais pas
+obligatoire.
 
 ## Formateur
 
