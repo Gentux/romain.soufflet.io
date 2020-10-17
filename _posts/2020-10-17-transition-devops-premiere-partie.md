@@ -38,7 +38,7 @@ De nombreux articles vantent les mérites de la culture “devops” et les bonn
 pratiques qui en découlent. Pour autant vous n’y trouverez pas de plan d’action
 concret et réalisable pour intégrer cette culture “devops”.
 
-Meme si le CEO ou CTO peut avoir une vision claire de ce qu’il aimerait obtenir
+Même si le CEO ou CTO peut avoir une vision claire de ce qu’il aimerait obtenir
 après transformation, c’est la transmission aux différents profils de
 l'entreprise qui s'avère être le point le plus complexe et le plus
 problématique.
@@ -84,13 +84,13 @@ toute nouvelle initiative sera jugée comme inappropriée et mettra en danger la
 cohérence globale du projet. L’intégration de la culture **Devops** doit se faire
 en douceur en prenant en compte les individus si l’on ne veut pas créer un
 chaos nuisible pour l’entreprise. Il s’agit ici de ne pas “brusquer” les
-composantes de l’entreprise en leurs imposant des processus qu’elles ne
+composantes de l’entreprise en leurs imposants des processus qu’elles ne
 comprennent pas et dont elles n’ont aucunes connaissances préalables.
 
 ## Les équipes « Devops »
 
 Les nouvelles entités Devops ou les anciennes à qui l'on demande de “faire du
-Devops” sont aussi dans une position délicate : elles de ne savent pas quoi
+Devops” sont aussi dans une position délicate : elles ne savent pas quoi
 faire pour être “davantage devops”.
 
 La conséquence directe de ce flou derrière le terme Devops se traduit par une
@@ -113,9 +113,9 @@ communication et l’entraide.
 C’est pour cette raison que les initiatives demandant à une seule équipe de «
 faire plus de devops » sont vouées à l’échec. Comment une équipe seule pourrait
 permettre à toute l’entreprise de mieux communiquer et améliorer les relais de
-travaux?
+travaux ?
 
-Chaque équipe doit être impliquées dans cette transition, chaque équipe doit
+Chaque équipe doit être impliquée dans cette transition, chaque équipe doit
 pouvoir y voir son propre bénéfice dans les changements de l’entreprise. Ce
 n’est qu’en voyant ces bénéfices que les équipes voudront y participer.
 
@@ -152,11 +152,11 @@ instant pour y réfléchir :
 * Un état final, idéal, dans lequel les points d’améliorations sont des acquis
 
 Il est donc primordial de se poser la question suivante pour aligner tout le
-monde sur la transition : Que veux-t-on changer dans notre organisation ?
+monde sur la transition : Que veut on changer dans notre organisation ?
 
 Quand il s’agit d’augmenter le nombre de déploiements par exemple, les
-questions qui suivent seront “combien en faisons nous actuellement ?” et
-“combien souhaitons nous en faire à l’avenir ?”.
+questions qui suivent seront “combien en faisons-nous actuellement ?” et
+“combien souhaitons-nous en faire à l’avenir ?”.
 
 Dans le même raisonnement, il est aussi important de définir ce que l’on
 souhaite garder. Il est, par exemple, courant de voir une étape de validation
@@ -179,7 +179,7 @@ travail d’équipe entre équipes.
 
 ## Conclusion
 
-Même si il existait la possibilité dès aujourd’hui de créer le plan parfait qui
+Même s'il existait la possibilité dès aujourd’hui de créer le plan parfait qui
 corresponde totalement à votre organisation, l’application de ce dernier
 restera difficile. J’ai pris l’habitude de dire à mes clients et collaborateurs
 que les problèmes les plus importants sont rarement techniques, ce sont
