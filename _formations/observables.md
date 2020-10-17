@@ -18,26 +18,52 @@ anticiper les problèmes plutôt que de réagir aux pannes.
 ## Objectif
 
 Tout d'abord gagner en visibilité sur ce qui se passe dans vos environnements de
-production.
+production :
 
-Identifier des indicateurs et mettre en place un plan pour rendre votre
-infrastructure observable.
-
-Gérer vos alertes, les différents cannaux par lesquels vous pouvez mener vos
-actions.
-
-L'auto-scaling et l'automatisation des premiers secours.
+* Collecter des informations de manière optimale et jeter les données innutiles.
+* Identifier des indicateurs fiable
+* Définir des scénario de pannes
+* Anticiper les pannes
+* Gérer vos alertes
+* Automatiser les premiers secours.
+* Envisager l'auto-scaling
 
 ## Programme
 
-* Définitions des observables: Les métriques, les logs et autres sujets
-* Collecte de données
-* Consolidations des données
-* Les dashbaords
-* Les alertes
-* L'automatisation et l'auto-scaling
+1. Définitions et Concepts
+  * Les métriques
+  * Les logs
+  * Les alertes
+2. Collecte de données
+  * Les données machines
+  * Les données OS
+  * Les données applicatives
+  * La requête de vie
+3. Les dashbaords
+  * Les différents état d'un système de production
+  * Identifier les metriques clefs
+4. Les alertes
+  * Définir les seuils
+  * Définir une alertes
+5. L'automatisation
+  * Les premiers secours
+  * L'auto-scaling
 
-## Sessions et tarifs
+## Sessions et tarif
+
+| Nombre de participants | Tarif unitaire |
+| :--- | ---: |
+| 2 à 3 personnes | 1 200€ HT |
+| 4 à 6 personnes | 1 000€ HT |
+
+### Besoin d’une formation en entreprise sur-mesure ?
+
+Pour une formation personnalisée, en accord avec vos besoins, dans vos locaux,
+dans les nôtres ou à distance, décrivez-nous votre besoin en détail.
+
+Habituellement, le coût pédagogique d’une intra pour cette formation,
+forfaitaire jusqu’à 10 apprenants, est de 5 000 € HT en format réduit 2 jours
+et 7 500 € HT en format 3 jours.
 
 ## Formateur
 
