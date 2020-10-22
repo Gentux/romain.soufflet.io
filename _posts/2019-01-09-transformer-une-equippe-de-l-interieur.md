@@ -5,7 +5,8 @@ date: 2019-01-08 10:26:32
 img: https://s3.eu-west-2.amazonaws.com/gentux/Images/butterfly-tranformation-small.jpg
 layout: post
 excerpt_separator: <!--more-->
-toporder: 5
+toporder: 4
+comments: true
 language: fr
 public: yes
 title: "Tranformez votre équipe de l'intérieur"

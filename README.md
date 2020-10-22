@@ -10,12 +10,7 @@ This site is powered by [Jekyll](https://jekyllrb.com/)
 # Build a local version
 
 ```
-docker run \
-  --rm \
-  --volume="${PWD}:/srv/jekyll" \
-  --name jekyll_watch \
-  -dt jekyll/jekyll \
-  ./start.sh
+docker run --volume="${PWD}:/srv/jekyll" --name jekyll_watch -dt jekyll/jekyll jekyll build --watch
 ```
 
 You can start a simple webserver to serve the content of `_site` directory

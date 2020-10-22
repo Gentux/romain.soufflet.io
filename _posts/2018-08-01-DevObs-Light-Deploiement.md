@@ -4,7 +4,7 @@ custom_css: posts.css
 date: 2018-08-01 11:16:32
 img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/DevObs-small.jpeg"
 layout: post
-toporder: 5
+toporder: 7
 excerpt_separator: <!--more-->
 language: fr
 public: yes

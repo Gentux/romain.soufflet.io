@@ -10,28 +10,25 @@ custom_css: formations.css
     {% assign formations = site.formations | sort: "toporder" %}
     {% for formation in formations %}
       {% if formation.public %}
-    <div class="d-md-flex flex-md-row d-sm-flex flex-sm-column mb-2">
-      <div class="p-2 image">
-        <a href="{{ formation.url }}">
+    <a href="{{ formation.url }}">
+      <div class="d-md-flex flex-md-row d-sm-flex flex-sm-column mb-2">
+        <div class="p-2 image">
         {% if formation.img %}
           <img src="{{ formation.img }}" class="rounded mx-auto d-block img-fluid w-100" alt="" />
         {% else %}
           <img src="/img/placeholder.png" class="img-fluid img-thumbnail" alt="" />
         {% endif %}
-        </a>
-      </div>
-
-      <div class="p-2 content">
-        <h4>{{ formation.title }}</h4>
-
-        <div class="intro">
-          {{ formation.excerpt }}
         </div>
-        <a class="btn btn-primary formation-link" href="{{ formation.url }}">
-            Continuer à lire
-        </a>
+
+        <div class="p-2 content">
+          <h4>{{ formation.title }}</h4>
+
+          <div class="intro">
+            {{ formation.excerpt | regex_replace: '\<a href=".*">', '' | remove: '</a>' }}
+          </div>
+        </div>
       </div>
-    </div>
+    </a>
 
     <hr>
       {% endif %}

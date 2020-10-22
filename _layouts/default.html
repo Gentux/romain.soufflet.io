@@ -24,6 +24,9 @@ layout: backbone
             <li class="nav-item {% if current[1] == 'about.html' %}active{% endif %}">
               <a class="nav-link" href="/about.html">À propos</a>
             </li>
+            <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
+              <a class="nav-link" href="/posts.html">Articles</a>
+            </li>
 <!--
             <li class="nav-item {% if current[1] == 'formations.html' %}active{% endif %}">
               <a class="nav-link" href="/formations.html">Formations</a>
@@ -31,13 +34,8 @@ layout: backbone
             <li class="nav-item {% if current[1] == 'hebergements.html' %}active{% endif %}">
               <a class="nav-link" href="/hebergements.html">Hébergement</a>
             </li>
--->
-            <li class="nav-item {% if current[1] == 'posts.html' %}active{% endif %}">
-              <a class="nav-link" href="/posts.html">Articles</a>
-            </li>
-<!--
             <li class="nav-item {% if current[1] == 'coffee.html' %}active{% endif %}">
-              <a class="nav-link" href="/coffee.html">Café DevOps</a>
+              <a class="nav-link" href="/coffee.html">Rencontres</a>
             </li>
 -->
             <li class="nav-item">
@@ -197,6 +195,11 @@ layout: backbone
         window.addEventListener('resize', onResize, false);
 
         update();
+
+        var tables = document.querySelector('table');
+        if ( tables ) {
+          tables.classList.add('table');
+        }
 
     });
 </script>

@@ -4,7 +4,8 @@ custom_css: posts.css
 date: 2020-01-29 08:26:32
 img: "https://s3.eu-west-2.amazonaws.com/gentux/Images/et-si-on-parlait-devops-small.jpg"
 layout: post
-toporder: 4
+toporder: 5
+comments: true
 excerpt_separator: <!--more-->
 language: fr
 public: yes
