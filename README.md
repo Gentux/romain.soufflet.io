@@ -1,5 +1,7 @@
 # Personal website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ebe26c2-bb55-46d1-81e8-a87285ebb4f1/deploy-status)](https://app.netlify.com/projects/romainsoufflet/deploys)
+
 This is my personal websites.
 You can visit it at [romain.soufflet.io](https://romain.soufflet.io/)
 
