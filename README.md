@@ -12,12 +12,12 @@ This site is powered by [Jekyll](https://jekyllrb.com/)
 # Build a local version
 
 ```
+docker build -t romain-soufflet-jekyll-watch .
 docker run \
-  --rm \
-  --volume="${PWD}:/srv/jekyll" \
-  --name jekyll_watch \
-  -dt jekyll/jekyll \
-  ./start.sh
+   --rm \
+   --volume="${PWD}:/srv/jekyll" \
+   --name romain.soufflet.io-jekyll-watch \
+   -dt romain-soufflet-jekyll-watch
 ```
 
 You can start a simple webserver to serve the content of `_site` directory
